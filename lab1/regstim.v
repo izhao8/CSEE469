@@ -6,17 +6,17 @@ module regstim();
 
 	parameter ClockDelay = 5000;
 
-	logic	[4:0] 	ReadRegister1, ReadRegister2, WriteRegister;
-	logic [63:0]	WriteData;
-	logic 			RegWrite, clk;
-	logic [63:0]	ReadData1, ReadData2;
+	reg	[4:0] 	ReadRegister1, ReadRegister2, WriteRegister;
+	reg [63:0]	WriteData;
+	reg 			RegWrite, clk;
+	wire [63:0]	ReadData1, ReadData2;
 
 	integer i;
 
 	// Your register file MUST be named "regfile".
 	// Also you must make sure that the port declarations
 	// match up with the module instance in this stimulus file.
-	registerFile dut (.data(WriteData), .DRA(ReadData1), .DRB(ReadData2),
+	regfile dut (.data(WriteData), .DRA(ReadData1), .DRB(ReadData2),
 						.RA(ReadRegister1), .RB(ReadRegister2), .RW(WriteRegister),
 						.en(RegWrite), .clk(clk));
 

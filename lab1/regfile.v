@@ -2,7 +2,7 @@
 `include "decoder.v"
 `include "register.v"
 
-module registerFile (data, DRA, DRB, RA, RB, RW, en, clk);
+module regfile (data, DRA, DRB, RA, RB, RW, en, clk);
 	
 	output [63:0] DRA, DRB;
 	input [63:0] data;
