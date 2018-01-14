@@ -1,6 +1,6 @@
 // Test bench for Register file
 `timescale 1ns/10ps
-`include "registerFile.v"
+`include "regfile.v"
 
 module regstim(); 		
 
@@ -19,6 +19,12 @@ module regstim();
 	regfile dut (.data(WriteData), .DRA(ReadData1), .DRB(ReadData2),
 						.RA(ReadRegister1), .RB(ReadRegister2), .RW(WriteRegister),
 						.en(RegWrite), .clk(clk));
+
+	//gtkwave file for iverilog
+	initial begin
+		$dumpfile("testResults.vcd");
+		$dumpvars(1, dut);
+	end
 
 	// Force %t's to print in a nice format.
 	initial $timeformat(-9, 2, " ns", 10);
