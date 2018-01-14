@@ -1,5 +1,6 @@
 // Test bench for Register file
 `timescale 1ns/10ps
+`include "regsterFile.v"
 
 module regstim(); 		
 

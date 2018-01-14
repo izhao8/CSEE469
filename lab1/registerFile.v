@@ -2,22 +2,22 @@
 `include "decoder.v"
 `include "register.v"
 
-module registerFile (data, DRA, DRB, RA, RB, RW, en, clk, reset);
+module registerFile (data, DRA, DRB, RA, RB, RW, en, clk);
 	
 	output [63:0] DRA, DRB;
 	input [63:0] data;
 	input [4:0] RA, RB, RW;
-	input en, clk, reset;
+	input en, clk;
 
-	wire [31:0] wr;
+	wire [31:0] dec;
 	wire [31:0][63:0] outwr;
 
-	decoder start (.in(RW), .out(wr), .en(en));
+	decoder start (.in(RW), .out(dec), .en(en));
 
 	generate
 		genvar i;
-		for (i = 0; i < 32; i = i + 1'b1) begin
-			register set (.in(data), .out(outwr[i]), .en(wr[i]), .reset(reset), .clk(clk));
+		for (i = 0; i < 31; i = i + 1'b1) begin
+			register set (.in(data), .out(outwr[i]), .en(dec[i]), .reset(reset), .clk(clk));
 		end
 	endgenerate
 
