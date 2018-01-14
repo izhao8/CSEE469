@@ -1,6 +1,6 @@
 // Test bench for Register file
 `timescale 1ns/10ps
-`include "regsterFile.v"
+`include "registerFile.v"
 
 module regstim(); 		
 
@@ -16,9 +16,9 @@ module regstim();
 	// Your register file MUST be named "regfile".
 	// Also you must make sure that the port declarations
 	// match up with the module instance in this stimulus file.
-	registerFile dut (.ReadData1, .ReadData2, .WriteData, 
-					 .ReadRegister1, .ReadRegister2, .WriteRegister,
-					 .RegWrite, .clk);
+	registerFile dut (.data(WriteData), .DRA(ReadData1), .DRB(ReadData2),
+						.RA(ReadRegister1), .RB(ReadRegister2), .RW(WriteRegister),
+						.en(RegWrite), .clk(clk));
 
 	// Force %t's to print in a nice format.
 	initial $timeformat(-9, 2, " ns", 10);

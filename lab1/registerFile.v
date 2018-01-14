@@ -17,7 +17,7 @@ module registerFile (data, DRA, DRB, RA, RB, RW, en, clk);
 	generate
 		genvar i;
 		for (i = 0; i < 31; i = i + 1'b1) begin
-			register set (.in(data), .out(outwr[i]), .en(dec[i]), .reset(reset), .clk(clk));
+			register set (.in(data), .out(outwr[i]), .en(dec[i]), .clk(clk));
 		end
 	endgenerate
 

@@ -7,11 +7,10 @@ module register (in, out, en, clk);
 	input en, clk;
 
 	generate
-		genvar i;
-		if (en) begin 
-			for (i = 0; i < 64; i = i + 1'b1) begin
-				D_FF hold (.q(out[i]), .d(.in[i]), .reset(1'b0), .clk(clk));
-			end
+		genvar i; 
+		for (i = 0; i < 64; i = i + 1'b1) begin
+			D_FF set (.q(out[i]), .d(in[i]), .reset(en), .clk(clk));
 		end
 	endgenerate
+
 endmodule
