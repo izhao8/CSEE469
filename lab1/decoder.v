@@ -31,7 +31,6 @@ module decoder3to8 (in, out, en);
 	assign out[7] = in[0] & in[1] & in[2] & en;
 endmodule
 
-
 module decoder2to4 (in, out, en);
 	output wire [3:0] out;
 

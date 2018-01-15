@@ -5,11 +5,11 @@ module register (in, out, en, clk);
 
 	input [63:0] in;
 	input en, clk;
-
+	
 	generate
 		genvar i; 
 		for (i = 0; i < 64; i = i + 1'b1) begin
-			D_FF set (.q(out[i]), .d(in[i]), .reset(en), .clk(clk));
+			D_FF set (.q(out[i]), .d(in[i]), .reset(1'b0), .clk(clk));
 		end
 	endgenerate
 
