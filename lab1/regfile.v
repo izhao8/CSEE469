@@ -13,7 +13,6 @@ module regfile (data, DRA, DRB, RA, RB, RW, en, clk);
 	wire [31:0][63:0] outwr;
 
 	decoder start (.in(RW), .out(dec), .en(en));
-	assign dec[31] = 1'b0;
 
 	generate
 		genvar i;
@@ -22,7 +21,8 @@ module regfile (data, DRA, DRB, RA, RB, RW, en, clk);
 		end
 	endgenerate
 
-	multiplex one (.in(outwr), .out(DRA), .read(RA), .clk(clk), .reset(reset));
-	multiplex two (.in(outwr), .out(DRB), .read(RB), .clk(clk), .reset(reset));
+	assign dec[31] = 64'b0;
+	multiplex one (.in(outwr), .out(DRA), .read(RA));
+	multiplex two (.in(outwr), .out(DRB), .read(RB));
 
 endmodule
