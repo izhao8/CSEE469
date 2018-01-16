@@ -23,6 +23,16 @@ module mux2to1 (new, old, out, en);
 
 	input new, old, en;
 
-	assign out = (en & new) | (~en & old);
+	wire ren;
+	wire [1:0] con;
+
+	not ren0 (ren, en);
+
+	and con0 (con[0], en, new);
+	and con1 (con[1], ren, old);
+	
+	or out0 (out, con[0], con[1]);
+	
+	//assign out = (en & new) | (~en & old);
 
 endmodule

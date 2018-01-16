@@ -51,13 +51,24 @@ module mux4to1 (in, out, sel);
 	input [1:0] sel;
 
 	wire [3:0] temp;
+	wire [1:0] rsel;
 
-	assign temp[0] = in[0] & ~sel[0] & ~sel[1];
-	assign temp[1] = in[1] & sel[0] & ~sel[1];
-	assign temp[2] = in[2] & ~sel[0] & sel[1];
-	assign temp[3] = in[3] & sel[0] & sel[1];
+	not rsel0 (rsel[0], sel[0]);
+	not rsel1 (rsel[1], sel[1]);
 
-	assign out = temp[0] | temp[1] | temp[2] | temp[3];
+	and temp0 (temp[0], in[0], rsel[0], rsel[1]);
+	and temp1 (temp[1], in[1], sel[0], rsel[1]);
+	and temp2 (temp[2], in[2], rsel[0], sel[1]);
+	and temp3 (temp[3], in[3], sel[0], sel[1]);
+
+	or out0 (out, temp[0], temp[1], temp[2], temp[3]);
+
+	// assign temp[0] = in[0] & ~sel[0] & ~sel[1];
+	// assign temp[1] = in[1] & sel[0] & ~sel[1];
+	// assign temp[2] = in[2] & ~sel[0] & sel[1];
+	// assign temp[3] = in[3] & sel[0] & sel[1];
+
+	// assign out = temp[0] | temp[1] | temp[2] | temp[3];
 
 endmodule
 
@@ -68,5 +79,15 @@ module mux2to1other (in, out, sel);
 	input [1:0] in;
 	input sel;
 
-	assign out = (in[1] & sel) | (in[0] & ~sel);
+	wire rsel;
+	wire [1:0] con;
+
+	not rsel0 (rsel, sel);
+
+	and con0 (con[0], in[1], sel);
+	and con1 (con[1], in[0], rsel);
+
+	or out0 (out, con[0], con[1]);
+
+	//assign out = (in[1] & sel) | (in[0] & ~sel);
 endmodule

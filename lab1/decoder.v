@@ -21,14 +21,29 @@ module decoder3to8 (in, out, en);
 	input en;
 	input [2:0] in;
 
-	assign out[0] = ~in[0] & ~in[1] & ~in[2] & en;
-	assign out[1] = in[0] & ~in[1] & ~in[2] & en;
-	assign out[2] = ~in[0] & in[1] & ~in[2] & en;
-	assign out[3] = in[0] & in[1] & ~in[2] & en;
-	assign out[4] = ~in[0] & ~in[1] & in[2] & en;
-	assign out[5] = in[0] & ~in[1] & in[2] & en;
-	assign out[6] = ~in[0] & in[1] & in[2] & en;
-	assign out[7] = in[0] & in[1] & in[2] & en;
+	wire [2:0] rin;
+
+	not rin1 (rin[0], in[0]);
+	not rin2 (rin[1], in[1]);
+	not rin3 (rin[2], in[2]);
+
+	and out1 (out[0], rin[0], rin[1], rin[2], en);
+	and out2 (out[1], in[0], rin[1], rin[2], en);
+	and out3 (out[2], rin[0], in[1], rin[2], en);
+	and out4 (out[3], in[0], in[1], rin[2], en);
+	and out5 (out[4], rin[0], rin[1], in[2], en);
+	and out6 (out[5], in[0], rin[1], in[2], en);
+	and out7 (out[6], rin[0], in[1], in[2], en);
+	and out8 (out[7], in[0], in[1], in[2], en);
+
+	// assign out[0] = ~in[0] & ~in[1] & ~in[2] & en;
+	// assign out[1] = in[0] & ~in[1] & ~in[2] & en;
+	// assign out[2] = ~in[0] & in[1] & ~in[2] & en;
+	// assign out[3] = in[0] & in[1] & ~in[2] & en;
+	// assign out[4] = ~in[0] & ~in[1] & in[2] & en;
+	// assign out[5] = in[0] & ~in[1] & in[2] & en;
+	// assign out[6] = ~in[0] & in[1] & in[2] & en;
+	// assign out[7] = in[0] & in[1] & in[2] & en;
 endmodule
 
 module decoder2to4 (in, out, en);
@@ -37,8 +52,18 @@ module decoder2to4 (in, out, en);
 	input en;
 	input [1:0] in;
 
-	assign out[3] = in[0] & in[1] & en;
-	assign out[2] = ~in[0] & in[1] & en;
-	assign out[1] = in[0] & ~in[1] & en;
-	assign out[0] = ~in[0] & ~in[1] & en;
+	wire [1:0] rin;
+
+	not rin1 (rin[0], in[0]);
+	not rin2 (rin[1], in[1]);
+
+	and out1 (out[3], in[0], in[1], en);
+	and out2 (out[2], rin[0], in[1], en);
+	and out3 (out[1], in[0], rin[1], en);
+	and out4 (out[0], rin[0], rin[1], en);
+
+	// assign out[3] = in[0] & in[1] & en;
+	// assign out[2] = ~in[0] & in[1] & en;
+	// assign out[1] = in[0] & ~in[1] & en;
+	// assign out[0] = ~in[0] & ~in[1] & en;
 endmodule
