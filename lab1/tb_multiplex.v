@@ -21,12 +21,15 @@ module tb_multiplex();
 		end
 		#5
 		in[1] <= 64'd123434;
+		read <= 5'd1;
 		#5;
-		in[1] <= 64'd4523;
+		in[3] <= 64'd4523;
+		read <= 5'd1;
 		#5;		
 		for (i = 0; i < 32; i = i + 1) begin
 			in[i] <= i*64'h0000010204080001 + i;
 		end
+		#5;
 		$stop;
 	end
 endmodule
