@@ -7,32 +7,17 @@ module multiplex (in, out, read);
 	//assign out = in[read];
 	wire [63:0][31:0] temp; 
 
-	reverse swap (.in(in), .out(temp));
-
 	generate
 		genvar i, j;
 		for (i = 0; i < 64; i = i + 1) begin 
+			for (j = 0; j < 32; j = j + 1) begin
+				assign temp[i][j] = in[j][i];
+			end
 			mux32to1 choose (.in(temp[i]), .out(out[i]), .sel(read));
 		end
 	endgenerate
 
 
-endmodule
-
-
-module reverse (in, out);
-	output [63:0][31:0] out;
-
-	input [31:0][63:0] in;
-
-		generate
-			genvar i, j;
-			for (i = 0; i < 64; i = i + 1) begin 
-				for (j = 0; j < 32; j = j + 1) begin
-					assign out[i][j] = in[j][i];
-				end
-			end
-		endgenerate
 endmodule
 
 
