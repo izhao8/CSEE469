@@ -1,4 +1,4 @@
-`include "decoder.v"
+//`include "decoder.v"
 
 module tb_decoder ();
 	reg [4:0] in;

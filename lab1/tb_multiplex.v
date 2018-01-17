@@ -1,4 +1,4 @@
-`include "multiplex.v"
+//`include "multiplex.v"
 
 module tb_multiplex();
 	reg [4:0] read;

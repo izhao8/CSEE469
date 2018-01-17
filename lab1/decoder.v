@@ -1,3 +1,5 @@
+`timescale 1ns/10ps
+
 module decoder (in, out, en);
 	output wire [31:0] out;
 
@@ -23,18 +25,18 @@ module decoder3to8 (in, out, en);
 
 	wire [2:0] rin;
 
-	not rin1 (rin[0], in[0]);
-	not rin2 (rin[1], in[1]);
-	not rin3 (rin[2], in[2]);
+	not #50 rin1 (rin[0], in[0]);
+	not #50 rin2 (rin[1], in[1]);
+	not #50 rin3 (rin[2], in[2]);
 
-	and out1 (out[0], rin[0], rin[1], rin[2], en);
-	and out2 (out[1], in[0], rin[1], rin[2], en);
-	and out3 (out[2], rin[0], in[1], rin[2], en);
-	and out4 (out[3], in[0], in[1], rin[2], en);
-	and out5 (out[4], rin[0], rin[1], in[2], en);
-	and out6 (out[5], in[0], rin[1], in[2], en);
-	and out7 (out[6], rin[0], in[1], in[2], en);
-	and out8 (out[7], in[0], in[1], in[2], en);
+	and #50 out1 (out[0], rin[0], rin[1], rin[2], en);
+	and #50 out2 (out[1], in[0], rin[1], rin[2], en);
+	and #50 out3 (out[2], rin[0], in[1], rin[2], en);
+	and #50 out4 (out[3], in[0], in[1], rin[2], en);
+	and #50 out5 (out[4], rin[0], rin[1], in[2], en);
+	and #50 out6 (out[5], in[0], rin[1], in[2], en);
+	and #50 out7 (out[6], rin[0], in[1], in[2], en);
+	and #50 out8 (out[7], in[0], in[1], in[2], en);
 
 	// assign out[0] = ~in[0] & ~in[1] & ~in[2] & en;
 	// assign out[1] = in[0] & ~in[1] & ~in[2] & en;
@@ -54,13 +56,13 @@ module decoder2to4 (in, out, en);
 
 	wire [1:0] rin;
 
-	not rin1 (rin[0], in[0]);
-	not rin2 (rin[1], in[1]);
+	not #50 rin1 (rin[0], in[0]); 
+	not #50 rin2 (rin[1], in[1]);
 
-	and out1 (out[3], in[0], in[1], en);
-	and out2 (out[2], rin[0], in[1], en);
-	and out3 (out[1], in[0], rin[1], en);
-	and out4 (out[0], rin[0], rin[1], en);
+	and #50 out1 (out[3], in[0], in[1], en);
+	and #50 out2 (out[2], rin[0], in[1], en); 
+	and #50 out3 (out[1], in[0], rin[1], en);
+	and #50 out4 (out[0], rin[0], rin[1], en);
 
 	// assign out[3] = in[0] & in[1] & en;
 	// assign out[2] = ~in[0] & in[1] & en;
