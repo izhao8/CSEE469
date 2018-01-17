@@ -8,3 +8,4 @@ module D_FF (q, d, reset, clk);
   else
     q <= d; // Otherwise out = d
 endmodule
+
