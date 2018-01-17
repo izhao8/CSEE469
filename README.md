@@ -1,6 +1,6 @@
 ## CS/EE 469 LAB PROJECTS
 
-This repository holds the several projects done in the class CSEE 469. The labs will involve ARM assembly, Verilog, and C languages to program and develop the ARM microprocessor.
+This repository holds the several projects done in the class CSEE 469. The labs will involve ARM assembly, Verilog, and C languages to program and develop the ARM microprocessor. Labs are compiled and simulated using Icarus Verilog before being imported into Quartus.
 
 ## LAB 1
 
