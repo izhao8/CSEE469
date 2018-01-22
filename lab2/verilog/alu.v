@@ -14,9 +14,13 @@ module alu (A, B, cntrol, result, negative, zero, overflow, carry_out);
 	wire [63:0] tB, ADD, AND, XOR, OR;
 	wire t0, c, of;
 
-	assign AND = A & B;
-	assign XOR = A ^ B;
-	assign OR = A | B;
+	// assign AND = A & B;
+	// assign XOR = A ^ B;
+	// assign OR = A | B;
+
+	bitAND ANDbit (A, B, AND);
+	bitOR ORbit (A, B, OR);
+	bitXOR XORbit (A, B, XOR);
 
 	complement forSub (B, tB, contrl[0]);
 	arithmetic ADDorSUB (A, tB, ADD, of, c, cntrol[0]); 
