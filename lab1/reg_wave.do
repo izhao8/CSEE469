@@ -10,7 +10,7 @@ add wave -noupdate /regstim/WriteData
 add wave -noupdate /regstim/WriteRegister
 add wave -noupdate /regstim/clk
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {129338012 ps} 0}
+WaveRestoreCursors {{Cursor 1} {190202959 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 115
@@ -26,4 +26,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {479311457 ps}
+WaveRestoreZoom {0 ps} {501375 ns}

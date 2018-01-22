@@ -1,4 +1,4 @@
-//`include "register.v"
+`include "register.v"
 
 module tb_register();
 	reg [63:0] in;
