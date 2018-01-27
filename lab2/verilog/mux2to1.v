@@ -6,11 +6,11 @@ module mux2to1 (i1, i0, out, en);
 	wire ren;
 	wire [1:0] con;
 
-	not #50 ren0 (ren, en);
+	not (ren, en);
 
-	and #50 con0 (con[0], en, i1);
-	and #50 con1 (con[1], ren, i0);
+	and (con[0], en, i1);
+	and (con[1], ren, i0);
 	
-	or #50 out0 (out, con[0], con[1]);
+	or (out, con[0], con[1]);
 	
 endmodule

@@ -4,21 +4,21 @@ vlib work
 # Compile Verilog
 #     All Verilog files that are part of this design should have
 #     their own "vlog" line below.
-vlog "./regstim.v"
-vlog "./register.sv"
-vlog "./regfile.sv"
-vlog "./decoder.v"
-vlog "./D_FF.v"
-vlog "./multiplex.sv"
+vlog "./alustim.sv"
+vlog "./alu.v"
+vlog "./arithmetic.v"
+vlog "./mux5to1.sv"
+vlog "./mux2to1.v"
+vlog "./gatelogic.v"
 
 # Call vsim to invoke simulator
 #     Make sure the last item on the line is the name of the
 #     testbench module you want to execute.
-vsim -voptargs="+acc" -t 1ps -lib work regstim
+vsim -voptargs="+acc" -t 1ps -lib work alustim
 # Source the wave do file
 #     This should be the file that sets up the signal window for
 #     the module you are testing.
-do reg_wave.do
+do alu_wave.do
 
 # Set the window types
 view wave

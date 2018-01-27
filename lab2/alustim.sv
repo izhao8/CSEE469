@@ -31,12 +31,6 @@ module alustim();
 
 	alu dut (.A, .B, .cntrl, .result, .negative, .zero, .overflow, .carry_out);
 
-	//gtkwave initialization
-	initial begin
-		$dumpfile("resultAlustim.vcd");
-		$dumpvars(1, dut);
-	end
-
 	// Force %t's to print in a nice format.
 	initial $timeformat(-9, 2, " ns", 10);
 
@@ -45,7 +39,7 @@ module alustim();
 	initial begin
 	
 		$display("%t testing PASS_A operations", $time);
-		cntrl = ALU_PASS_B;
+		cntrl = ALU_XOR;
 		for (i=0; i<100; i++) begin
 			A = $random(); B = $random();
 			#(delay);
@@ -53,7 +47,7 @@ module alustim();
 		end
 		
 		$display("%t testing addition", $time);
-		cntrl = ALU_ADD;
+		cntrl = ALU_OR;
 		A = 64'h0000000000000001; B = 64'h0000000000000001;
 		#(delay);
 		assert(result == 64'h0000000000000002 && carry_out == 0 && overflow == 0 && negative == 0 && zero == 0);
