@@ -1,0 +1,223 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\ivanz\Documents\GitHub\CSEE469\lab2
+vadder
+Z1 !s100 gLlQW5gdY2oAAPz;=NgYQ0
+Z2 I^=M6Q<6RW8CXXNzWRGM5T3
+Z3 VbMgIlPJaE_nBONN:U9e0A2
+Z4 dC:\Users\ivanz\Documents\GitHub\CSEE469\lab2
+Z5 w1517012659
+Z6 8./arithmetic.v
+Z7 F./arithmetic.v
+L0 27
+Z8 OV;L;10.1e;51
+r1
+31
+Z9 !s108 1517015432.414000
+Z10 !s107 ./arithmetic.v|
+Z11 !s90 -reportprogress|300|./arithmetic.v|
+o-O0
+!i10b 1
+!s85 0
+!s101 -O0
+valu
+Z12 !s100 YaoI]YJBOB=e1k_:2XJ7N1
+Z13 If5HW4mQJcO;mLEU]N_@]63
+Z14 V3^YU>`Pa03KnJKWWzoUha0
+R4
+Z15 w1517012591
+Z16 8./alu.v
+Z17 F./alu.v
+L0 2
+R8
+r1
+31
+Z18 !s90 -reportprogress|300|./alu.v|
+o-O0
+Z19 !s108 1517015432.052000
+Z20 !s107 ./alu.v|
+!i10b 1
+!s85 0
+!s101 -O0
+valustim
+Z21 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z22 IU_M8UM2I]Tc0mUIX;hm>W0
+Z23 VH_Ig?HkCQ^?:eXj_MBFSl1
+Z24 !s105 alustim_sv_unit
+S1
+R4
+Z25 w1517015423
+Z26 8./alustim.sv
+Z27 F./alustim.sv
+L0 20
+R8
+r1
+31
+Z28 !s90 -reportprogress|300|./alustim.sv|
+o-O0
+Z29 !s100 S23Qdo88KgOCePa<?4RgP0
+Z30 !s108 1517015431.756000
+Z31 !s107 ./alustim.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+varithmetic
+Z32 !s100 7AJQ9IU9oiU@@ZI^M<L:A2
+Z33 IbmZM?RJ0kZ1PR@Q90lee`3
+Z34 VEk4RCn5TH_IOOZd=b4]2h0
+R4
+R5
+R6
+R7
+L0 2
+R8
+r1
+31
+R9
+R10
+R11
+o-O0
+!i10b 1
+!s85 0
+!s101 -O0
+vbitAND
+!i10b 1
+Z35 !s100 @Ec;[_]SN2h7k1IEIa^4;2
+Z36 I@ml[9_hB3f7oHN23JD:8X0
+Z37 VShhQbj9GJiA8cfC66SelQ1
+R4
+Z38 w1517012645
+Z39 8./gatelogic.v
+Z40 F./gatelogic.v
+L0 27
+R8
+r1
+!s85 0
+31
+Z41 !s108 1517015433.238000
+Z42 !s107 ./gatelogic.v|
+Z43 !s90 -reportprogress|300|./gatelogic.v|
+!s101 -O0
+o-O0
+Z44 nbit@a@n@d
+vbitOR
+!i10b 1
+Z45 !s100 YnhmVPW[iVJ]W:eAYCS?n2
+Z46 IR`Jh9USioGF=Cd<en3omo3
+Z47 Vmec;BFQK]>7zjl:SdohU?1
+R4
+R38
+R39
+R40
+L0 40
+R8
+r1
+!s85 0
+31
+R41
+R42
+R43
+!s101 -O0
+o-O0
+Z48 nbit@o@r
+vbitXOR
+!i10b 1
+Z49 !s100 NOk_7W2DNJOESNSZ3fYCm3
+Z50 I11Zj[`oE5Ro4E<^4d4Y6D0
+Z51 V<_6z_A798PP_30G=X@1cc2
+R4
+R38
+R39
+R40
+L0 53
+R8
+r1
+!s85 0
+31
+R41
+R42
+R43
+!s101 -O0
+o-O0
+Z52 nbit@x@o@r
+vcomplement
+Z53 !s100 <^NhcSPQGn>M8odeQd_NV0
+Z54 Io?>`8c0@;dj5VB5<25cVX0
+Z55 V7`R<FmONVH9jH>UIE]mV?2
+R4
+Z56 w1516926465
+Z57 8./complement.v
+Z58 F./complement.v
+L0 2
+R8
+r1
+31
+Z59 !s90 -reportprogress|300|./complement.v|
+o-O0
+Z60 !s108 1517012714.617000
+Z61 !s107 ./complement.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmux2to1
+Z62 !s100 1IbR?RE:g;SCUN;MX5aOV2
+Z63 I]AV4AaN0<>QcI6YZ@1UK]3
+Z64 Vg0m?gOED92d>Te75G0C6C0
+R4
+Z65 w1516926541
+Z66 8./mux2to1.v
+Z67 F./mux2to1.v
+L0 2
+R8
+r1
+31
+Z68 !s90 -reportprogress|300|./mux2to1.v|
+o-O0
+!i10b 1
+!s85 0
+Z69 !s108 1517015433.116000
+Z70 !s107 ./mux2to1.v|
+!s101 -O0
+vmux5to1
+R21
+Z71 !s100 gHLTcfKkT6j@b:7XkYbFZ2
+Z72 I[_BW6QR`hd0@R8ZWPlTdf3
+Z73 VQYb<L>0DWc?X]z7`B^9Zf0
+Z74 !s105 mux5to1_sv_unit
+S1
+R4
+Z75 w1516925183
+Z76 8./mux5to1.sv
+Z77 F./mux5to1.sv
+L0 2
+R8
+r1
+31
+Z78 !s90 -reportprogress|300|./mux5to1.sv|
+o-O0
+Z79 !s108 1517015432.771000
+Z80 !s107 ./mux5to1.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vzero
+!i10b 1
+Z81 !s100 LGl:`TIzQkKKl[Jk2k<J;0
+Z82 IL@lAhPa9HeTO]<:W3eVLK1
+Z83 Vm=okPQD<T^YCEf?_o<NiI3
+R4
+R38
+R39
+R40
+L0 2
+R8
+r1
+!s85 0
+31
+R41
+R42
+R43
+!s101 -O0
+o-O0

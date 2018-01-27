@@ -1,0 +1,1297 @@
+# Reading C:/altera/14.0/modelsim_ase/tcl/vsim/pref.tcl 
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alustim
+# 
+# Top level modules:
+# 	alustim
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module arithmetic
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	arithmetic
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux5to1
+# 
+# Top level modules:
+# 	mux5to1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux2to1
+# 
+# Top level modules:
+# 	mux2to1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module zero
+# -- Compiling module bitAND
+# -- Compiling module bitOR
+# -- Compiling module bitXOR
+# 
+# Top level modules:
+# 	zero
+# 	bitAND
+# 	bitOR
+# 	bitXOR
+# vsim -lib work -voptargs=\"+acc\" -t 1ps alustim 
+# Loading sv_std.std
+# Loading work.alustim
+# Loading work.alu
+# Loading work.bitAND
+# Loading work.bitOR
+# Loading work.bitXOR
+# Loading work.arithmetic
+# Loading work.mux5to1
+# Loading work.mux2to1
+# Loading work.zero
+# Loading work.adder
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+#    0.00 ns testing PASS_A operations
+# ** Error: Assertion error.
+#    Time: 100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 10 ms  Scope: alustim File: ./alustim.sv Line: 46
+# 10000000.00 ns testing addition
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alustim
+# 
+# Top level modules:
+# 	alustim
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module arithmetic
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	arithmetic
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux5to1
+# 
+# Top level modules:
+# 	mux5to1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux2to1
+# 
+# Top level modules:
+# 	mux2to1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module zero
+# -- Compiling module bitAND
+# -- Compiling module bitOR
+# -- Compiling module bitXOR
+# 
+# Top level modules:
+# 	zero
+# 	bitAND
+# 	bitOR
+# 	bitXOR
+# vsim -lib work -voptargs=\"+acc\" -t 1ps alustim 
+# Loading sv_std.std
+# Loading work.alustim
+# Loading work.alu
+# Loading work.bitAND
+# Loading work.bitOR
+# Loading work.bitXOR
+# Loading work.arithmetic
+# Loading work.mux5to1
+# Loading work.mux2to1
+# Loading work.zero
+# Loading work.adder
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+#    0.00 ns testing PASS_A operations
+# ** Error: Assertion error.
+#    Time: 100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 10 ms  Scope: alustim File: ./alustim.sv Line: 46
+# 10000000.00 ns testing addition
+# ** Error: Assertion error.
+#    Time: 10100 us  Scope: alustim File: ./alustim.sv Line: 53
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/ivanz/Documents/GitHub/CSEE469/lab2/alu_wave.do
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/ivanz/Documents/GitHub/CSEE469/lab2/alu_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alustim
+# 
+# Top level modules:
+# 	alustim
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module arithmetic
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	arithmetic
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux5to1
+# 
+# Top level modules:
+# 	mux5to1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux2to1
+# 
+# Top level modules:
+# 	mux2to1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module zero
+# -- Compiling module bitAND
+# -- Compiling module bitOR
+# -- Compiling module bitXOR
+# 
+# Top level modules:
+# 	zero
+# 	bitAND
+# 	bitOR
+# 	bitXOR
+# vsim -lib work -voptargs=\"+acc\" -t 1ps alustim 
+# Loading sv_std.std
+# Loading work.alustim
+# Loading work.alu
+# Loading work.bitAND
+# Loading work.bitOR
+# Loading work.bitXOR
+# Loading work.arithmetic
+# Loading work.mux5to1
+# Loading work.mux2to1
+# Loading work.zero
+# Loading work.adder
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+#    0.00 ns testing PASS_A operations
+# ** Error: Assertion error.
+#    Time: 100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 10 ms  Scope: alustim File: ./alustim.sv Line: 46
+# 10000000.00 ns testing addition
+# ** Error: Assertion error.
+#    Time: 10100 us  Scope: alustim File: ./alustim.sv Line: 53
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alustim
+# 
+# Top level modules:
+# 	alustim
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module arithmetic
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	arithmetic
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux5to1
+# 
+# Top level modules:
+# 	mux5to1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux2to1
+# 
+# Top level modules:
+# 	mux2to1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module zero
+# -- Compiling module bitAND
+# -- Compiling module bitOR
+# -- Compiling module bitXOR
+# 
+# Top level modules:
+# 	zero
+# 	bitAND
+# 	bitOR
+# 	bitXOR
+# vsim -lib work -voptargs=\"+acc\" -t 1ps alustim 
+# Loading sv_std.std
+# Loading work.alustim
+# Loading work.alu
+# Loading work.bitAND
+# Loading work.bitOR
+# Loading work.bitXOR
+# Loading work.arithmetic
+# Loading work.mux5to1
+# Loading work.mux2to1
+# Loading work.zero
+# Loading work.adder
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+#    0.00 ns testing PASS_A operations
+# ** Error: Assertion error.
+#    Time: 100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 10 ms  Scope: alustim File: ./alustim.sv Line: 46
+# 10000000.00 ns testing addition
+# ** Error: Assertion error.
+#    Time: 10100 us  Scope: alustim File: ./alustim.sv Line: 53
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alustim
+# 
+# Top level modules:
+# 	alustim
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module arithmetic
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	arithmetic
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux5to1
+# 
+# Top level modules:
+# 	mux5to1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux2to1
+# 
+# Top level modules:
+# 	mux2to1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module zero
+# -- Compiling module bitAND
+# -- Compiling module bitOR
+# -- Compiling module bitXOR
+# 
+# Top level modules:
+# 	zero
+# 	bitAND
+# 	bitOR
+# 	bitXOR
+# vsim -lib work -voptargs=\"+acc\" -t 1ps alustim 
+# Loading sv_std.std
+# Loading work.alustim
+# Loading work.alu
+# Loading work.bitAND
+# Loading work.bitOR
+# Loading work.bitXOR
+# Loading work.arithmetic
+# Loading work.mux5to1
+# Loading work.mux2to1
+# Loading work.zero
+# Loading work.adder
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+#    0.00 ns testing PASS_A operations
+# ** Error: Assertion error.
+#    Time: 100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 1900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 2900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 3900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 4900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 5900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 6900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 7900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 8900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9 ms  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9100 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9200 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9300 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9400 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9500 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9600 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9700 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9800 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 9900 us  Scope: alustim File: ./alustim.sv Line: 46
+# ** Error: Assertion error.
+#    Time: 10 ms  Scope: alustim File: ./alustim.sv Line: 46
+# 10000000.00 ns testing addition
+# ** Error: Assertion error.
+#    Time: 10100 us  Scope: alustim File: ./alustim.sv Line: 53
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/ivanz/Documents/GitHub/CSEE469/lab2/alu_wave.do
