@@ -17,7 +17,7 @@ module tb_arithmetic();
 	end
 
 	integer i, j;
-	integer seed = 1;
+	integer seed = 2;
 	initial begin
 		//checking subtraction
 		sub <= 1'b1;

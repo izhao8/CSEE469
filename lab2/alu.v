@@ -1,3 +1,6 @@
+//All testbenching and simulations were done using GTKwave and iVerilog.
+//Refer to the verilog folder for testbench modules
+
 `timescale 1ns/10ps
 module alu (A, B, cntrl, result, negative, zero, overflow, carry_out);
 	input [63:0] A, B;

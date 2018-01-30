@@ -39,7 +39,7 @@ module alustim();
 	initial begin
 	
 		$display("%t testing PASS_A operations", $time);
-		cntrl = ALU_XOR;
+		cntrl = ALU_SUBTRACT;
 		for (i=0; i<100; i++) begin
 			A = $random(); B = $random();
 			#(delay);

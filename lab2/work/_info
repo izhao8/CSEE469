@@ -15,7 +15,7 @@ L0 27
 Z8 OV;L;10.1e;51
 r1
 31
-Z9 !s108 1517015432.414000
+Z9 !s108 1517274021.716000
 Z10 !s107 ./arithmetic.v|
 Z11 !s90 -reportprogress|300|./arithmetic.v|
 o-O0
@@ -23,32 +23,32 @@ o-O0
 !s85 0
 !s101 -O0
 valu
-Z12 !s100 YaoI]YJBOB=e1k_:2XJ7N1
-Z13 If5HW4mQJcO;mLEU]N_@]63
+Z12 !s100 6FmBPJHXe^QknEVAU^oiX0
+Z13 IL9i4lYZY_TRZZRHP4n4LK2
 Z14 V3^YU>`Pa03KnJKWWzoUha0
 R4
-Z15 w1517012591
+Z15 w1517273107
 Z16 8./alu.v
 Z17 F./alu.v
-L0 2
+L0 5
 R8
 r1
 31
 Z18 !s90 -reportprogress|300|./alu.v|
 o-O0
-Z19 !s108 1517015432.052000
+Z19 !s108 1517274021.552000
 Z20 !s107 ./alu.v|
 !i10b 1
 !s85 0
 !s101 -O0
 valustim
 Z21 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-Z22 IU_M8UM2I]Tc0mUIX;hm>W0
+Z22 I>kJm_oa1:z1BMl[6>HeNW2
 Z23 VH_Ig?HkCQ^?:eXj_MBFSl1
 Z24 !s105 alustim_sv_unit
 S1
 R4
-Z25 w1517015423
+Z25 w1517274017
 Z26 8./alustim.sv
 Z27 F./alustim.sv
 L0 20
@@ -57,8 +57,8 @@ r1
 31
 Z28 !s90 -reportprogress|300|./alustim.sv|
 o-O0
-Z29 !s100 S23Qdo88KgOCePa<?4RgP0
-Z30 !s108 1517015431.756000
+Z29 !s100 ;^>j16JE;Ec0YX89_E48e2
+Z30 !s108 1517274021.345000
 Z31 !s107 ./alustim.sv|
 !i10b 1
 !s85 0
@@ -96,7 +96,7 @@ R8
 r1
 !s85 0
 31
-Z41 !s108 1517015433.238000
+Z41 !s108 1517274022.539000
 Z42 !s107 ./gatelogic.v|
 Z43 !s90 -reportprogress|300|./gatelogic.v|
 !s101 -O0
@@ -177,7 +177,7 @@ Z68 !s90 -reportprogress|300|./mux2to1.v|
 o-O0
 !i10b 1
 !s85 0
-Z69 !s108 1517015433.116000
+Z69 !s108 1517274022.330000
 Z70 !s107 ./mux2to1.v|
 !s101 -O0
 vmux5to1
@@ -197,7 +197,7 @@ r1
 31
 Z78 !s90 -reportprogress|300|./mux5to1.sv|
 o-O0
-Z79 !s108 1517015432.771000
+Z79 !s108 1517274022.042000
 Z80 !s107 ./mux5to1.sv|
 !i10b 1
 !s85 0
