@@ -10,7 +10,7 @@ module alu (A, B, cntrl, result, negative, zero, overflow, carry_out);
 	output [63:0] result;
 
 	wire [63:0] tB, ADD, AND, XOR, OR;
-	wire t0, c, of;
+	wire t0, c, of, ncntrl;
 
 	bitAND ANDbit (A, B, AND);
 	bitOR ORbit (A, B, OR);
@@ -20,7 +20,9 @@ module alu (A, B, cntrl, result, negative, zero, overflow, carry_out);
 	arithmetic ADDorSUB (A, B, ADD, of, c, cntrl[0]); 
 	mux5to1 choose (ADD, AND, XOR, OR, B, result, cntrl);
 
-	and #50 (t0, cntrl[0], cntrl[1]);
+
+	not #50 (ncntrl, cntrl[2]);
+	and #50 (t0, ncntrl, cntrl[1]);
 	mux2to1 carry (c, 1'b0, carry_out, t0);
 	mux2to1 flow (of, 1'b0, overflow, t0);
 	zero check (result, zero);
