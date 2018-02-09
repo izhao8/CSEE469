@@ -17,7 +17,7 @@ module tb_control();
 
 	integer i;
 	initial begin
-		instruct <= 11'b10101011000;
+		instruct <= 11'b11001011000;
 		#10;
 		instruct <= 11'b11111000010;
 		#10;

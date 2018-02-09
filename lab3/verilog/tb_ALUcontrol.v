@@ -1,7 +1,7 @@
 `include "ALUcontrol.v"
 
 module tb_ALUcontrol();
-	wire [2:0] out;
+	wire [3:0] out;
 
 	reg [10:0] instruct;
 	reg [1:0] Op;
@@ -17,7 +17,7 @@ module tb_ALUcontrol();
 	initial begin
 		for (i = 0; i < 4; i = i + 1) begin
 			Op <= i;
-			instruct <= 11'b1xx01x000;
+			instruct <= 11'b1xx0101x000;
 			#5;
 			instruct <= 11'b11111000010;
 			#5;

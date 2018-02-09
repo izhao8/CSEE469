@@ -1,5 +1,5 @@
 $date
-	Fri Feb 09 12:10:05 2018
+	Fri Feb 09 14:02:24 2018
 $end
 $version
 	Icarus Verilog
@@ -11,80 +11,84 @@ $scope module tb_ALUcontrol $end
 $scope module dut $end
 $var wire 2 ! Op [1:0] $end
 $var wire 11 " instruct [10:0] $end
-$var wire 2 # t0 [1:0] $end
-$var wire 3 $ out [2:0] $end
-$var wire 8 % F [7:0] $end
+$var wire 1 # nOp $end
+$var wire 2 $ t0 [1:0] $end
+$var wire 4 % out [3:0] $end
+$var wire 8 & F [7:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b1xx %
-b0 $
-b0x #
-b1xx01x000 "
+b1xx010 &
+b10 %
+b0x $
+1#
+b1xx0101x000 "
 b0 !
 $end
 #500
-b1 #
-b11111 %
+b1 $
+b0 %
+b111110 &
 b11111000010 "
 #1000
 b11111000000 "
 #1500
-b0 #
-b10110 %
+b101101 &
 b10110100xxx "
 #2000
-b0x #
-b100 $
-b1xx %
-b1xx01x000 "
+b0x $
+0#
+b110 %
+b1xx010 &
+b1xx0101x000 "
 b1 !
 #2500
-b1 #
-b11111 %
+b1 $
+b100 %
+b111110 &
 b11111000010 "
 #3000
 b11111000000 "
 #3500
-b0 #
-b10110 %
+b101101 &
 b10110100xxx "
 #4000
-bx #
-bx0x $
-b1xx %
-b1xx01x000 "
+b1x $
+1#
+b10x %
+b1xx010 &
+b1xx0101x000 "
 b10 !
 #4500
-b101 $
-b11 #
-b11111 %
+b101 %
+b11 $
+b111110 &
 b11111000010 "
 #5000
 b11111000000 "
 #5500
-b100 $
-b10 #
-b10110 %
+b1 %
+b1 $
+b101101 &
 b10110100xxx "
 #6000
-b10x $
-bx #
-b1xx %
-b1xx01x000 "
+b1x $
+0#
+b10x %
+b1xx010 &
+b1xx0101x000 "
 b11 !
 #6500
-b101 $
-b11 #
-b11111 %
+b101 %
+b11 $
+b111110 &
 b11111000010 "
 #7000
 b11111000000 "
 #7500
-b100 $
-b10 #
-b10110 %
+b1 $
+b101101 &
 b10110100xxx "
 #8000
