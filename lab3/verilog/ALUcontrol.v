@@ -1,11 +1,10 @@
 `timescale 1ns/10ps
 
 module ALUcontrol(instruct, Op, out);
-	
+	output [2:0] out;
+
 	input [10:0] instruct;
 	input [1:0] Op;
-
-	output [2:0] out;
 
 	wire [5:0] F;
 
