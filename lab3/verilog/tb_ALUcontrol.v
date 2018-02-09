@@ -13,4 +13,19 @@ module tb_ALUcontrol();
 		$dumpvars(1, dut);
 	end
 
+	integer i, j;
+	initial begin
+		for (i = 0; i < 4; i = i + 1) begin
+			Op <= i;
+			instruct <= 11'b1xx01x000;
+			#5;
+			instruct <= 11'b11111000010;
+			#5;
+			instruct <= 11'b11111000000;
+			#5;
+			instruct <= 11'b10110100xxx;
+			#5;	
+		end		
+		$stop;
+	end
 endmodule

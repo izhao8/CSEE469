@@ -15,6 +15,17 @@ module tb_control();
 		$dumpvars(1, dut);
 	end
 
-	
+	integer i;
+	initial begin
+		instruct <= 11'b10101011000;
+		#10;
+		instruct <= 11'b11111000010;
+		#10;
+		instruct <= 11'b11111000000;
+		#10;
+		instruct <= 11'b10110100010;
+		#10;					
+		$stop;
+	end
 
 endmodule

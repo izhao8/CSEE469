@@ -20,4 +20,19 @@ module tb_programCounter();
 		forever #(ClockDelay/2) clk <= ~clk;
 	end
 
+	integer i;
+	initial begin
+		reset <=1; PCsrc <= 0; @(posedge clk);
+		reset <=0;
+		for (i = 0; i < 11; i++) begin
+			in <= i*64'h12FF3CA146;
+			@(posedge clk);
+		end
+		PCsrc <= 1;
+		repeat(10) begin
+			@(posedge clk);
+		end
+		$stop;
+	end
+
 endmodule

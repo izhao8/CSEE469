@@ -1,5 +1,5 @@
-`include "D_FF.v"
-`include "mux2to1.v"
+ `include "D_FF.v"
+ `include "mux2to1.v"
 `timescale 1ns/10ps
 
 module register (in, out, en, clk);
