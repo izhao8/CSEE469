@@ -1,5 +1,6 @@
 `include "fullADD.v"
 `timescale 1ns/10ps
+
 module arithmetic (A, B, out, of, C, sub);
 	output [63:0] out;
 	output of, C;

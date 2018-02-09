@@ -1,7 +1,7 @@
 `include "arithmetic.v"
 `include "mux5to1.v"
 `include "gateLogic.v"
-//`include "mux2to1.v"
+`timescale 1ns/10ps
 
 module alu (A, B, cntrol, result, negative, zero, overflow, carry_out);
 	input [63:0] A, B;
@@ -20,8 +20,8 @@ module alu (A, B, cntrol, result, negative, zero, overflow, carry_out);
 	arithmetic ADDorSUB (A, B, ADD, of, c, cntrol[0]); 
 	mux5to1 choose (ADD, AND, XOR, OR, B, result, cntrol);
 
-	not (ncntrol, cntrol[2]);
-	and (t0, ncntrol, cntrol[1]);
+	not #50 (ncntrol, cntrol[2]);
+	and #50 (t0, ncntrol, cntrol[1]);
 	mux2to1 carry (c, 1'b0, carry_out, t0);
 	mux2to1 flow (of, 1'b0, overflow, t0);
 	zero check (result, zero);
