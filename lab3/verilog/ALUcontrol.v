@@ -13,21 +13,6 @@ module ALUcontrol(instruct, Op, out);
 	wire [1:0] t0;
 	wire nOp;
 
-	// always @(*) begin
-	// 	casez(Op)
-	// 		2'b00: out = 3'b010;
-	// 		2'bZ1: out = 3'b111;
-	// 		2'b1Z: if (instruct[9] == 0 && instruct[3] == 1)
-	// 					out = 3'b010;
-	// 				else if (instruct[9] == 1 && instruct[3] == 1)
-	// 					out = 3'b110;
-	// 				else if (instruct[8])
-	// 					out = 3'b001;
-	// 				else 
-	// 					out = 0;
-	// 	endcase
-	// end
-
 	not (nOp, Op[0]);
 
 	//Operation 0

@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at programCounter.v(9): object "PC4" differs only in case from object "pc4" in the same scope
+Info (10281): Verilog HDL Declaration information at alu.v(10): object "LSL" differs only in case from object "lsl" in the same scope
+Info (10281): Verilog HDL Declaration information at alu.v(10): object "LSR" differs only in case from object "lsr" in the same scope

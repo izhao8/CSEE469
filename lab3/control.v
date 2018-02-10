@@ -21,7 +21,7 @@ module control (instruct, Reg2Loc, Branch, MemRead,
 	//B-format: B, B.LT
 
 	always @(*) begin
-		if (instruct > 160 && instruct < 191) begin //B -- CHECK
+		if (instruct >= 160 && instruct <= 191) begin //B -- CHECK
 			Reg2Loc = 1;
 			ALUSrc = 0;
 			MemtoReg = 0;
@@ -31,7 +31,7 @@ module control (instruct, Reg2Loc, Branch, MemRead,
 			Branch = 1;
 			ALUOp = 2'b01;
 		end
-		else if (instruct > 672 && instruct < 679) begin //B.cond
+		else if (instruct >= 672 && instruct <= 679) begin //B.cond
 			
 		end
 		else if (instruct == 1984) begin //STUR
@@ -52,9 +52,9 @@ module control (instruct, Reg2Loc, Branch, MemRead,
 			MemRead = 1;
 			MemWrite = 0;
 			Branch = 0;
-			ALUOp = 2'b0;
+			ALUOp = 2'b00;
 		end
-		else if (instruct > 1440 && instruct < 1447) begin //CBZ
+		else if (instruct >= 1440 && instruct <= 1447) begin //CBZ
 			Reg2Loc = 1;
 			ALUSrc = 0;
 			MemtoReg = 1'bx;
@@ -64,7 +64,7 @@ module control (instruct, Reg2Loc, Branch, MemRead,
 			Branch = 1;
 			ALUOp = 2'b01;
 		end
-		else if (instruct > 1160 && instruct < 1161) begin // ADDI
+		else if (instruct >= 1160 && instruct <= 1161) begin // ADDI
 			
 		end
 		else if (instruct == 1690) begin //LSR
@@ -115,7 +115,7 @@ module control (instruct, Reg2Loc, Branch, MemRead,
 			MemRead = 0;
 			MemWrite = 1;
 			Branch = 0;
-			ALUOp = 2'b10;
+			ALUOp = 2'b11;
 		end
 	end
 endmodule
