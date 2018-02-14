@@ -22,7 +22,7 @@ module zero (in, out);
 		end
 	endgenerate
 
-	nor (out, t1[0], t1[1], t1[2], t1[3]);
+	nor #50 (out, t1[0], t1[1], t1[2], t1[3]);
 endmodule
 
 module bitAND (A, B, out);

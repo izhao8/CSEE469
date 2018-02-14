@@ -9,15 +9,15 @@ module CPU (clk, reset);
 	logic negative, zero, overflow, carry_out;
 	logic [4:0] Read2;
 	logic [1:0] ALUOp;
-	logic ALUSrc;
+	logic [2:0] ALUSrc;
 	logic [63:0] ReadData1, ReadData2, WriteData, Extend, alusrc, 
-						result, dataread, addi, condB, uncondB;
+						result, dataread, addi, condB, uncondB, ldst;
 	logic [3:0] control;		
 	input logic clk, reset;
 	
 	and #50 (PCsr, zero, Branch);
 	
-	programCounter grabAddr (PCaddr, Branch, addr, clk, reset);
+	programCounter grabAddr (PCaddr, PCsr, addr, clk, reset);
 	instructmem instruc (addr, instruction, clk);
 	
 	control signals (instruction[31:21], Reg2Loc, Branch, MemRead, 
@@ -41,6 +41,7 @@ module CPU (clk, reset);
 	signExtend #(.width(26)) extend (instruction[25:0], Extend); //Branching
 	signExtend #(.width(12)) addI (instruction[21:10], addi); //for ADDI instruction
 	signExtend #(.width(19)) cond (instruction[23:5], uncondB); //Uncond Branching
+	signExtend #(.width(9)) ldurstur (instruction[20:12], ldst); //LDUR and STUR
 	
 	//Unconditional Branching
 	generate
@@ -51,26 +52,28 @@ module CPU (clk, reset);
 	endgenerate 
 	
 	//ALUsrc mux
-	generate
-		genvar j;
-		for (j = 0; j < 64; j++) begin : aluin
-			mux2to1 sel1 (addi[j], ReadData2[j], alusrc[j], ALUSrc);
-		end
-	endgenerate
+//	generate
+//		genvar j;
+//		for (j = 0; j < 64; j++) begin : aluin
+//			mux2to1 sel1 (addi[j], ReadData2[j], alusrc[j], ALUSrc);
+//		end
+//	endgenerate
 
-//	always_ff @(posedge clk) begin
-//		if(reset)
-//			alusrc <=0;
-//		else if (ALUSrc == 3'b000)
-//			alusrc <= addi;
-//		else if (ALUSrc == 3'b001)
-//			alusrc <= Extend;
-//		else if (ALUSrc == 3'b011)
-//			alusrc <= uncondB;
-//		else 
-//			alusrc <= ReadData2;
-//	end
-//	
+	always_comb begin
+		if(reset)
+			alusrc <= 0;
+		else if (ALUSrc == 3'b010)
+			alusrc <= addi;
+		else if (ALUSrc == 3'b001)
+			alusrc <= 64'b0;
+		else if (ALUSrc == 3'b011)
+			alusrc <= uncondB;
+		else if (ALUSrc == 3'b100)
+			alusrc <= ldst;
+		else 
+			alusrc <= ReadData2;
+	end
+	
 	alu magic (ReadData1, alusrc, control, result, negative, zero, overflow, carry_out, instruction[15:10]); 
 	
 	datamem data (result, MemWrite, MemRead, ReadData2, clk, 4'd8, dataread);
