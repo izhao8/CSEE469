@@ -11,6 +11,7 @@ entity control is
         MemWrite        : out    vl_logic;
         ALUSrc          : out    vl_logic_vector(2 downto 0);
         RegWrite        : out    vl_logic;
-        UncondB         : out    vl_logic
+        UncondB         : out    vl_logic;
+        B               : out    vl_logic
     );
 end control;

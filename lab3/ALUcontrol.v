@@ -22,7 +22,7 @@ module ALUcontrol(instruct, Op, out);
 						out = 4'b0010;
 					else if (instruct == 1986 || instruct == 1984) //LDUR & STUR
 						out = 4'b0010;
-			2'b11: out = 4'b1000;
+			2'b11: out = 4'b1000; //MUL
 		endcase
 	end
 

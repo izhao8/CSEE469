@@ -5,29 +5,34 @@ module CPU (clk, reset);
 	logic [63:0] PCaddr;
 	logic [31:0] instruction;
 	logic RegWrite, Reg2Loc, Branch, MemWrite, 
-			MemtoReg, MemRead, PCsr, UncondB;
-	logic negative, zero, overflow, carry_out;
+			MemtoReg, MemRead, PCsr, UncondB, negwire, reggin;
+	logic negative, zero, overflow, carry_out, B, Blt, Bout;
 	logic [4:0] Read2;
 	logic [1:0] ALUOp;
 	logic [2:0] ALUSrc;
 	logic [63:0] ReadData1, ReadData2, WriteData, Extend, alusrc, 
-						result, dataread, addi, condB, uncondB, ldst;
+						result, dataread, addi, condB, uncondB;
 	logic [3:0] control;		
 	input logic clk, reset;
 	
-	and #50 (PCsr, zero, Branch);
+	//Branch signals 
+	and #50 (B, zero, Branch); //B and CBZ
+	and #50 (Blt, Branch, negwire); //B.LT
+	mux2to1 sel2 (Blt, B, PCsr, Bout);
+	lsl shift (condB, PCaddr);
 	
+	//Program counter and instruction modules
 	programCounter grabAddr (PCaddr, PCsr, addr, clk, reset);
 	instructmem instruc (addr, instruction, clk);
 	
+	//Main control and ALU control signal modules
 	control signals (instruction[31:21], Reg2Loc, Branch, MemRead, 
-				MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite, UncondB);
-				
+				MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite, UncondB, Bout);			
 	ALUcontrol signal (instruction[31:21], ALUOp, control);
 	
-	lsl shift (condB, PCaddr);
+//	lsl shift (condB, PCaddr);
 	
-	//reg input
+	//Register input decider
 	generate
 		genvar i;
 		for (i = 0; i < 5; i++) begin : RB
@@ -35,13 +40,15 @@ module CPU (clk, reset);
 		end
 	endgenerate
 	
+	//Register module
 	regfile reading (instruction[9:5], Read2, WriteData, ReadData1, ReadData2,
 							instruction[4:0], RegWrite, clk);
-							
+	
+	//Sign Extending module for multiple instructions using parameters
 	signExtend #(.width(26)) extend (instruction[25:0], Extend); //Branching
 	signExtend #(.width(12)) addI (instruction[21:10], addi); //for ADDI instruction
 	signExtend #(.width(19)) cond (instruction[23:5], uncondB); //Uncond Branching
-	signExtend #(.width(9)) ldurstur (instruction[20:12], ldst); //LDUR and STUR
+	//signExtend #(.width(9)) ldurstur (instruction[20:12], ldst); //LDUR and STUR
 	
 	//Unconditional Branching
 	generate
@@ -59,6 +66,7 @@ module CPU (clk, reset);
 //		end
 //	endgenerate
 
+	//ALU input decider
 	always_comb begin
 		if(reset)
 			alusrc <= 0;
@@ -68,8 +76,8 @@ module CPU (clk, reset);
 			alusrc <= 64'b0;
 		else if (ALUSrc == 3'b011)
 			alusrc <= uncondB;
-		else if (ALUSrc == 3'b100)
-			alusrc <= ldst;
+//		else if (ALUSrc == 3'b100)
+//			alusrc <= ldst;
 		else 
 			alusrc <= ReadData2;
 	end
@@ -86,7 +94,13 @@ module CPU (clk, reset);
 		end
 	endgenerate
 	
+	//Stores negative flag for B.LT
+	mux2to1 choose (negative, negwire, reggin, (control == 4'b011));
+	D_FF negFlag (negwire, reggin, 1'b0, clk);
 endmodule
+
+
+
 
 module CPU_testbench();
 	logic clk, reset;
