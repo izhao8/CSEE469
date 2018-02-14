@@ -1,8 +1,9 @@
 `timescale 1ns/10ps
 
-module alu (A, B, cntrol, result, negative, zero, overflow, carry_out);
+module alu (A, B, cntrl, result, negative, zero, overflow, carry_out, shift);
 	input [63:0] A, B;
-	input [3:0] cntrol;
+	input [3:0] cntrl;
+	input [5:0] shift;
 
 	output negative, zero, overflow, carry_out;
 	output [63:0] result;
@@ -13,15 +14,15 @@ module alu (A, B, cntrol, result, negative, zero, overflow, carry_out);
 	bitAND ANDbit (A, B, AND);
 	bitOR ORbit (A, B, OR);
 	bitXOR XORbit (A, B, XOR);
-	mult multiply (A, B, 1, MUL_L, MUL_H);
-	shifter lsl (A, 0, 6'd2, LSL);
-	shifter lsr (A, 1, 6'd2, LSR);
+	mult multiply (A, B, 1'b1, MUL_L, MUL_H);
+	shifter lsl (A, 1'b0, shift, LSL);
+	shifter lsr (A, 1'b1, shift, LSR);
 
-	arithmetic ADDorSUB (A, B, ADD, of, c, cntrol[0]); 
-	mux5to1 choose (ADD, AND, XOR, OR, B, MUL_L, LSL, LSR, result, cntrol);
+	arithmetic ADDorSUB (A, B, ADD, of, c, cntrl[0]); 
+	mux5to1 choose (ADD, AND, XOR, OR, B, MUL_L, LSL, LSR, result, cntrl);
 
-	not #50 (ncntrl, cntrol[2]);
-	and #50 (t0, ncntrl, cntrol[1]);
+	not #50 (ncntrl, cntrl[2]);
+	and #50 (t0, ncntrl, cntrl[1]);
 	
 	mux2to1 carry (c, 1'b0, carry_out, t0);
 	mux2to1 flow (of, 1'b0, overflow, t0);

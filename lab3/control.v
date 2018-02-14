@@ -1,12 +1,13 @@
 `timescale 1ns/10ps
 module control (instruct, Reg2Loc, Branch, MemRead, 
-				MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite);
+				MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite, UncondB);
 
 	input [10:0] instruct;
 
 	output reg RegWrite, Reg2Loc, Branch, MemWrite, 
-				MemtoReg, ALUSrc, MemRead;
+				MemtoReg, MemRead, UncondB;
 	output reg [1:0] ALUOp;
+	output reg  ALUSrc;
 
 	wire [5:0] temp;
 	wire[7:0] tin0;
@@ -23,63 +24,69 @@ module control (instruct, Reg2Loc, Branch, MemRead,
 	always @(*) begin
 		if (instruct >= 160 && instruct <= 191) begin //B
 			Reg2Loc = 1'bx;
-			ALUSrc = 1'bx;
+			ALUSrc = 1;
 			MemtoReg = 1'bx;
 			RegWrite = 0;
 			MemRead = 1'bx;
 			MemWrite = 0;
 			Branch = 1;
 			ALUOp = 2'bx;
+			UncondB = 1;
 		end
 		else if (instruct >= 672 && instruct <= 679) begin //B.LT
 			Reg2Loc = 1'b0;
-			ALUSrc = 1'b0;
-			MemtoReg = 1'bx;
+			ALUSrc = 1;
+			MemtoReg = 1'b1;
 			RegWrite = 0;
-			MemRead = 1'bx;
+			MemRead = 1'b1;
 			MemWrite = 0;
 			Branch = 1;
 			ALUOp = 2'bx;
+			UncondB = 1;
 		end
 		else if (instruct == 1984) begin //STUR
 			Reg2Loc = 1;
-			ALUSrc = 1;
-			MemtoReg = 1'bx;
-			RegWrite = 0;
+			ALUSrc = 0;
+			MemtoReg = 0;
+			RegWrite = 1;
 			MemRead = 0;
-			MemWrite = 1;
+			MemWrite = 0;
 			Branch = 0;
 			ALUOp = 2'b0;
+			UncondB = 1'bx;
 		end
 		else if (instruct == 1986) begin //LDUR
-			Reg2Loc = 1'bx;
-			ALUSrc = 1;
+			Reg2Loc = 1'b1;
+			ALUSrc = 0;
 			MemtoReg = 1;
 			RegWrite = 1;
 			MemRead = 1;
 			MemWrite = 0;
 			Branch = 0;
 			ALUOp = 2'b00;
+			UncondB = 1'bx;
 		end
 		else if (instruct >= 1440 && instruct <= 1447) begin //CBZ
-			Reg2Loc = 1;
-			ALUSrc = 0;
+			Reg2Loc = 0;
+			ALUSrc = 1;
 			MemtoReg = 1'bx;
 			RegWrite = 0;
 			MemRead = 0;
 			MemWrite = 0;
 			Branch = 1;
-			ALUOp = 2'b01;
+			ALUOp = 2'b00;
+			UncondB = 0;
 		end
 		else if (instruct >= 1160 && instruct <= 1161) begin // ADDI
-			Reg2Loc = 1;
-			ALUSrc = 0;
-			MemtoReg = 1'b0;
+			Reg2Loc = 1'b1;
+			ALUSrc = 1;
+			MemtoReg = 0;
 			RegWrite = 1;
 			MemRead = 0;
 			MemWrite = 0;
 			Branch = 0;
 			ALUOp = 2'b10;
+			UncondB = 1'bx;
 		end
 		else if (instruct == 1690) begin //LSR
 			Reg2Loc = 0;
@@ -90,6 +97,7 @@ module control (instruct, Reg2Loc, Branch, MemRead,
 			MemWrite = 1;
 			Branch = 0;
 			ALUOp = 2'b10;
+			UncondB = 1'bx;
 		end
 		else if (instruct == 1691) begin //LSL
 			Reg2Loc = 0;
@@ -100,36 +108,40 @@ module control (instruct, Reg2Loc, Branch, MemRead,
 			MemWrite = 1;
 			Branch = 0;
 			ALUOp = 2'b10;
+			UncondB = 1'bx;
 		end
 		else if (instruct == 1880) begin //SUBS
-			Reg2Loc = 0;
+			Reg2Loc = 1;
 			ALUSrc = 0;
 			MemtoReg = 0;
 			RegWrite = 1;
 			MemRead = 0;
-			MemWrite = 1;
+			MemWrite = 0;
 			Branch = 0;
 			ALUOp = 2'b10;
+			UncondB = 1'bx;
 		end
 		else if (instruct == 1368) begin //ADDS
-			Reg2Loc = 0;
+			Reg2Loc = 1;
 			ALUSrc = 0;
 			MemtoReg = 0;
 			RegWrite = 1;
 			MemRead = 0;
-			MemWrite = 1;
+			MemWrite = 0;
 			Branch = 0;
 			ALUOp = 2'b10;
+			UncondB = 1'bx;
 		end
 		else begin //MUL
 			Reg2Loc = 0;
-			ALUSrc = 0;
+			ALUSrc = 1;
 			MemtoReg = 0;
 			RegWrite = 1;
 			MemRead = 0;
 			MemWrite = 1;
 			Branch = 0;
 			ALUOp = 2'b11;
+			UncondB = 1'bx;
 		end
 	end
 endmodule

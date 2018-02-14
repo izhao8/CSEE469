@@ -25,19 +25,19 @@ module arithmetic (A, B, out, of, C, sub);
 
 endmodule
 
-// module adder (A, B, Ci, Co, S);
-// 	output S, Co;
+module adder (A, B, Ci, Co, S);
+ 	output S, Co;
 
-// 	input A, B, Ci;
+ 	input A, B, Ci;
 
-// 	wire temp0;
-// 	wire [1:0] temp1;
+ 	wire temp0;
+ 	wire [1:0] temp1;
 
-// 	xor (temp0, A, B);
-// 	xor (S, temp0, Ci);
+ 	xor (temp0, A, B);
+ 	xor (S, temp0, Ci);
 
-// 	and (temp1[0], Ci, temp0);
-// 	and (temp1[1], A, B);
+ 	and (temp1[0], Ci, temp0);
+ 	and (temp1[1], A, B);
 
-// 	or (Co, temp1[0], temp1[1]);
-// endmodule
+ 	or (Co, temp1[0], temp1[1]);
+endmodule

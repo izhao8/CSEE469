@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Tue Feb 13 14:18:46 2018
+Tue Feb 13 19:25:48 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Feb 13 14:18:46 2018               ;
+; Analysis & Synthesis Status ; Failed - Tue Feb 13 19:25:48 2018               ;
 ; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
 ; Revision Name               ; CPU                                             ;
 ; Top-level Entity Name       ; CPU                                             ;
@@ -161,10 +161,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
-    Info: Processing started: Tue Feb 13 14:18:34 2018
+    Info: Processing started: Tue Feb 13 19:25:31 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file regstim.sv
+    Info (12023): Found entity 1: regstim File: C:/Users/qqzaho/Desktop/CSEE469/lab3/regstim.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file alustim.sv
+    Info (12023): Found entity 1: alustim File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alustim.sv Line: 20
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
     Info (12023): Found entity 1: regfile File: C:/Users/qqzaho/Desktop/CSEE469/lab3/regfile.sv Line: 1
 Info (12021): Found 4 design units, including 4 entities, in source file multiplex.sv
@@ -185,7 +189,7 @@ Info (12021): Found 2 design units, including 2 entities, in source file datamem
     Info (12023): Found entity 2: datamem_testbench File: C:/Users/qqzaho/Desktop/CSEE469/lab3/datamem.sv Line: 70
 Info (12021): Found 2 design units, including 2 entities, in source file submodules.v
     Info (12023): Found entity 1: signExtend File: C:/Users/qqzaho/Desktop/CSEE469/lab3/submodules.v Line: 3
-    Info (12023): Found entity 2: lsl File: C:/Users/qqzaho/Desktop/CSEE469/lab3/submodules.v Line: 11
+    Info (12023): Found entity 2: lsl File: C:/Users/qqzaho/Desktop/CSEE469/lab3/submodules.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
     Info (12023): Found entity 1: register File: C:/Users/qqzaho/Desktop/CSEE469/lab3/register.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file programcounter.v
@@ -199,8 +203,6 @@ Info (12021): Found 4 design units, including 4 entities, in source file gatelog
     Info (12023): Found entity 2: bitAND File: C:/Users/qqzaho/Desktop/CSEE469/lab3/gateLogic.v Line: 28
     Info (12023): Found entity 3: bitOR File: C:/Users/qqzaho/Desktop/CSEE469/lab3/gateLogic.v Line: 41
     Info (12023): Found entity 4: bitXOR File: C:/Users/qqzaho/Desktop/CSEE469/lab3/gateLogic.v Line: 54
-Info (12021): Found 1 design units, including 1 entities, in source file fulladd.v
-    Info (12023): Found entity 1: adder File: C:/Users/qqzaho/Desktop/CSEE469/lab3/fullADD.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file d_ff.v
     Info (12023): Found entity 1: D_FF File: C:/Users/qqzaho/Desktop/CSEE469/lab3/D_FF.v Line: 1
 Info (12021): Found 3 design units, including 3 entities, in source file decoder.v
@@ -209,27 +211,27 @@ Info (12021): Found 3 design units, including 3 entities, in source file decoder
     Info (12023): Found entity 3: decoder2to4 File: C:/Users/qqzaho/Desktop/CSEE469/lab3/decoder.v Line: 51
 Info (12021): Found 1 design units, including 1 entities, in source file control.v
     Info (12023): Found entity 1: control File: C:/Users/qqzaho/Desktop/CSEE469/lab3/control.v Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file arithmetic.v
+Info (12021): Found 2 design units, including 2 entities, in source file arithmetic.v
     Info (12023): Found entity 1: arithmetic File: C:/Users/qqzaho/Desktop/CSEE469/lab3/arithmetic.v Line: 3
+    Info (12023): Found entity 2: adder File: C:/Users/qqzaho/Desktop/CSEE469/lab3/arithmetic.v Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file alucontrol.v
     Info (12023): Found entity 1: ALUcontrol File: C:/Users/qqzaho/Desktop/CSEE469/lab3/ALUcontrol.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
     Info (12023): Found entity 1: alu File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file cpu.sv
+Info (12021): Found 2 design units, including 2 entities, in source file cpu.sv
     Info (12023): Found entity 1: CPU File: C:/Users/qqzaho/Desktop/CSEE469/lab3/CPU.sv Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at CPU.sv(23): created implicit net for "ALUOp" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/CPU.sv Line: 23
-Critical Warning (10846): Verilog HDL Instantiation warning at CPU.sv(26): instance has no name File: C:/Users/qqzaho/Desktop/CSEE469/lab3/CPU.sv Line: 26
+    Info (12023): Found entity 2: CPU_testbench File: C:/Users/qqzaho/Desktop/CSEE469/lab3/CPU.sv Line: 84
 Info (12127): Elaborating entity "CPU" for the top level hierarchy
 Info (12128): Elaborating entity "programCounter" for hierarchy "programCounter:grabAddr" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/CPU.sv Line: 19
 Info (12128): Elaborating entity "alu" for hierarchy "programCounter:grabAddr|alu:bcond" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/programCounter.v Line: 12
-Info (12128): Elaborating entity "bitAND" for hierarchy "programCounter:grabAddr|alu:bcond|bitAND:ANDbit" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 13
-Info (12128): Elaborating entity "bitOR" for hierarchy "programCounter:grabAddr|alu:bcond|bitOR:ORbit" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 14
-Info (12128): Elaborating entity "bitXOR" for hierarchy "programCounter:grabAddr|alu:bcond|bitXOR:XORbit" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 15
-Info (12128): Elaborating entity "mult" for hierarchy "programCounter:grabAddr|alu:bcond|mult:multiply" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 16
-Info (12128): Elaborating entity "shifter" for hierarchy "programCounter:grabAddr|alu:bcond|shifter:lsl" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 17
-Info (12128): Elaborating entity "arithmetic" for hierarchy "programCounter:grabAddr|alu:bcond|arithmetic:ADDorSUB" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 20
+Info (12128): Elaborating entity "bitAND" for hierarchy "programCounter:grabAddr|alu:bcond|bitAND:ANDbit" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 14
+Info (12128): Elaborating entity "bitOR" for hierarchy "programCounter:grabAddr|alu:bcond|bitOR:ORbit" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 15
+Info (12128): Elaborating entity "bitXOR" for hierarchy "programCounter:grabAddr|alu:bcond|bitXOR:XORbit" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 16
+Info (12128): Elaborating entity "mult" for hierarchy "programCounter:grabAddr|alu:bcond|mult:multiply" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 17
+Info (12128): Elaborating entity "shifter" for hierarchy "programCounter:grabAddr|alu:bcond|shifter:lsl" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 18
+Info (12128): Elaborating entity "arithmetic" for hierarchy "programCounter:grabAddr|alu:bcond|arithmetic:ADDorSUB" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 21
 Info (12128): Elaborating entity "adder" for hierarchy "programCounter:grabAddr|alu:bcond|arithmetic:ADDorSUB|adder:arith[0].add" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/arithmetic.v Line: 19
-Info (12128): Elaborating entity "mux5to1" for hierarchy "programCounter:grabAddr|alu:bcond|mux5to1:choose" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 21
+Info (12128): Elaborating entity "mux5to1" for hierarchy "programCounter:grabAddr|alu:bcond|mux5to1:choose" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 22
 Warning (10270): Verilog HDL Case Statement warning at mux5to1.v(22): incomplete case statement has no default case item File: C:/Users/qqzaho/Desktop/CSEE469/lab3/mux5to1.v Line: 22
 Warning (10240): Verilog HDL Always Construct warning at mux5to1.v(22): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: C:/Users/qqzaho/Desktop/CSEE469/lab3/mux5to1.v Line: 22
 Info (10041): Inferred latch for "out[0]" at mux5to1.v(22) File: C:/Users/qqzaho/Desktop/CSEE469/lab3/mux5to1.v Line: 22
@@ -296,19 +298,19 @@ Info (10041): Inferred latch for "out[60]" at mux5to1.v(22) File: C:/Users/qqzah
 Info (10041): Inferred latch for "out[61]" at mux5to1.v(22) File: C:/Users/qqzaho/Desktop/CSEE469/lab3/mux5to1.v Line: 22
 Info (10041): Inferred latch for "out[62]" at mux5to1.v(22) File: C:/Users/qqzaho/Desktop/CSEE469/lab3/mux5to1.v Line: 22
 Info (10041): Inferred latch for "out[63]" at mux5to1.v(22) File: C:/Users/qqzaho/Desktop/CSEE469/lab3/mux5to1.v Line: 22
-Info (12128): Elaborating entity "mux2to1" for hierarchy "programCounter:grabAddr|alu:bcond|mux2to1:carry" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 26
-Info (12128): Elaborating entity "zero" for hierarchy "programCounter:grabAddr|alu:bcond|zero:check" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 29
+Info (12128): Elaborating entity "mux2to1" for hierarchy "programCounter:grabAddr|alu:bcond|mux2to1:carry" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 27
+Info (12128): Elaborating entity "zero" for hierarchy "programCounter:grabAddr|alu:bcond|zero:check" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/alu.v Line: 30
 Info (12128): Elaborating entity "instructmem" for hierarchy "instructmem:instruc" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/CPU.sv Line: 20
 Warning (10175): Verilog HDL warning at instructmem.sv(24): ignoring unsupported system task File: C:/Users/qqzaho/Desktop/CSEE469/lab3/instructmem.sv Line: 24
-Error (10170): Verilog HDL syntax error at test01_AddiB.arm(25) near text: _. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/qqzaho/Desktop/CSEE469/lab3/benchmarks/test01_AddiB.arm Line: 25
+Error (10170): Verilog HDL syntax error at test02_AddsSubs.arm(39) near text: _. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/qqzaho/Desktop/CSEE469/lab3/benchmarks/test02_AddsSubs.arm Line: 39
 Info (10648): Verilog HDL Display System Task info at instructmem.sv(43): Running benchmark:  File: C:/Users/qqzaho/Desktop/CSEE469/lab3/instructmem.sv Line: 43
 Error (12152): Can't elaborate user hierarchy "instructmem:instruc" File: C:/Users/qqzaho/Desktop/CSEE469/lab3/CPU.sv Line: 20
 Info (144001): Generated suppressed messages file C:/Users/qqzaho/Desktop/CSEE469/lab3/CPU.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 6 warnings
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 4 warnings
     Error: Peak virtual memory: 704 megabytes
-    Error: Processing ended: Tue Feb 13 14:18:46 2018
-    Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:24
+    Error: Processing ended: Tue Feb 13 19:25:48 2018
+    Error: Elapsed time: 00:00:17
+    Error: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+
