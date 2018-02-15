@@ -16,3 +16,12 @@ module lsl (in, out);
 
 	assign out = in << 2;
 endmodule
+
+module signExtend0 #(parameter width=32) (in, out);
+	input [width-1:0] in;
+
+	output [63:0] out;
+	
+
+	assign out = $unsigned(in);
+endmodule

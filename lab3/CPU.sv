@@ -11,7 +11,7 @@ module CPU (clk, reset);
 	logic [1:0] ALUOp;
 	logic [2:0] ALUSrc;
 	logic [63:0] ReadData1, ReadData2, WriteData, Extend, alusrc, 
-						result, dataread, addi, condB, uncondB;
+						result, dataread, addi, condB, uncondB, ldst;
 	logic [3:0] control;		
 	input logic clk, reset;
 	
@@ -46,9 +46,9 @@ module CPU (clk, reset);
 	
 	//Sign Extending module for multiple instructions using parameters
 	signExtend #(.width(26)) extend (instruction[25:0], Extend); //Branching
-	signExtend #(.width(12)) addI (instruction[21:10], addi); //for ADDI instruction
+	signExtend0 #(.width(12)) addI (instruction[21:10], addi); //for ADDI instruction
 	signExtend #(.width(19)) cond (instruction[23:5], uncondB); //Uncond Branching
-	//signExtend #(.width(9)) ldurstur (instruction[20:12], ldst); //LDUR and STUR
+	signExtend #(.width(9)) ldurstur (instruction[20:12], ldst); //LDUR and STUR
 	
 	//Unconditional Branching
 	generate
@@ -58,13 +58,6 @@ module CPU (clk, reset);
 		end
 	endgenerate 
 	
-	//ALUsrc mux
-//	generate
-//		genvar j;
-//		for (j = 0; j < 64; j++) begin : aluin
-//			mux2to1 sel1 (addi[j], ReadData2[j], alusrc[j], ALUSrc);
-//		end
-//	endgenerate
 
 	//ALU input decider
 	always_comb begin
@@ -76,8 +69,8 @@ module CPU (clk, reset);
 			alusrc <= 64'b0;
 		else if (ALUSrc == 3'b011)
 			alusrc <= uncondB;
-//		else if (ALUSrc == 3'b100)
-//			alusrc <= ldst;
+		else if (ALUSrc == 3'b100)
+			alusrc <=ldst;
 		else 
 			alusrc <= ReadData2;
 	end
@@ -95,7 +88,7 @@ module CPU (clk, reset);
 	endgenerate
 	
 	//Stores negative flag for B.LT
-	mux2to1 choose (negative, negwire, reggin, (control == 4'b011));
+	mux2to1 choose ((negative & ~overflow), negwire, reggin, (control == 4'b011));
 	D_FF negFlag (negwire, reggin, 1'b0, clk);
 endmodule
 
@@ -107,7 +100,7 @@ module CPU_testbench();
 	
 	CPU dut (clk, reset);
 	
-	parameter clocks = 100;
+	parameter clocks = 1500;
 	parameter ClockDelay = 50000;
 	
 	initial $timeformat(-9, 2, " ns", 10);
