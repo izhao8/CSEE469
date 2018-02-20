@@ -18,19 +18,3 @@ module register (in, out, en, clk);
 	endgenerate
 endmodule
 
-// module mux2to1 (in, old, out, en);
-// 	output wire out;
-
-// 	input in, old, en;
-
-// 	wire ren;
-// 	wire [1:0] con;
-
-// 	not #50 ren0 (ren, en);
-
-// 	and #50 con0 (con[0], en, in);
-// 	and #50 con1 (con[1], ren, old);
-	
-// 	or #50 out0 (out, con[0], con[1]);
-
-// endmodule

@@ -1,0 +1,34 @@
+`timescale 1ns/10ps
+
+module regExId (WB, M, EX, PC, A, B, Branch, OP, Rd, Ao, Bo, Opout, 
+					Rdout, jump, wb, m, ex);
+	output [63:0] Ao, Bo, Opout, jump;
+	output [4:0] Rdout;
+	output wb, m, ex;
+	
+	input WB, M, EX, PC;
+	input [63:0] A, B, Branch;
+	input [10:0] OP;
+	input [4:0] Rd;
+	
+
+endmodule
+
+module regExMem (WB, M, Branch, zero, result, B, resultOut, Bo, jump, 
+						zout, Rd, Rdout, wb, m);
+	output [63:0] resultOut, Bo;
+	output [4:0] Rdout;
+	output zout, wb, m;
+	
+	input WB, M, zero;
+	input [63:0] result, B, Branch;
+	input [4:0] Rdout;
+	
+
+endmodule
+
+module regMemWb();
+
+
+endmodule
+
