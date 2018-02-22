@@ -1,0 +1,6 @@
+`timescale 1ns/10ps
+
+module dataMUX (data, result, regData, out, sel);
+
+
+endmodule

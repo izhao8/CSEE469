@@ -2,7 +2,7 @@
 
 module CPU (clk, reset);
 	logic [63:0] addr;
-	logic [63:0] PCaddr;
+	logic [63:0] PCaddr, pc;
 	logic [31:0] instruction;
 	logic RegWrite, Reg2Loc, Branch, MemWrite, 
 			MemtoReg, MemRead, PCsr, UncondB, negwire, reggin;
@@ -19,36 +19,19 @@ module CPU (clk, reset);
 	and #50 (B, zero, Branch); //B and CBZ
 	and #50 (Blt, Branch, negwire); //B.LT
 	mux2to1 sel2 (Blt, B, PCsr, Bout);
-	lsl shift (condB, PCaddr);
-	
-	//Program counter and instruction modules
-	programCounter grabAddr (PCaddr, PCsr, addr, clk, reset);
-	instructmem instruc (addr, instruction, clk);
+	lsl shift (jump0, PCaddr);
 	
 	//Main control and ALU control signal modules
-	control signals (instruction[31:21], Reg2Loc, Branch, MemRead, 
+	logic [1:0] WB0;
+	logic [2:0] M0;
+	logic [6:0] EX0;
+	logic csel;
+	
+	control signals (instructOUT[31:21], Reg2Loc, Branch, MemRead, 
 				MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite, UncondB, Bout);			
-	ALUcontrol signal (instruction[31:21], ALUOp, control);
-	
-//	lsl shift (condB, PCaddr);
-	
-	//Register input decider
-	generate
-		genvar i;
-		for (i = 0; i < 5; i++) begin : RB
-			mux2to1 sel0 (instruction[i], instruction[i+16], Read2[i], Reg2Loc);
-		end
-	endgenerate
-	
-	//Register module
-	regfile reading (instruction[9:5], Read2, WriteData, ReadData1, ReadData2,
-							instruction[4:0], RegWrite, clk);
-	
-	//Sign Extending module for multiple instructions using parameters
-	signExtend #(.width(26)) extend (instruction[25:0], Extend); //Branching
-	signExtend0 #(.width(12)) addI (instruction[21:10], addi); //for ADDI instruction
-	signExtend #(.width(19)) cond (instruction[23:5], uncondB); //Uncond Branching
-	signExtend #(.width(9)) ldurstur (instruction[20:12], ldst); //LDUR and STUR
+	ALUcontrol signal (instruction[31:21], ALUOp, control); //change instruction input with ID/EX output
+	controlMUX stall0 (csel, {regWrite, MemtoReg}, {MemWrite, MemRead, Branch}, 
+							{ALUOp, ALUSrc}, WB0, M0, EX0);
 	
 	//Unconditional Branching
 	generate
@@ -58,7 +41,54 @@ module CPU (clk, reset);
 		end
 	endgenerate 
 	
+	//Program counter and instruction modules
+	assign pc = PCaddr + instructPC1;
+	logic [64:0] t0; //temp in programCounter output
+	programCounter grabAddr (pc, PCsr, addr, clk, reset, t0);
+	instructmem instruc (addr, instruction, clk);
+	
+	/* IF/ID register goes between here BEGIN */
+	logic [31:0] instructOUT;
+	logic [63:0] instructPC0;
+	logic ifidwrite, flush;
+	
+	regIfId IFnID (instruction, flush, ifidwrite, t0, instructOUT, instructPC0, clk);
+	
+	/* IF/ID register goes between here END */
+	
+	
+	//Register input decider
+	generate
+		genvar i;
+		for (i = 0; i < 5; i++) begin : RB
+			mux2to1 sel0 (instructOUT[i], instructOUT[i+16], Read2[i], Reg2Loc);
+		end
+	endgenerate
+	
+	//Register module
+	regfile reading (instructOUT[9:5], Read2, WriteData, ReadData1, ReadData2,
+							instructOUT[4:0], RegWrite, clk);
+	
+	//Sign Extending module for multiple instructions using parameters
+	signExtend #(.width(26)) extend (instructOUT[25:0], Extend); //Branching
+	signExtend0 #(.width(12)) addI (instructOUT[21:10], addi); //for ADDI instruction
+	signExtend #(.width(19)) cond (instructOUT[23:5], uncondB); //Uncond Branching
+	signExtend #(.width(9)) ldurstur (instructOUT[20:12], ldst); //LDUR and STUR
 
+	/* ID/EX register goes between here BEGIN	*/
+	logic [1:0] WB1;
+	logic [2:0] M1;
+	logic [63:0] jump0, instructPC1, A, B;
+	logic [10:0] OP0;
+	logic [4:0] dest0
+	
+	//module regExId (WB, M, EX, PC, A, B, Branch, OP, Rd, Ao, Bo, Opout, 
+					//Rdout, jump, pc, clk,);
+	
+	regExId IDnEX (WB0, M0, EX0, ReadData1, ReadData2, condB, instructOUT[31:21], 
+						instructOUT[4:0], A, B, OP0, dest0, jump0, instructPC1, clk);
+	/* ID/EX register goes between here END */
+	
 	//ALU input decider
 	always_comb begin
 		if(reset)
@@ -77,7 +107,21 @@ module CPU (clk, reset);
 	
 	alu magic (ReadData1, alusrc, control, result, negative, zero, overflow, carry_out, instruction[15:10]); 
 	
+	//Stores negative flag for B.LT
+	mux2to1 choose ((negative & ~overflow), negwire, reggin, (control == 4'b011));
+	D_FF negFlag (negwire, reggin, 1'b0, clk);
+	
+	/* EX/MEM register goes between here BEGIN */
+	
+	
+	/* EX/MEM register goes between here END */
+	
 	datamem data (result, MemWrite, MemRead, ReadData2, clk, 4'd8, dataread);
+	
+	/* MEM/WB register goes between here BEGIN */
+	
+	
+	/* MEM/WB register goes between here END */
 	
 	//data mux
 	generate
@@ -87,9 +131,6 @@ module CPU (clk, reset);
 		end
 	endgenerate
 	
-	//Stores negative flag for B.LT
-	mux2to1 choose ((negative & ~overflow), negwire, reggin, (control == 4'b011));
-	D_FF negFlag (negwire, reggin, 1'b0, clk);
 endmodule
 
 

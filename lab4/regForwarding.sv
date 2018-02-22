@@ -1,5 +1,28 @@
 `timescale 1ns/10ps
 
+module regIdIf(instruction, flush, write, PC, instruct, pc, clk);
+	output [63:0] instruct;
+	output [31:0] pc;
+	
+	input [63:0] instruction;
+	input [31:0] instruct;
+	input flush, write, clk;
+	
+	always_ff @(posedge clk) begin
+		if (flush)
+			instruct <= 0;
+		else	if (write) begin
+			instruct <= instruction;
+			pc <= PC;
+		end
+		else
+			instruct <= instruct;
+			pc <= pc;
+	end
+
+endmodule
+
+
 module regExId (WB, M, EX, PC, A, B, Branch, OP, Rd, Ao, Bo, Opout, 
 					Rdout, jump, pc, clk,);
 	output [63:0] Ao, Bo, Opout, jump, pc;
@@ -57,7 +80,7 @@ module regExMem (WB, M, Branch, zero, result, B, resultOut, Bo, jump,
 	
 	pipeFF set0 (resultout, result, clk, 0);
 	pipeFF set1 (Bo, B, clk, 0);
-	mux2to1 sel0 (Branch, jump, w, !branch); 
+	//mux2to1 sel0 (Branch, jump, w, !branch); 
 	pipeFF set2 (jump, w, clk, 0); //check this later
 	pipeFF @(.length(5)) set3 (Rdout, Rd, clk, 0);
 	
