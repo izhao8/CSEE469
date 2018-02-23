@@ -9,10 +9,10 @@ module control (instruct, Reg2Loc, Branch, MemRead,
 	output reg [1:0] ALUOp;
 	output reg  [2:0] ALUSrc;
 
-	wire [5:0] temp;
-	wire[7:0] tin0;
-	wire [5:0] ninst;
-	wire [3:0] format;
+//	wire [5:0] temp;
+//	wire[7:0] tin0;
+//	wire [5:0] ninst;
+//	wire [3:0] format;
 
 	//B, B.LT, ADDI, ADDS, CBZ, LDUR, STUR, SUBS, LSL, LSR, MUL
 	//I-format: ADDI

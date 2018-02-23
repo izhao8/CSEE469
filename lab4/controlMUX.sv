@@ -9,14 +9,16 @@ module controlMUX(sel, WB, M, EX, wb, m, ex);
 	input [2:0] M;
 	input [6:0] EX;
 	
-	if (sel) begin
-		wb = WB;
-		m = M;
-		ex = EX;
-	else
-		wb = 0;
-		m = 0;
-		ex = 0;
-		
+	always_comb begin
+		if (sel) begin
+			wb = WB;
+			m = M;
+			ex = EX;
+		end
+		else begin
+			wb = 0;
+			m = 0;
+			ex = 0;
+		end
 	end
 endmodule

@@ -5,7 +5,6 @@ module regIdIf(instruction, flush, write, PC, instruct, pc, clk);
 	output [31:0] pc;
 	
 	input [63:0] instruction;
-	input [31:0] instruct;
 	input flush, write, clk;
 	
 	always_ff @(posedge clk) begin
@@ -15,34 +14,38 @@ module regIdIf(instruction, flush, write, PC, instruct, pc, clk);
 			instruct <= instruction;
 			pc <= PC;
 		end
-		else
+		else begin
 			instruct <= instruct;
 			pc <= pc;
+		end
 	end
 
 endmodule
 
 
-module regExId (WB, M, EX, PC, A, B, Branch, OP, Rd, Ao, Bo, Opout, 
-					Rdout, jump, pc, clk,);
-	output [63:0] Ao, Bo, Opout, jump, pc;
-	output [4:0] Rdout;
-	output [10:0] Opout;
+module regExId (WB, M, EX, A, B, ADDI,  Rd, Ao, Bo, 
+					Rdout, addIO, pc, clk, Rn, Rm, Rno, Rmo, wb, m, Reg2Loc,
+					ALUOp, ALUSrc, Op, Opout);
+	output [63:0] Ao, Bo, addIO; 
+	output [4:0] Rdout, Rno, Rmo;
 	output [1:0] wb;
 	output [2:0] m;
-	output [3:0] ALUOp;
+	output [1:0] ALUOp;
 	output [2:0] ALUSrc;
+	output [10:0] Opout;
+	output Reg2Loc;
 	
 	input [1:0] WB;
 	input [2:0] M; 
-	input [63:0] A, B, Branch, PC; //Branch is SE input
+	input [63:0] A, B, ADDI;
 	input [10:0] OP; //instruction[31:21] --> Opout
-	input [4:0] Rd; //instruction[4:0] --> Rdout
-	input [6:0] EX; //[6:3] is ALUOp; [2:0] is ALUSrc
+	input [4:0] Rd, Rn, Rm; //instruction[4:0] --> Rdout
+	input [5:0] EX; //[5:3] is ALUOp, [2:1] is ALUSrc, 0 is Reg2Loc
 	input clk;
 	
-	assign ALUOp = EX[6:3];
-	assign ALUSrc = EX[2:0];
+	assign ALUOp = EX[5:3];
+	assign ALUSrc = EX[2:1];
+	assign Reg2Loc = EX[0];
 	assign m = M;
 	assign wb = WB;
 	assign Rdout = Rd;
@@ -51,24 +54,24 @@ module regExId (WB, M, EX, PC, A, B, Branch, OP, Rd, Ao, Bo, Opout,
 	pipeFF set1 (Ao, A, clk, 0);
 	pipeFF set2 (Bo, B, clk, 0);
 	pipeFF #(.length(5)) set3 (Rdout, Rd, clk, 0);
-	pipeFF set4 (jump, Branch, clk, 0);
+	pipeFF set4 (addIO, ADDI, clk, 0);
 	pipeFF #(.length(11)) set5 (Opout, OP, clk, 0);
 	
 	
 endmodule
 
-module regExMem (WB, M, Branch, zero, result, B, resultOut, Bo, jump, 
+module regExMem (WB, M, zero, result, B, resultOut, Bo, 
 						zout, Rd, Rdout, wb, MemWrite, MemRead, branch, clk);
-	output [63:0] resultOut, Bo, jump;
+	output [63:0] resultOut, Bo;
 	output [4:0] Rdout;
-	output zout, MemWrite, MemRead, branch; //lowercase is branch is control signal
+	output zout, MemWrite, MemRead, branch; //lowercase branch is control signal
 	output [1:0] wb;
 	
 	input zero;
 	input [1:0] WB;
 	input [2:0] M;
-	input [63:0] result, B, Branch;
-	input [4:0] Rdout;
+	input [63:0] result, B; //B is readdata2
+	input [4:0] Rd;
 	input clk;
 	
 	assign zout = zero;
@@ -80,9 +83,8 @@ module regExMem (WB, M, Branch, zero, result, B, resultOut, Bo, jump,
 	
 	pipeFF set0 (resultout, result, clk, 0);
 	pipeFF set1 (Bo, B, clk, 0);
-	//mux2to1 sel0 (Branch, jump, w, !branch); 
-	pipeFF set2 (jump, w, clk, 0); //check this later
-	pipeFF @(.length(5)) set3 (Rdout, Rd, clk, 0);
+//	pipeFF set2 (jump, w, clk, 0); //check this later
+	pipeFF #(.length(5)) set3 (Rdout, Rd, clk, 0);
 	
 endmodule
 
@@ -101,16 +103,16 @@ module regMemWb(WB, data, addr, Rd, Rdout, RegWrite, MemtoReg, addrO, dataO, clk
 	
 	pipeFF set0 (result, addr, clk, 0);
 	pipeFF set1 (dataO, data, clk, 0);
-	pipeFF @(.length(5)) set2 (Rdout, Rd, clk, 0);
+	pipeFF #(.length(5)) set2 (Rdout, Rd, clk, 0);
 endmodule
 
-module pipeFF #(parameter length = 64) (q, d, reset, clk)
+module pipeFF #(parameter length = 64) (q, d, reset, clk);
 	output [length -1: 0] q;
 	
 	input [length -1: 0] d;
 	input reset, clk;
 	
-	always_f 2(posedge clk) begin
+	always_ff @(posedge clk) begin
 		if (reset) q <= 0;
 		else q <= d;
 	end

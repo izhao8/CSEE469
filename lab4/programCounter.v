@@ -1,10 +1,10 @@
 `timescale 1ns/10ps
 
-module programCounter(in, PCsrc, out, clk, reset, temp);
+module programCounter(in, PCsrc, out, clk, reset, temp, en);
 	output reg [63:0] out, temp;
 
 	input [63:0] in;
-	input clk, reset, PCsrc;
+	input clk, reset, PCsrc, en;
 
 	wire [63:0] B, PC4;
 	wire C, of, neg, z;
@@ -14,11 +14,13 @@ module programCounter(in, PCsrc, out, clk, reset, temp);
 	alu pc4 (temp, 64'd4, 4'b0010, PC4, C, of, neg, z, 6'd0);
 
 	always @(posedge clk) begin
-		if (reset)
+		if (reset) begin
 			out <= 0;
-		else if (PCsrc)
+		end
+		else if (PCsrc && en) begin
 			out <= in;
-		else begin
+		end
+		else (en) begin
 			out <= PC4;
 		end
 		assign temp = out;
