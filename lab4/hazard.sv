@@ -1,7 +1,7 @@
 `timescale 1ns/10ps
 
 module hazard(PCwrite, IfIdwrite, csel, Rn, Rm, IdExRn, memRead);
-	output IfIdwrite, PCwrite, csel;
+	output reg IfIdwrite, PCwrite, csel;
 	
 	input [4:0] Rn, Rm, IdExRn;
 	input memRead;

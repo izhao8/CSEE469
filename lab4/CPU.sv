@@ -14,6 +14,31 @@ module CPU (clk, reset);
 						result, dataread, addi, condB, uncondB, ldst;
 	logic [3:0] control;		
 	input logic clk, reset;
+	logic [1:0] WB0;
+	logic [2:0] M0;
+	logic [5:0] EX0;
+	logic csel;
+	logic [31:0] instructOUT;
+	logic [63:0] instructPC0;
+	logic ifidwrite, flush;
+	logic [63:0] exto;
+	logic [1:0] WB1;
+	logic [2:0] M1;
+	logic [63:0] exto0, A, Bother;
+	logic [10:0] OP0;
+	logic [4:0] Rd0, Rn0, Rm0;
+	logic [1:0] aluop0; 
+	logic [2:0] alusrc0;
+	logic RegDst;
+	logic [1:0] forA, forB;
+	logic [63:0] F1, F2;
+	logic [1:0] WB2;
+	logic [4:0] Rd1;
+	logic [63:0] result0, B0;
+	logic zout, MemWrite0, MemRead0, branch0;
+	logic [4:0] Rd2;
+	logic [63:0] result1, data0;
+	logic RegWrite0, MemtoReg0;
 	
 	//Branch signals 
 	and #50 (B, zero, Branch); //B and CBZ
@@ -27,14 +52,14 @@ module CPU (clk, reset);
 	/* HAZARD MODULE */	
 	
 	//Main control and ALU control signal modules
-	logic [1:0] WB0;
-	logic [2:0] M0;
-	logic [5:0] EX0;
-	logic csel;
+//	logic [1:0] WB0;
+//	logic [2:0] M0;
+//	logic [5:0] EX0;
+//	logic csel;
 	
 	control signals (instructOUT[31:21], Reg2Loc, Branch, MemRead, 
 				MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite, UncondB, Bout);			
-	ALUcontrol signal (instruction[31:21], ALUOp, OP0); //change instruction input with ID/EX output
+	ALUcontrol signal (OP0, EX0[5:4], control); //change instruction input with ID/EX output
 	controlMUX stall0 (csel, {RegWrite, MemtoReg}, {MemWrite, MemRead, Branch}, 
 							{ALUOp, ALUSrc, Reg2Loc}, WB0, M0, EX0);
 	
@@ -48,17 +73,17 @@ module CPU (clk, reset);
 	
 	//Program counter and instruction modules
 	assign pc = PCaddr + instructPC0;
-	logic [64:0] t0; //temp in programCounter output
+	logic [63:0] t0; //temp in programCounter output
 	programCounter grabAddr (pc, PCsr, addr, clk, reset, t0, PCen);
 	instructmem instruc (addr, instruction, clk);
 	
 	/* IF/ID register goes between here BEGIN */
-	logic [31:0] instructOUT;
-	logic [63:0] instructPC0;
-	logic ifidwrite, flush;
+//	logic [31:0] instructOUT;
+//	logic [63:0] instructPC0;
+//	logic ifidwrite, flush;
 	
 	assign flush = (ReadData1 == ReadData2);
-	regIfId IFnID (instruction, flush, ifidwrite, t0, instructOUT, instructPC0, clk);
+	regIdIf IFnID (instruction, flush, ifidwrite, t0, instructOUT, instructPC0, clk);
 	
 	/* IF/ID register goes between here END */
 	
@@ -81,7 +106,7 @@ module CPU (clk, reset);
 	signExtend #(.width(19)) cond (instructOUT[23:5], uncondB); //Uncond Branching
 	signExtend #(.width(9)) ldurstur (instructOUT[20:12], ldst); //LDUR and STUR
 	
-	logic [63:0] exto;
+//	logic [63:0] exto;
 	always_comb begin
 		if (instructOUT[31:21] >= 1160 && instructOUT[31:21] <= 1161) begin
 			exto = addi;
@@ -92,14 +117,14 @@ module CPU (clk, reset);
 	end
 	
 	/* ID/EX register goes between here BEGIN	*/
-	logic [1:0] WB1;
-	logic [2:0] M1;
-	logic [63:0] exto0, A, Bother;
-	logic [10:0] OP0;
-	logic [4:0] Rd0, Rn0, Rm0;
-	logic [1:0] aluop0; 
-	logic [2:0] alusrc0;
-	logic RegDst; 
+//	logic [1:0] WB1;
+//	logic [2:0] M1;
+//	logic [63:0] exto0, A, Bother;
+//	logic [10:0] OP0;
+//	logic [4:0] Rd0, Rn0, Rm0;
+//	logic [1:0] aluop0; 
+//	logic [2:0] alusrc0;
+//	logic RegDst; 
 	
 	/* (WB, M, EX, A, B, ADDI,  Rd, Ao, Bo, 
 					Rdout, addIO, clk, Rn, Rm, Rno, Rmo, wb, m, Reg2Loc,
@@ -111,11 +136,12 @@ module CPU (clk, reset);
 	/* ID/EX register goes between here END */
 	
 	/* FORWARDING UNIT */
-	logic [1:0] forA, forB;
-	logic [63:0] F1, F2;
+//	logic [1:0] forA, forB;
+//	logic [63:0] F1, F2;
+	
 	forwardUnit forward (forA, forB, Rn0, Rm0, Rd1, Rd2, WB2, WB1);
-	dataMux consider0 (WriteData, result0, A, F1, forA);
-	dataMux consider1 (WriteData, result0, B, F2, forB);
+	dataMUX consider0 (WriteData, result0, A, F1, forA);
+	dataMUX consider1 (WriteData, result0, B, F2, forB);
 	/* FORWARDING UNIT */
 	
 	//ALU input decider
@@ -141,10 +167,10 @@ module CPU (clk, reset);
 	D_FF negFlag (negwire, reggin, 1'b0, clk);
 	
 	/* EX/MEM register goes between here BEGIN */
-	logic [1:0] WB2;
-	logic [4:0] Rd1;
-	logic [63:0] result0, B0;
-	logic zout, MemWrite0, MemRead0, branch0;
+//	logic [1:0] WB2;
+//	logic [4:0] Rd1;
+//	logic [63:0] result0, B0;
+//	logic zout, MemWrite0, MemRead0, branch0;
 						
 	regExMem ExnMem (WB1, M1, zero, result, Bother, result0, B0, zout, Rd0, Rd1, WB2, 
 							MemWrite0, MemRead0, branch0, clk);
@@ -154,9 +180,9 @@ module CPU (clk, reset);
 	datamem data (result0, MemWrite0, MemRead0, B0, clk, 4'd8, dataread);
 	
 	/* MEM/WB register goes between here BEGIN */
-	logic [4:0] Rd2;
-	logic [63:0] result1, data0;
-	logic RegWrite0, MemtoReg0;
+//	logic [4:0] Rd2;
+//	logic [63:0] result1, data0;
+//	logic RegWrite0, MemtoReg0;
 	
 	regMemWb MEMnWB (WB2, dataread, result0, Rd1, Rd2, RegWrite0, MemtoReg0, result1, data0);
 	

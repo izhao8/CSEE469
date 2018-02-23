@@ -1,7 +1,7 @@
 `timescale 1ns/10ps
 
 module forwardUnit(forA, forB, Rn, Rm, EXmemrd, MEMwbrd, memWB, exWB);
-	output [1:0] forA, forB;
+	output reg [1:0] forA, forB;
 	
 	input [4:0] Rn, Rm, EXmemrd, MEMwbrd;
 	input [1:0] memWB, exWB;

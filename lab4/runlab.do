@@ -24,6 +24,11 @@ vlog "./instructmem.sv"
 vlog "./datamem.sv"
 vlog "./math.sv"
 vlog "./submodules.v"
+vlog "./hazard.sv"
+vlog "./regForwarding.sv"
+vlog "./forwardUnit.sv"
+vlog "./controlMUX.sv"
+vlog "./dataMUX.sv"
 
 # Call vsim to invoke simulator
 #     Make sure the last item on the line is the name of the

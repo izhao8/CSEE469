@@ -1,8 +1,8 @@
 `timescale 1ns/10ps
 
 module regIdIf(instruction, flush, write, PC, instruct, pc, clk);
-	output [63:0] instruct;
-	output [31:0] pc;
+	output reg [63:0] instruct;
+	output reg [31:0] pc;
 	
 	input [63:0] instruction, PC;
 	input flush, write, clk;
@@ -106,7 +106,7 @@ module regMemWb(WB, data, addr, Rd, Rdout, RegWrite, MemtoReg, addrO, dataO, clk
 endmodule
 
 module pipeFF #(parameter length = 64) (q, d, reset, clk);
-	output [length -1: 0] q;
+	output reg [length -1: 0] q;
 	
 	input [length -1: 0] d;
 	input reset, clk;

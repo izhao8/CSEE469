@@ -1,13 +1,13 @@
 `timescale 1ns/10ps
 
 module controlMUX(sel, WB, M, EX, wb, m, ex);
-	output [1:0] wb;
-	output [2:0] m;
-	output [6:0] ex;
+	output reg [1:0] wb;
+	output reg [2:0] m;
+	output reg [5:0] ex;
 	
 	input [1:0] WB;
 	input [2:0] M;
-	input [6:0] EX;
+	input [5:0] EX;
 	input sel;
 	
 	always_comb begin
