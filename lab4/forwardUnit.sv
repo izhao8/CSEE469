@@ -1,7 +1,7 @@
 `timescale 1ns/10ps
 
-module forwardUnit(forA, forB, Rn, Rm, regRd, EXmemrd, MEMwbrd, memWB, exWB);
-	output [1:0] forA, forb;
+module forwardUnit(forA, forB, Rn, Rm, EXmemrd, MEMwbrd, memWB, exWB);
+	output [1:0] forA, forB;
 	
 	input [4:0] Rn, Rm, EXmemrd, MEMwbrd;
 	input [1:0] memWB, exWB;
@@ -9,8 +9,8 @@ module forwardUnit(forA, forB, Rn, Rm, regRd, EXmemrd, MEMwbrd, memWB, exWB);
 	logic en, checkA, checkB;
 	
 	assign en = exWB[1] & (MEMwbrd != 31);
-	assign checkA = (EXmemrd != Rn) | (memWB[1] = 0);
-	assign checkB = (EXmemrd != Rm) | (memWB[1] = 0);
+	assign checkA = (EXmemrd != Rn) | (memWB[1] == 0);
+	assign checkB = (EXmemrd != Rm) | (memWB[1] == 0);
 	
 	always_comb begin
 		//control for data 1

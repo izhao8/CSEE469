@@ -8,6 +8,7 @@ module controlMUX(sel, WB, M, EX, wb, m, ex);
 	input [1:0] WB;
 	input [2:0] M;
 	input [6:0] EX;
+	input sel;
 	
 	always_comb begin
 		if (sel) begin

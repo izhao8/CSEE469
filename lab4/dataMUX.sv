@@ -9,7 +9,7 @@ module dataMUX (data, result, regData, out, sel);
 	always_comb begin
 		if (sel == 2'b01) out = data;
 		else if (sel == 2'b10) out = result;
-		else data = regData;
+		else out = regData;
 	end
 
 endmodule

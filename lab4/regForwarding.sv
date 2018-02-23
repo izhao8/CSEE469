@@ -4,7 +4,7 @@ module regIdIf(instruction, flush, write, PC, instruct, pc, clk);
 	output [63:0] instruct;
 	output [31:0] pc;
 	
-	input [63:0] instruction;
+	input [63:0] instruction, PC;
 	input flush, write, clk;
 	
 	always_ff @(posedge clk) begin
@@ -24,8 +24,8 @@ endmodule
 
 
 module regExId (WB, M, EX, A, B, ADDI,  Rd, Ao, Bo, 
-					Rdout, addIO, pc, clk, Rn, Rm, Rno, Rmo, wb, m, Reg2Loc,
-					ALUOp, ALUSrc, Op, Opout);
+					Rdout, addIO, clk, Rn, Rm, Rno, Rmo, wb, m, Reg2Loc,
+					ALUOp, ALUSrc, OP, Opout);
 	output [63:0] Ao, Bo, addIO; 
 	output [4:0] Rdout, Rno, Rmo;
 	output [1:0] wb;
@@ -50,7 +50,6 @@ module regExId (WB, M, EX, A, B, ADDI,  Rd, Ao, Bo,
 	assign wb = WB;
 	assign Rdout = Rd;
 	
-	pipeFF set0 (pc, PC, clk, 0);
 	pipeFF set1 (Ao, A, clk, 0);
 	pipeFF set2 (Bo, B, clk, 0);
 	pipeFF #(.length(5)) set3 (Rdout, Rd, clk, 0);
@@ -81,7 +80,7 @@ module regExMem (WB, M, zero, result, B, resultOut, Bo,
 	assign MemRead = M[1];
 	assign branch = M[0];
 	
-	pipeFF set0 (resultout, result, clk, 0);
+	pipeFF set0 (resultOut, result, clk, 0);
 	pipeFF set1 (Bo, B, clk, 0);
 //	pipeFF set2 (jump, w, clk, 0); //check this later
 	pipeFF #(.length(5)) set3 (Rdout, Rd, clk, 0);
@@ -89,19 +88,19 @@ module regExMem (WB, M, zero, result, B, resultOut, Bo,
 endmodule
 
 module regMemWb(WB, data, addr, Rd, Rdout, RegWrite, MemtoReg, addrO, dataO, clk);
-	output [63:0] result, dataO;
+	output [63:0] dataO, addrO;
 	output [4:0] Rdout;
-	output regWrite, MemtoReg;
+	output RegWrite, MemtoReg;
 
 	input [1:0] WB;
 	input [63:0] data, addr;
 	input [4:0] Rd;
 	input clk;
 	
-	assign regWrite = WB[1];
+	assign RegWrite = WB[1];
 	assign MemtoReg = WB[0];
 	
-	pipeFF set0 (result, addr, clk, 0);
+	pipeFF set0 (addrO, addr, clk, 0);
 	pipeFF set1 (dataO, data, clk, 0);
 	pipeFF #(.length(5)) set2 (Rdout, Rd, clk, 0);
 endmodule

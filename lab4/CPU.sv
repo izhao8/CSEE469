@@ -22,9 +22,6 @@ module CPU (clk, reset);
 	lsl shift (condB, PCaddr);
 	
 	/* HAZARD MODULE */
-	//SIGNALS output: ifidwrite, PCwrite, csel
-	//SIGNALS input: Rn, Rm, & Rd (ID/EX), MemRead (ID/EX), 
-	//PCwrite, IfIdwrite, csel, Rn, Rm, IdExRn, memRead
 	logic PCen;
 	hazard safe (PCen, ifidwrite, csel, instructOUT[9:5], instructOUT[20:16], Rn0, M0[1]);
 	/* HAZARD MODULE */	
@@ -85,12 +82,13 @@ module CPU (clk, reset);
 	signExtend #(.width(9)) ldurstur (instructOUT[20:12], ldst); //LDUR and STUR
 	
 	logic [63:0] exto;
-	
-	if (instructOUT[31:21] >= 1160 && instructOUT[31:21] <= 1161) begin
-		exto = addi;
-	end
-	else begin
-		exto = ldst;
+	always_comb begin
+		if (instructOUT[31:21] >= 1160 && instructOUT[31:21] <= 1161) begin
+			exto = addi;
+		end
+		else begin
+			exto = ldst;
+		end
 	end
 	
 	/* ID/EX register goes between here BEGIN	*/
@@ -103,8 +101,12 @@ module CPU (clk, reset);
 	logic [2:0] alusrc0;
 	logic RegDst; 
 	
+	/* (WB, M, EX, A, B, ADDI,  Rd, Ao, Bo, 
+					Rdout, addIO, clk, Rn, Rm, Rno, Rmo, wb, m, Reg2Loc,
+					ALUOp, ALUSrc, OP, Opout) */
+	
 	regExId IDnEX (WB0, M0, EX0, ReadData1, ReadData2, exto, Read2, A, Bother, 
-						Rd0, exto0, clk, instructOUT[9:5], instructOUT[16:20], Rn0, Rm0, WB1,
+						Rd0, exto0, clk, instructOUT[9:5], instructOUT[20:16], Rn0, Rm0, WB1,
 						M1, aluop0, alusrc0, RegDst, instructOUT[31:21], OP0);
 	/* ID/EX register goes between here END */
 	

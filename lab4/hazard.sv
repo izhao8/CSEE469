@@ -8,7 +8,7 @@ module hazard(PCwrite, IfIdwrite, csel, Rn, Rm, IdExRn, memRead);
 	
 	logic check;
 	
-	assign check = (IdExRn = Rn) | (IdExRn = Rm);
+	assign check = (IdExRn == Rn) | (IdExRn == Rm);
 	
 	always_comb begin
 		if (memRead && check) begin

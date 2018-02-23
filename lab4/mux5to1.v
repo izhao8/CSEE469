@@ -31,6 +31,7 @@ module mux5to1 (ADD, AND, XOR, OR, B, MUL, LSL, LSR, out, sel);
 			4'b1000: out = MUL;
 			4'b1001: out = LSL;
 			4'b1010: out = LSR;
+			default: out = out;
 		endcase
 	end
 
