@@ -7,8 +7,8 @@ entity pipeFF is
     port(
         q               : out    vl_logic_vector;
         d               : in     vl_logic_vector;
-        reset           : in     vl_logic;
-        clk             : in     vl_logic
+        clk             : in     vl_logic;
+        reset           : in     vl_logic
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of length : constant is 1;

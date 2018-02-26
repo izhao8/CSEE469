@@ -1,1472 +1,5 @@
 # Reading C:/altera/14.0/modelsim_ase/tcl/vsim/pref.tcl 
 do runlab.do
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module arithmetic
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	arithmetic
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux5to1
-# 
-# Top level modules:
-# 	mux5to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux2to1
-# 
-# Top level modules:
-# 	mux2to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module zero
-# -- Compiling module bitAND
-# -- Compiling module bitOR
-# -- Compiling module bitXOR
-# 
-# Top level modules:
-# 	zero
-# 	bitAND
-# 	bitOR
-# 	bitXOR
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regstim
-# 
-# Top level modules:
-# 	regstim
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module decoder
-# -- Compiling module decoder3to8
-# -- Compiling module decoder2to4
-# 
-# Top level modules:
-# 	decoder
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module D_FF
-# 
-# Top level modules:
-# 	D_FF
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module multiplex
-# -- Compiling module mux32to1
-# -- Compiling module mux4to1
-# -- Compiling module mux2to1other
-# 
-# Top level modules:
-# 	multiplex
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module CPU
-# ** Error: ./CPU.sv(26): (vlog-2730) Undefined variable: 'instructOUT'.
-# 
-# ** Error: ./CPU.sv(26): (vlog-2730) Undefined variable: 'M0'.
-# 
-# ** Error: ./CPU.sv(31): 'M0' already declared in this scope (CPU).
-# ** Error: ./CPU.sv(33): 'csel' already declared in this scope (CPU).
-# ** Error: ./CPU.sv(50): (vlog-2730) Undefined variable: 'instructPC0'.
-# 
-# ** Error: ./CPU.sv(56): 'instructOUT' already declared in this scope (CPU).
-# ** Error: ./CPU.sv(57): 'instructPC0' already declared in this scope (CPU).
-# ** Error: ./CPU.sv(58): 'ifidwrite' already declared in this scope (CPU).
-# ** Error: ./CPU.sv(98): 'OP0' already declared in this scope (CPU).
-# ** Error: ./CPU.sv(99): 'Rn0' already declared in this scope (CPU).
-# ** Error: ./CPU.sv(144): 'WB2' already declared in this scope (CPU).
-# ** Error: ./CPU.sv(145): 'Rd1' already declared in this scope (CPU).
-# ** Error: ./CPU.sv(146): 'result0' already declared in this scope (CPU).
-# ** Error: ./CPU.sv(157): 'Rd2' already declared in this scope (CPU).
-# -- Compiling module CPU_testbench
-# ** Error: C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 19
-# C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./CPU.sv""
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module arithmetic
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	arithmetic
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux5to1
-# 
-# Top level modules:
-# 	mux5to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux2to1
-# 
-# Top level modules:
-# 	mux2to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module zero
-# -- Compiling module bitAND
-# -- Compiling module bitOR
-# -- Compiling module bitXOR
-# 
-# Top level modules:
-# 	zero
-# 	bitAND
-# 	bitOR
-# 	bitXOR
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regstim
-# 
-# Top level modules:
-# 	regstim
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module decoder
-# -- Compiling module decoder3to8
-# -- Compiling module decoder2to4
-# 
-# Top level modules:
-# 	decoder
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module D_FF
-# 
-# Top level modules:
-# 	D_FF
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module multiplex
-# -- Compiling module mux32to1
-# -- Compiling module mux4to1
-# -- Compiling module mux2to1other
-# 
-# Top level modules:
-# 	multiplex
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module CPU
-# -- Compiling module CPU_testbench
-# 
-# Top level modules:
-# 	CPU_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module programCounter
-# 
-# Top level modules:
-# 	programCounter
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module control
-# 
-# Top level modules:
-# 	control
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module ALUcontrol
-# 
-# Top level modules:
-# 	ALUcontrol
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module instructmem
-# -- Compiling module instructmem_testbench
-# 
-# Top level modules:
-# 	instructmem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module datamem
-# -- Compiling module datamem_testbench
-# 
-# Top level modules:
-# 	datamem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mult
-# -- Compiling module shifter
-# -- Compiling module shifter_testbench
-# -- Compiling module mult_testbench
-# 
-# Top level modules:
-# 	shifter_testbench
-# 	mult_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module signExtend
-# -- Compiling module lsl
-# -- Compiling module signExtend0
-# 
-# Top level modules:
-# 	signExtend
-# 	lsl
-# 	signExtend0
-# vsim -lib work -voptargs=\"+acc\" -t 1ps CPU_testbench 
-# Loading sv_std.std
-# Loading work.CPU_testbench
-# Loading work.CPU
-# Loading work.mux2to1
-# Loading work.lsl
-# ** Error: (vsim-3033) ./CPU.sv(51): Instantiation of 'hazard' failed. The design unit was not found.
-# 
-#         Region: /CPU_testbench/dut
-#         Searched libraries:
-#             C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/work
-# Loading work.control
-# Loading work.ALUcontrol
-# ** Error: (vsim-3033) ./CPU.sv(64): Instantiation of 'controlMUX' failed. The design unit was not found.
-# 
-#         Region: /CPU_testbench/dut
-#         Searched libraries:
-#             C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/work
-# Loading work.programCounter
-# Loading work.alu
-# Loading work.bitAND
-# Loading work.bitOR
-# Loading work.bitXOR
-# Loading work.mult
-# Loading work.shifter
-# Loading work.arithmetic
-# Loading work.mux5to1
-# Loading work.zero
-# Loading work.instructmem
-# ** Error: (vsim-3033) ./CPU.sv(86): Instantiation of 'regIfId' failed. The design unit was not found.
-# 
-#         Region: /CPU_testbench/dut
-#         Searched libraries:
-#             C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/work
-# Loading work.regfile
-# Loading work.decoder
-# Loading work.decoder2to4
-# Loading work.decoder3to8
-# Loading work.multiplex
-# Loading work.signExtend
-# Loading work.signExtend0
-# ** Error: (vsim-3033) ./CPU.sv(135): Instantiation of 'regExId' failed. The design unit was not found.
-# 
-#         Region: /CPU_testbench/dut
-#         Searched libraries:
-#             C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/work
-# ** Error: (vsim-3033) ./CPU.sv(142): Instantiation of 'forwardUnit' failed. The design unit was not found.
-# 
-#         Region: /CPU_testbench/dut
-#         Searched libraries:
-#             C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/work
-# ** Error: (vsim-3033) ./CPU.sv(143): Instantiation of 'dataMux' failed. The design unit was not found.
-# 
-#         Region: /CPU_testbench/dut
-#         Searched libraries:
-#             C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/work
-# ** Error: (vsim-3033) ./CPU.sv(144): Instantiation of 'dataMux' failed. The design unit was not found.
-# 
-#         Region: /CPU_testbench/dut
-#         Searched libraries:
-#             C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/work
-# Loading work.D_FF
-# ** Error: (vsim-3033) ./CPU.sv(176): Instantiation of 'regExMem' failed. The design unit was not found.
-# 
-#         Region: /CPU_testbench/dut
-#         Searched libraries:
-#             C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/work
-# Loading work.datamem
-# ** Error: (vsim-3033) ./CPU.sv(187): Instantiation of 'regMemWb' failed. The design unit was not found.
-# 
-#         Region: /CPU_testbench/dut
-#         Searched libraries:
-#             C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/work
-# Error loading design
-# Error: Error loading design 
-#        Pausing macro execution 
-# MACRO ./runlab.do PAUSED at line 31
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module arithmetic
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	arithmetic
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux5to1
-# 
-# Top level modules:
-# 	mux5to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux2to1
-# 
-# Top level modules:
-# 	mux2to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module zero
-# -- Compiling module bitAND
-# -- Compiling module bitOR
-# -- Compiling module bitXOR
-# 
-# Top level modules:
-# 	zero
-# 	bitAND
-# 	bitOR
-# 	bitXOR
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regstim
-# 
-# Top level modules:
-# 	regstim
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module decoder
-# -- Compiling module decoder3to8
-# -- Compiling module decoder2to4
-# 
-# Top level modules:
-# 	decoder
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module D_FF
-# 
-# Top level modules:
-# 	D_FF
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module multiplex
-# -- Compiling module mux32to1
-# -- Compiling module mux4to1
-# -- Compiling module mux2to1other
-# 
-# Top level modules:
-# 	multiplex
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module CPU
-# -- Compiling module CPU_testbench
-# 
-# Top level modules:
-# 	CPU_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module programCounter
-# 
-# Top level modules:
-# 	programCounter
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module control
-# 
-# Top level modules:
-# 	control
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module ALUcontrol
-# 
-# Top level modules:
-# 	ALUcontrol
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module instructmem
-# -- Compiling module instructmem_testbench
-# 
-# Top level modules:
-# 	instructmem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module datamem
-# -- Compiling module datamem_testbench
-# 
-# Top level modules:
-# 	datamem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mult
-# -- Compiling module shifter
-# -- Compiling module shifter_testbench
-# -- Compiling module mult_testbench
-# 
-# Top level modules:
-# 	shifter_testbench
-# 	mult_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module signExtend
-# -- Compiling module lsl
-# -- Compiling module signExtend0
-# 
-# Top level modules:
-# 	signExtend
-# 	lsl
-# 	signExtend0
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module hazard
-# ** Error: ./hazard.sv(15): (vlog-2110) Illegal reference to net "IfIdwrite".
-# 
-# ** Error: ./hazard.sv(16): (vlog-2110) Illegal reference to net "PCwrite".
-# 
-# ** Error: ./hazard.sv(17): (vlog-2110) Illegal reference to net "csel".
-# 
-# ** Error: ./hazard.sv(20): (vlog-2110) Illegal reference to net "IfIdwrite".
-# 
-# ** Error: ./hazard.sv(21): (vlog-2110) Illegal reference to net "PCwrite".
-# 
-# ** Error: ./hazard.sv(22): (vlog-2110) Illegal reference to net "csel".
-# 
-# ** Error: C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 27
-# C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./hazard.sv""
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module arithmetic
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	arithmetic
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux5to1
-# 
-# Top level modules:
-# 	mux5to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux2to1
-# 
-# Top level modules:
-# 	mux2to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module zero
-# -- Compiling module bitAND
-# -- Compiling module bitOR
-# -- Compiling module bitXOR
-# 
-# Top level modules:
-# 	zero
-# 	bitAND
-# 	bitOR
-# 	bitXOR
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regstim
-# 
-# Top level modules:
-# 	regstim
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module decoder
-# -- Compiling module decoder3to8
-# -- Compiling module decoder2to4
-# 
-# Top level modules:
-# 	decoder
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module D_FF
-# 
-# Top level modules:
-# 	D_FF
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module multiplex
-# -- Compiling module mux32to1
-# -- Compiling module mux4to1
-# -- Compiling module mux2to1other
-# 
-# Top level modules:
-# 	multiplex
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module CPU
-# -- Compiling module CPU_testbench
-# 
-# Top level modules:
-# 	CPU_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module programCounter
-# 
-# Top level modules:
-# 	programCounter
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module control
-# 
-# Top level modules:
-# 	control
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module ALUcontrol
-# 
-# Top level modules:
-# 	ALUcontrol
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module instructmem
-# -- Compiling module instructmem_testbench
-# 
-# Top level modules:
-# 	instructmem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module datamem
-# -- Compiling module datamem_testbench
-# 
-# Top level modules:
-# 	datamem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mult
-# -- Compiling module shifter
-# -- Compiling module shifter_testbench
-# -- Compiling module mult_testbench
-# 
-# Top level modules:
-# 	shifter_testbench
-# 	mult_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module signExtend
-# -- Compiling module lsl
-# -- Compiling module signExtend0
-# 
-# Top level modules:
-# 	signExtend
-# 	lsl
-# 	signExtend0
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module hazard
-# 
-# Top level modules:
-# 	hazard
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regIdIf
-# ** Error: ./regForwarding.sv(12): (vlog-2110) Illegal reference to net "instruct".
-# 
-# ** Error: ./regForwarding.sv(14): (vlog-2110) Illegal reference to net "instruct".
-# 
-# ** Error: ./regForwarding.sv(15): (vlog-2110) Illegal reference to net "pc".
-# 
-# ** Error: ./regForwarding.sv(18): (vlog-2110) Illegal reference to net "instruct".
-# 
-# ** Error: ./regForwarding.sv(19): (vlog-2110) Illegal reference to net "pc".
-# 
-# -- Compiling module regExId
-# -- Compiling module regExMem
-# -- Compiling module regMemWb
-# -- Compiling module pipeFF
-# ** Error: ./regForwarding.sv(115): (vlog-2110) Illegal reference to net "q".
-# 
-# ** Error: ./regForwarding.sv(116): (vlog-2110) Illegal reference to net "q".
-# 
-# ** Error: C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 28
-# C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./regForwarding.sv""
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module arithmetic
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	arithmetic
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux5to1
-# 
-# Top level modules:
-# 	mux5to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux2to1
-# 
-# Top level modules:
-# 	mux2to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module zero
-# -- Compiling module bitAND
-# -- Compiling module bitOR
-# -- Compiling module bitXOR
-# 
-# Top level modules:
-# 	zero
-# 	bitAND
-# 	bitOR
-# 	bitXOR
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regstim
-# 
-# Top level modules:
-# 	regstim
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module decoder
-# -- Compiling module decoder3to8
-# -- Compiling module decoder2to4
-# 
-# Top level modules:
-# 	decoder
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module D_FF
-# 
-# Top level modules:
-# 	D_FF
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module multiplex
-# -- Compiling module mux32to1
-# -- Compiling module mux4to1
-# -- Compiling module mux2to1other
-# 
-# Top level modules:
-# 	multiplex
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module CPU
-# -- Compiling module CPU_testbench
-# 
-# Top level modules:
-# 	CPU_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module programCounter
-# 
-# Top level modules:
-# 	programCounter
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module control
-# 
-# Top level modules:
-# 	control
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module ALUcontrol
-# 
-# Top level modules:
-# 	ALUcontrol
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module instructmem
-# -- Compiling module instructmem_testbench
-# 
-# Top level modules:
-# 	instructmem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module datamem
-# -- Compiling module datamem_testbench
-# 
-# Top level modules:
-# 	datamem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mult
-# -- Compiling module shifter
-# -- Compiling module shifter_testbench
-# -- Compiling module mult_testbench
-# 
-# Top level modules:
-# 	shifter_testbench
-# 	mult_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module signExtend
-# -- Compiling module lsl
-# -- Compiling module signExtend0
-# 
-# Top level modules:
-# 	signExtend
-# 	lsl
-# 	signExtend0
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module hazard
-# 
-# Top level modules:
-# 	hazard
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regIdIf
-# -- Compiling module regExId
-# -- Compiling module regExMem
-# -- Compiling module regMemWb
-# -- Compiling module pipeFF
-# 
-# Top level modules:
-# 	regIdIf
-# 	regExId
-# 	regExMem
-# 	regMemWb
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module forwardUnit
-# ** Error: ./forwardUnit.sv(18): (vlog-2110) Illegal reference to net "forA".
-# 
-# ** Error: ./forwardUnit.sv(21): (vlog-2110) Illegal reference to net "forA".
-# 
-# ** Error: ./forwardUnit.sv(24): (vlog-2110) Illegal reference to net "forA".
-# 
-# ** Error: ./forwardUnit.sv(28): (vlog-2110) Illegal reference to net "forB".
-# 
-# ** Error: ./forwardUnit.sv(31): (vlog-2110) Illegal reference to net "forA".
-# 
-# ** Error: ./forwardUnit.sv(34): (vlog-2110) Illegal reference to net "forA".
-# 
-# ** Error: C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 29
-# C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./forwardUnit.sv""
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module arithmetic
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	arithmetic
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux5to1
-# 
-# Top level modules:
-# 	mux5to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux2to1
-# 
-# Top level modules:
-# 	mux2to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module zero
-# -- Compiling module bitAND
-# -- Compiling module bitOR
-# -- Compiling module bitXOR
-# 
-# Top level modules:
-# 	zero
-# 	bitAND
-# 	bitOR
-# 	bitXOR
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regstim
-# 
-# Top level modules:
-# 	regstim
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module decoder
-# -- Compiling module decoder3to8
-# -- Compiling module decoder2to4
-# 
-# Top level modules:
-# 	decoder
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module D_FF
-# 
-# Top level modules:
-# 	D_FF
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module multiplex
-# -- Compiling module mux32to1
-# -- Compiling module mux4to1
-# -- Compiling module mux2to1other
-# 
-# Top level modules:
-# 	multiplex
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module CPU
-# -- Compiling module CPU_testbench
-# 
-# Top level modules:
-# 	CPU_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module programCounter
-# 
-# Top level modules:
-# 	programCounter
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module control
-# 
-# Top level modules:
-# 	control
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module ALUcontrol
-# 
-# Top level modules:
-# 	ALUcontrol
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module instructmem
-# -- Compiling module instructmem_testbench
-# 
-# Top level modules:
-# 	instructmem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module datamem
-# -- Compiling module datamem_testbench
-# 
-# Top level modules:
-# 	datamem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mult
-# -- Compiling module shifter
-# -- Compiling module shifter_testbench
-# -- Compiling module mult_testbench
-# 
-# Top level modules:
-# 	shifter_testbench
-# 	mult_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module signExtend
-# -- Compiling module lsl
-# -- Compiling module signExtend0
-# 
-# Top level modules:
-# 	signExtend
-# 	lsl
-# 	signExtend0
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module hazard
-# 
-# Top level modules:
-# 	hazard
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regIdIf
-# -- Compiling module regExId
-# -- Compiling module regExMem
-# -- Compiling module regMemWb
-# -- Compiling module pipeFF
-# 
-# Top level modules:
-# 	regIdIf
-# 	regExId
-# 	regExMem
-# 	regMemWb
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module forwardUnit
-# 
-# Top level modules:
-# 	forwardUnit
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module controlMUX
-# ** Error: ./controlMUX.sv(15): (vlog-2110) Illegal reference to net "wb".
-# 
-# ** Error: ./controlMUX.sv(16): (vlog-2110) Illegal reference to net "m".
-# 
-# ** Error: ./controlMUX.sv(17): (vlog-2110) Illegal reference to net "ex".
-# 
-# ** Error: ./controlMUX.sv(20): (vlog-2110) Illegal reference to net "wb".
-# 
-# ** Error: ./controlMUX.sv(21): (vlog-2110) Illegal reference to net "m".
-# 
-# ** Error: ./controlMUX.sv(22): (vlog-2110) Illegal reference to net "ex".
-# 
-# ** Error: C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 30
-# C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./controlMUX.sv""
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module arithmetic
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	arithmetic
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux5to1
-# 
-# Top level modules:
-# 	mux5to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux2to1
-# 
-# Top level modules:
-# 	mux2to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module zero
-# -- Compiling module bitAND
-# -- Compiling module bitOR
-# -- Compiling module bitXOR
-# 
-# Top level modules:
-# 	zero
-# 	bitAND
-# 	bitOR
-# 	bitXOR
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regstim
-# 
-# Top level modules:
-# 	regstim
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module decoder
-# -- Compiling module decoder3to8
-# -- Compiling module decoder2to4
-# 
-# Top level modules:
-# 	decoder
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module D_FF
-# 
-# Top level modules:
-# 	D_FF
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module multiplex
-# -- Compiling module mux32to1
-# -- Compiling module mux4to1
-# -- Compiling module mux2to1other
-# 
-# Top level modules:
-# 	multiplex
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module CPU
-# -- Compiling module CPU_testbench
-# 
-# Top level modules:
-# 	CPU_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module programCounter
-# 
-# Top level modules:
-# 	programCounter
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module control
-# 
-# Top level modules:
-# 	control
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module ALUcontrol
-# 
-# Top level modules:
-# 	ALUcontrol
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module instructmem
-# -- Compiling module instructmem_testbench
-# 
-# Top level modules:
-# 	instructmem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module datamem
-# -- Compiling module datamem_testbench
-# 
-# Top level modules:
-# 	datamem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mult
-# -- Compiling module shifter
-# -- Compiling module shifter_testbench
-# -- Compiling module mult_testbench
-# 
-# Top level modules:
-# 	shifter_testbench
-# 	mult_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module signExtend
-# -- Compiling module lsl
-# -- Compiling module signExtend0
-# 
-# Top level modules:
-# 	signExtend
-# 	lsl
-# 	signExtend0
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module hazard
-# 
-# Top level modules:
-# 	hazard
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regIdIf
-# -- Compiling module regExId
-# -- Compiling module regExMem
-# -- Compiling module regMemWb
-# -- Compiling module pipeFF
-# 
-# Top level modules:
-# 	regIdIf
-# 	regExId
-# 	regExMem
-# 	regMemWb
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module forwardUnit
-# 
-# Top level modules:
-# 	forwardUnit
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module controlMUX
-# 
-# Top level modules:
-# 	controlMUX
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module dataMUX
-# ** Error: ./dataMUX.sv(10): (vlog-2110) Illegal reference to net "out".
-# 
-# ** Error: ./dataMUX.sv(11): (vlog-2110) Illegal reference to net "out".
-# 
-# ** Error: ./dataMUX.sv(12): (vlog-2110) Illegal reference to net "out".
-# 
-# ** Error: C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 31
-# C:/altera/14.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./dataMUX.sv""
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module arithmetic
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	arithmetic
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux5to1
-# 
-# Top level modules:
-# 	mux5to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux2to1
-# 
-# Top level modules:
-# 	mux2to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module zero
-# -- Compiling module bitAND
-# -- Compiling module bitOR
-# -- Compiling module bitXOR
-# 
-# Top level modules:
-# 	zero
-# 	bitAND
-# 	bitOR
-# 	bitXOR
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regstim
-# 
-# Top level modules:
-# 	regstim
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module decoder
-# -- Compiling module decoder3to8
-# -- Compiling module decoder2to4
-# 
-# Top level modules:
-# 	decoder
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module D_FF
-# 
-# Top level modules:
-# 	D_FF
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module multiplex
-# -- Compiling module mux32to1
-# -- Compiling module mux4to1
-# -- Compiling module mux2to1other
-# 
-# Top level modules:
-# 	multiplex
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module CPU
-# -- Compiling module CPU_testbench
-# 
-# Top level modules:
-# 	CPU_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module programCounter
-# 
-# Top level modules:
-# 	programCounter
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module control
-# 
-# Top level modules:
-# 	control
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module ALUcontrol
-# 
-# Top level modules:
-# 	ALUcontrol
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module instructmem
-# -- Compiling module instructmem_testbench
-# 
-# Top level modules:
-# 	instructmem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module datamem
-# -- Compiling module datamem_testbench
-# 
-# Top level modules:
-# 	datamem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mult
-# -- Compiling module shifter
-# -- Compiling module shifter_testbench
-# -- Compiling module mult_testbench
-# 
-# Top level modules:
-# 	shifter_testbench
-# 	mult_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module signExtend
-# -- Compiling module lsl
-# -- Compiling module signExtend0
-# 
-# Top level modules:
-# 	signExtend
-# 	lsl
-# 	signExtend0
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module hazard
-# 
-# Top level modules:
-# 	hazard
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regIdIf
-# -- Compiling module regExId
-# -- Compiling module regExMem
-# -- Compiling module regMemWb
-# -- Compiling module pipeFF
-# 
-# Top level modules:
-# 	regIdIf
-# 	regExId
-# 	regExMem
-# 	regMemWb
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module forwardUnit
-# 
-# Top level modules:
-# 	forwardUnit
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module controlMUX
-# 
-# Top level modules:
-# 	controlMUX
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module dataMUX
-# 
-# Top level modules:
-# 	dataMUX
-# vsim -lib work -voptargs=\"+acc\" -t 1ps CPU_testbench 
-# Loading sv_std.std
-# Loading work.CPU_testbench
-# Loading work.CPU
-# Loading work.mux2to1
-# Loading work.lsl
-# Loading work.hazard
-# Loading work.control
-# Loading work.ALUcontrol
-# Loading work.controlMUX
-# Loading work.programCounter
-# Loading work.alu
-# Loading work.bitAND
-# Loading work.bitOR
-# Loading work.bitXOR
-# Loading work.mult
-# Loading work.shifter
-# Loading work.arithmetic
-# Loading work.mux5to1
-# Loading work.zero
-# Loading work.instructmem
-# ** Error: (vsim-3033) ./CPU.sv(86): Instantiation of 'regIfId' failed. The design unit was not found.
-# 
-#         Region: /CPU_testbench/dut
-#         Searched libraries:
-#             C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/work
-# Loading work.regfile
-# Loading work.decoder
-# Loading work.decoder2to4
-# Loading work.decoder3to8
-# Loading work.multiplex
-# Loading work.signExtend
-# Loading work.signExtend0
-# Loading work.regExId
-# Loading work.pipeFF
-# Loading work.forwardUnit
-# ** Error: (vsim-3033) ./CPU.sv(143): Instantiation of 'dataMux' failed. The design unit was not found.
-# 
-#         Region: /CPU_testbench/dut
-#         Searched libraries:
-#             C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/work
-# ** Error: (vsim-3033) ./CPU.sv(144): Instantiation of 'dataMux' failed. The design unit was not found.
-# 
-#         Region: /CPU_testbench/dut
-#         Searched libraries:
-#             C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/work
-# Loading work.D_FF
-# Loading work.regExMem
-# Loading work.datamem
-# Loading work.regMemWb
-# Error loading design
-# Error: Error loading design 
-#        Pausing macro execution 
-# MACRO ./runlab.do PAUSED at line 36
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module arithmetic
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	arithmetic
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux5to1
-# 
-# Top level modules:
-# 	mux5to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux2to1
-# 
-# Top level modules:
-# 	mux2to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module zero
-# -- Compiling module bitAND
-# -- Compiling module bitOR
-# -- Compiling module bitXOR
-# 
-# Top level modules:
-# 	zero
-# 	bitAND
-# 	bitOR
-# 	bitXOR
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regstim
-# 
-# Top level modules:
-# 	regstim
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module decoder
-# -- Compiling module decoder3to8
-# -- Compiling module decoder2to4
-# 
-# Top level modules:
-# 	decoder
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module D_FF
-# 
-# Top level modules:
-# 	D_FF
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module multiplex
-# -- Compiling module mux32to1
-# -- Compiling module mux4to1
-# -- Compiling module mux2to1other
-# 
-# Top level modules:
-# 	multiplex
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module CPU
-# -- Compiling module CPU_testbench
-# 
-# Top level modules:
-# 	CPU_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module programCounter
-# 
-# Top level modules:
-# 	programCounter
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module control
-# 
-# Top level modules:
-# 	control
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module ALUcontrol
-# 
-# Top level modules:
-# 	ALUcontrol
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module instructmem
-# -- Compiling module instructmem_testbench
-# 
-# Top level modules:
-# 	instructmem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module datamem
-# -- Compiling module datamem_testbench
-# 
-# Top level modules:
-# 	datamem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mult
-# -- Compiling module shifter
-# -- Compiling module shifter_testbench
-# -- Compiling module mult_testbench
-# 
-# Top level modules:
-# 	shifter_testbench
-# 	mult_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module signExtend
-# -- Compiling module lsl
-# -- Compiling module signExtend0
-# 
-# Top level modules:
-# 	signExtend
-# 	lsl
-# 	signExtend0
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module hazard
-# 
-# Top level modules:
-# 	hazard
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regIdIf
-# -- Compiling module regExId
-# -- Compiling module regExMem
-# -- Compiling module regMemWb
-# -- Compiling module pipeFF
-# 
-# Top level modules:
-# 	regIdIf
-# 	regExId
-# 	regExMem
-# 	regMemWb
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module forwardUnit
-# 
-# Top level modules:
-# 	forwardUnit
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module controlMUX
-# 
-# Top level modules:
-# 	controlMUX
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module dataMUX
-# 
-# Top level modules:
-# 	dataMUX
-# vsim -lib work -voptargs=\"+acc\" -t 1ps CPU_testbench 
-# Loading sv_std.std
-# Loading work.CPU_testbench
-# Loading work.CPU
-# Loading work.mux2to1
-# Loading work.lsl
-# Loading work.hazard
-# Loading work.control
-# Loading work.ALUcontrol
-# Loading work.controlMUX
-# Loading work.programCounter
-# Loading work.alu
-# Loading work.bitAND
-# Loading work.bitOR
-# Loading work.bitXOR
-# Loading work.mult
-# Loading work.shifter
-# Loading work.arithmetic
-# Loading work.mux5to1
-# Loading work.zero
-# Loading work.instructmem
-# ** Error: (vsim-3033) ./CPU.sv(86): Instantiation of 'regIfId' failed. The design unit was not found.
-# 
-#         Region: /CPU_testbench/dut
-#         Searched libraries:
-#             C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/work
-# Loading work.regfile
-# Loading work.decoder
-# Loading work.decoder2to4
-# Loading work.decoder3to8
-# Loading work.multiplex
-# Loading work.signExtend
-# Loading work.signExtend0
-# Loading work.regExId
-# Loading work.pipeFF
-# Loading work.forwardUnit
-# Loading work.dataMUX
-# Loading work.D_FF
-# Loading work.regExMem
-# Loading work.datamem
-# Loading work.regMemWb
-# Error loading design
-# Error: Error loading design 
-#        Pausing macro execution 
-# MACRO ./runlab.do PAUSED at line 36
-do runlab.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
@@ -1661,350 +194,6 @@ do runlab.do
 # Loading work.mux4to1
 # Loading work.mux2to1other
 # Loading work.register
-# ** Warning: (vsim-3015) ./CPU.sv(62): [PCDPC] - Port size (4 or 4) does not match connection size (11) for port 'out'. The port definition is at: ./ALUcontrol.v(3).
-# 
-#         Region: /CPU_testbench/dut/signal
-# ** Warning: (vsim-3015) ./CPU.sv(64): [PCDPC] - Port size (7 or 7) does not match connection size (6) for port 'EX'. The port definition is at: ./controlMUX.sv(3).
-# 
-#         Region: /CPU_testbench/dut/stall0
-# ** Warning: (vsim-3015) ./CPU.sv(64): [PCDPC] - Port size (7 or 7) does not match connection size (6) for port 'ex'. The port definition is at: ./controlMUX.sv(3).
-# 
-#         Region: /CPU_testbench/dut/stall0
-# ** Warning: (vsim-3015) ./CPU.sv(77): [PCDPC] - Port size (64 or 64) does not match connection size (65) for port 'temp'. The port definition is at: ./programCounter.v(3).
-# 
-#         Region: /CPU_testbench/dut/grabAddr
-# ** Warning: (vsim-3015) ./CPU.sv(86): [PCDPC] - Port size (64 or 64) does not match connection size (32) for port 'instruction'. The port definition is at: ./regForwarding.sv(3).
-# 
-#         Region: /CPU_testbench/dut/IFnID
-# ** Warning: (vsim-3015) ./CPU.sv(86): [PCDPC] - Port size (64 or 64) does not match connection size (65) for port 'PC'. The port definition is at: ./regForwarding.sv(3).
-# 
-#         Region: /CPU_testbench/dut/IFnID
-# ** Warning: (vsim-3015) ./CPU.sv(86): [PCDPC] - Port size (64 or 64) does not match connection size (32) for port 'instruct'. The port definition is at: ./regForwarding.sv(3).
-# 
-#         Region: /CPU_testbench/dut/IFnID
-# ** Warning: (vsim-3015) ./CPU.sv(86): [PCDPC] - Port size (32 or 32) does not match connection size (64) for port 'pc'. The port definition is at: ./regForwarding.sv(3).
-# 
-#         Region: /CPU_testbench/dut/IFnID
-# ** Warning: (vsim-3015) ./CPU.sv(135): [PCDPC] - Port size (1 or 1) does not match connection size (2) for port 'Reg2Loc'. The port definition is at: ./regForwarding.sv(27).
-# 
-#         Region: /CPU_testbench/dut/IDnEX
-# ** Warning: (vsim-3015) ./CPU.sv(135): [PCDPC] - Port size (2 or 2) does not match connection size (3) for port 'ALUOp'. The port definition is at: ./regForwarding.sv(28).
-# 
-#         Region: /CPU_testbench/dut/IDnEX
-# ** Warning: (vsim-3015) ./CPU.sv(135): [PCDPC] - Port size (3 or 3) does not match connection size (1) for port 'ALUSrc'. The port definition is at: ./regForwarding.sv(28).
-# 
-#         Region: /CPU_testbench/dut/IDnEX
-# ** Error: (vsim-3839) ./CPU.sv(135): Variable '/CPU_testbench/dut/OP0', driven via a port connection, is multiply driven. See ./ALUcontrol.v(62).
-# 
-#         Region: /CPU_testbench/dut/IDnEX
-# ** Warning: (vsim-3015) ./regForwarding.sv(53): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/IDnEX/set1
-# ** Warning: (vsim-3015) ./regForwarding.sv(54): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/IDnEX/set2
-# ** Warning: (vsim-3015) ./regForwarding.sv(55): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/IDnEX/set3
-# ** Warning: (vsim-3015) ./regForwarding.sv(56): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/IDnEX/set4
-# ** Warning: (vsim-3015) ./regForwarding.sv(57): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/IDnEX/set5
-# ** Warning: (vsim-3015) ./CPU.sv(144): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'regData'. The port definition is at: ./dataMUX.sv(3).
-# 
-#         Region: /CPU_testbench/dut/consider1
-# ** Warning: (vsim-3015) ./regForwarding.sv(83): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/ExnMem/set0
-# ** Warning: (vsim-3015) ./regForwarding.sv(84): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/ExnMem/set1
-# ** Warning: (vsim-3015) ./regForwarding.sv(86): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/ExnMem/set3
-# ** Warning: (vsim-3017) ./CPU.sv(187): [TFMPC] - Too few port connections. Expected 10, found 9.
-# 
-#         Region: /CPU_testbench/dut/MEMnWB
-# ** Warning: (vsim-3722) ./CPU.sv(187): [TFMPC] - Missing connection for port 'clk'.
-# 
-# ** Warning: (vsim-3015) ./regForwarding.sv(103): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/MEMnWB/set0
-# ** Warning: (vsim-3015) ./regForwarding.sv(104): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/MEMnWB/set1
-# ** Warning: (vsim-3015) ./regForwarding.sv(105): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/MEMnWB/set2
-# Error loading design
-# Error: Error loading design 
-#        Pausing macro execution 
-# MACRO ./runlab.do PAUSED at line 36
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module arithmetic
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	arithmetic
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux5to1
-# 
-# Top level modules:
-# 	mux5to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mux2to1
-# 
-# Top level modules:
-# 	mux2to1
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module zero
-# -- Compiling module bitAND
-# -- Compiling module bitOR
-# -- Compiling module bitXOR
-# 
-# Top level modules:
-# 	zero
-# 	bitAND
-# 	bitOR
-# 	bitXOR
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regstim
-# 
-# Top level modules:
-# 	regstim
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module decoder
-# -- Compiling module decoder3to8
-# -- Compiling module decoder2to4
-# 
-# Top level modules:
-# 	decoder
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module D_FF
-# 
-# Top level modules:
-# 	D_FF
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module multiplex
-# -- Compiling module mux32to1
-# -- Compiling module mux4to1
-# -- Compiling module mux2to1other
-# 
-# Top level modules:
-# 	multiplex
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module CPU
-# -- Compiling module CPU_testbench
-# 
-# Top level modules:
-# 	CPU_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module programCounter
-# 
-# Top level modules:
-# 	programCounter
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module control
-# 
-# Top level modules:
-# 	control
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module ALUcontrol
-# 
-# Top level modules:
-# 	ALUcontrol
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module instructmem
-# -- Compiling module instructmem_testbench
-# 
-# Top level modules:
-# 	instructmem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module datamem
-# -- Compiling module datamem_testbench
-# 
-# Top level modules:
-# 	datamem_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module mult
-# -- Compiling module shifter
-# -- Compiling module shifter_testbench
-# -- Compiling module mult_testbench
-# 
-# Top level modules:
-# 	shifter_testbench
-# 	mult_testbench
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module signExtend
-# -- Compiling module lsl
-# -- Compiling module signExtend0
-# 
-# Top level modules:
-# 	signExtend
-# 	lsl
-# 	signExtend0
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module hazard
-# 
-# Top level modules:
-# 	hazard
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module regIdIf
-# -- Compiling module regExId
-# -- Compiling module regExMem
-# -- Compiling module regMemWb
-# -- Compiling module pipeFF
-# 
-# Top level modules:
-# 	regIdIf
-# 	regExId
-# 	regExMem
-# 	regMemWb
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module forwardUnit
-# 
-# Top level modules:
-# 	forwardUnit
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module controlMUX
-# 
-# Top level modules:
-# 	controlMUX
-# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
-# -- Compiling module dataMUX
-# 
-# Top level modules:
-# 	dataMUX
-# vsim -lib work -voptargs=\"+acc\" -t 1ps CPU_testbench 
-# Loading sv_std.std
-# Loading work.CPU_testbench
-# Loading work.CPU
-# Loading work.mux2to1
-# Loading work.lsl
-# Loading work.hazard
-# Loading work.control
-# Loading work.ALUcontrol
-# Loading work.controlMUX
-# Loading work.programCounter
-# Loading work.alu
-# Loading work.bitAND
-# Loading work.bitOR
-# Loading work.bitXOR
-# Loading work.mult
-# Loading work.shifter
-# Loading work.arithmetic
-# Loading work.mux5to1
-# Loading work.zero
-# Loading work.instructmem
-# Loading work.regIdIf
-# Loading work.regfile
-# Loading work.decoder
-# Loading work.decoder2to4
-# Loading work.decoder3to8
-# Loading work.multiplex
-# Loading work.signExtend
-# Loading work.signExtend0
-# Loading work.regExId
-# Loading work.pipeFF
-# Loading work.forwardUnit
-# Loading work.dataMUX
-# Loading work.D_FF
-# Loading work.regExMem
-# Loading work.datamem
-# Loading work.regMemWb
-# Loading work.adder
-# Loading work.mux32to1
-# Loading work.mux4to1
-# Loading work.mux2to1other
-# Loading work.register
-# ** Warning: (vsim-3015) ./CPU.sv(62): [PCDPC] - Port size (2 or 2) does not match connection size (11) for port 'Op'. The port definition is at: ./ALUcontrol.v(3).
-# 
-#         Region: /CPU_testbench/dut/signal
-# ** Warning: (vsim-3015) ./CPU.sv(77): [PCDPC] - Port size (64 or 64) does not match connection size (65) for port 'temp'. The port definition is at: ./programCounter.v(3).
-# 
-#         Region: /CPU_testbench/dut/grabAddr
-# ** Warning: (vsim-3015) ./CPU.sv(86): [PCDPC] - Port size (64 or 64) does not match connection size (32) for port 'instruction'. The port definition is at: ./regForwarding.sv(3).
-# 
-#         Region: /CPU_testbench/dut/IFnID
-# ** Warning: (vsim-3015) ./CPU.sv(86): [PCDPC] - Port size (64 or 64) does not match connection size (65) for port 'PC'. The port definition is at: ./regForwarding.sv(3).
-# 
-#         Region: /CPU_testbench/dut/IFnID
-# ** Warning: (vsim-3015) ./CPU.sv(86): [PCDPC] - Port size (64 or 64) does not match connection size (32) for port 'instruct'. The port definition is at: ./regForwarding.sv(3).
-# 
-#         Region: /CPU_testbench/dut/IFnID
-# ** Warning: (vsim-3015) ./CPU.sv(86): [PCDPC] - Port size (32 or 32) does not match connection size (64) for port 'pc'. The port definition is at: ./regForwarding.sv(3).
-# 
-#         Region: /CPU_testbench/dut/IFnID
-# ** Warning: (vsim-3015) ./CPU.sv(135): [PCDPC] - Port size (1 or 1) does not match connection size (2) for port 'Reg2Loc'. The port definition is at: ./regForwarding.sv(27).
-# 
-#         Region: /CPU_testbench/dut/IDnEX
-# ** Warning: (vsim-3015) ./CPU.sv(135): [PCDPC] - Port size (2 or 2) does not match connection size (3) for port 'ALUOp'. The port definition is at: ./regForwarding.sv(28).
-# 
-#         Region: /CPU_testbench/dut/IDnEX
-# ** Warning: (vsim-3015) ./CPU.sv(135): [PCDPC] - Port size (3 or 3) does not match connection size (1) for port 'ALUSrc'. The port definition is at: ./regForwarding.sv(28).
-# 
-#         Region: /CPU_testbench/dut/IDnEX
-# ** Warning: (vsim-3015) ./regForwarding.sv(53): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/IDnEX/set1
-# ** Warning: (vsim-3015) ./regForwarding.sv(54): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/IDnEX/set2
-# ** Warning: (vsim-3015) ./regForwarding.sv(55): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/IDnEX/set3
-# ** Warning: (vsim-3015) ./regForwarding.sv(56): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/IDnEX/set4
-# ** Warning: (vsim-3015) ./regForwarding.sv(57): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/IDnEX/set5
-# ** Warning: (vsim-3015) ./CPU.sv(144): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'regData'. The port definition is at: ./dataMUX.sv(3).
-# 
-#         Region: /CPU_testbench/dut/consider1
-# ** Warning: (vsim-3015) ./regForwarding.sv(83): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/ExnMem/set0
-# ** Warning: (vsim-3015) ./regForwarding.sv(84): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/ExnMem/set1
-# ** Warning: (vsim-3015) ./regForwarding.sv(86): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/ExnMem/set3
-# ** Warning: (vsim-3017) ./CPU.sv(187): [TFMPC] - Too few port connections. Expected 10, found 9.
-# 
-#         Region: /CPU_testbench/dut/MEMnWB
-# ** Warning: (vsim-3722) ./CPU.sv(187): [TFMPC] - Missing connection for port 'clk'.
-# 
-# ** Warning: (vsim-3015) ./regForwarding.sv(103): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/MEMnWB/set0
-# ** Warning: (vsim-3015) ./regForwarding.sv(104): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/MEMnWB/set1
-# ** Warning: (vsim-3015) ./regForwarding.sv(105): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clk'. The port definition is at: ./regForwarding.sv(108).
-# 
-#         Region: /CPU_testbench/dut/MEMnWB/set2
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
@@ -3002,4 +1191,1251 @@ do runlab.do
 # Break in Module CPU_testbench at ./CPU.sv line 227
 # Simulation Breakpoint: Break in Module CPU_testbench at ./CPU.sv line 227
 # MACRO ./runlab.do PAUSED at line 48
-# A time value could not be extracted from the current line
+# WARNING: No extended dataflow license exists
+add wave -position 21  sim:/CPU_testbench/dut/IFnID/instruct
+add wave -position 22  sim:/CPU_testbench/dut/IFnID/pc
+add wave -position 23  sim:/CPU_testbench/dut/IFnID/flush
+add wave -position 24  sim:/CPU_testbench/dut/IFnID/write
+add wave -position 65  sim:/CPU_testbench/dut/IDnEX/Ao
+add wave -position 66  sim:/CPU_testbench/dut/IDnEX/Bo
+add wave -position 67  sim:/CPU_testbench/dut/IDnEX/addIO
+add wave -position 68  sim:/CPU_testbench/dut/IDnEX/Rdout
+add wave -position 69  sim:/CPU_testbench/dut/IDnEX/Rno
+add wave -position 70  sim:/CPU_testbench/dut/IDnEX/Rmo
+add wave -position 71  sim:/CPU_testbench/dut/IDnEX/wb
+add wave -position 72  sim:/CPU_testbench/dut/IDnEX/m
+add wave -position 73  sim:/CPU_testbench/dut/IDnEX/ALUOp
+add wave -position 74  sim:/CPU_testbench/dut/IDnEX/ALUSrc
+add wave -position 75  sim:/CPU_testbench/dut/IDnEX/Opout
+add wave -position 76  sim:/CPU_testbench/dut/IDnEX/Reg2Loc
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/cpu_wave.do
+add wave -position 86  sim:/CPU_testbench/dut/ExnMem/resultOut
+add wave -position 87  sim:/CPU_testbench/dut/ExnMem/Bo
+add wave -position 88  sim:/CPU_testbench/dut/ExnMem/Rdout
+add wave -position 89  sim:/CPU_testbench/dut/ExnMem/zout
+add wave -position 90  sim:/CPU_testbench/dut/ExnMem/MemWrite
+add wave -position 91  sim:/CPU_testbench/dut/ExnMem/MemRead
+add wave -position 92  sim:/CPU_testbench/dut/ExnMem/branch
+add wave -position 93  sim:/CPU_testbench/dut/ExnMem/wb
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/cpu_wave.do
+add wave -position end  sim:/CPU_testbench/dut/MEMnWB/dataO
+add wave -position end  sim:/CPU_testbench/dut/MEMnWB/addrO
+add wave -position end  sim:/CPU_testbench/dut/MEMnWB/Rdout
+add wave -position end  sim:/CPU_testbench/dut/MEMnWB/RegWrite
+add wave -position end  sim:/CPU_testbench/dut/MEMnWB/MemtoReg
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/cpu_wave.do
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/cpu_wave.do
+# WARNING: No extended dataflow license exists
+add wave -position 21  sim:/CPU_testbench/dut/safe/IfIdwrite
+add wave -position 22  sim:/CPU_testbench/dut/safe/PCwrite
+add wave -position 23  sim:/CPU_testbench/dut/safe/csel
+add wave -position 24  sim:/CPU_testbench/dut/safe/Rn
+add wave -position 25  sim:/CPU_testbench/dut/safe/Rm
+add wave -position 26  sim:/CPU_testbench/dut/safe/IdExRn
+add wave -position 27  sim:/CPU_testbench/dut/safe/memRead
+add wave -position 28  sim:/CPU_testbench/dut/safe/check
+add wave -position 88  sim:/CPU_testbench/dut/forward/forA
+add wave -position 89  sim:/CPU_testbench/dut/forward/forB
+add wave -position 90  sim:/CPU_testbench/dut/forward/Rn
+add wave -position 91  sim:/CPU_testbench/dut/forward/Rm
+add wave -position 92  sim:/CPU_testbench/dut/forward/EXmemrd
+add wave -position 93  sim:/CPU_testbench/dut/forward/MEMwbrd
+add wave -position 94  sim:/CPU_testbench/dut/forward/memWB
+add wave -position 95  sim:/CPU_testbench/dut/forward/exWB
+add wave -position 96  sim:/CPU_testbench/dut/forward/en
+add wave -position 97  sim:/CPU_testbench/dut/forward/checkA
+add wave -position 98  sim:/CPU_testbench/dut/forward/checkB
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/cpu_wave.do
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/ivanz/Documents/GitHub/CSEE469/lab4/cpu_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module arithmetic
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	arithmetic
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux5to1
+# 
+# Top level modules:
+# 	mux5to1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mux2to1
+# 
+# Top level modules:
+# 	mux2to1
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module zero
+# -- Compiling module bitAND
+# -- Compiling module bitOR
+# -- Compiling module bitXOR
+# 
+# Top level modules:
+# 	zero
+# 	bitAND
+# 	bitOR
+# 	bitXOR
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module regstim
+# 
+# Top level modules:
+# 	regstim
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module decoder
+# -- Compiling module decoder3to8
+# -- Compiling module decoder2to4
+# 
+# Top level modules:
+# 	decoder
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module D_FF
+# 
+# Top level modules:
+# 	D_FF
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module multiplex
+# -- Compiling module mux32to1
+# -- Compiling module mux4to1
+# -- Compiling module mux2to1other
+# 
+# Top level modules:
+# 	multiplex
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module CPU
+# -- Compiling module CPU_testbench
+# 
+# Top level modules:
+# 	CPU_testbench
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module programCounter
+# 
+# Top level modules:
+# 	programCounter
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module ALUcontrol
+# 
+# Top level modules:
+# 	ALUcontrol
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module instructmem
+# -- Compiling module instructmem_testbench
+# 
+# Top level modules:
+# 	instructmem_testbench
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module datamem
+# -- Compiling module datamem_testbench
+# 
+# Top level modules:
+# 	datamem_testbench
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module mult
+# -- Compiling module shifter
+# -- Compiling module shifter_testbench
+# -- Compiling module mult_testbench
+# 
+# Top level modules:
+# 	shifter_testbench
+# 	mult_testbench
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module signExtend
+# -- Compiling module lsl
+# -- Compiling module signExtend0
+# 
+# Top level modules:
+# 	signExtend
+# 	lsl
+# 	signExtend0
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module hazard
+# 
+# Top level modules:
+# 	hazard
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module regIdIf
+# -- Compiling module regExId
+# -- Compiling module regExMem
+# -- Compiling module regMemWb
+# -- Compiling module pipeFF
+# 
+# Top level modules:
+# 	regIdIf
+# 	regExId
+# 	regExMem
+# 	regMemWb
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module forwardUnit
+# 
+# Top level modules:
+# 	forwardUnit
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module controlMUX
+# 
+# Top level modules:
+# 	controlMUX
+# Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+# -- Compiling module dataMUX
+# 
+# Top level modules:
+# 	dataMUX
+# vsim -lib work -voptargs=\"+acc\" -t 1ps CPU_testbench 
+# Loading sv_std.std
+# Loading work.CPU_testbench
+# Loading work.CPU
+# Loading work.mux2to1
+# Loading work.lsl
+# Loading work.hazard
+# Loading work.control
+# Loading work.ALUcontrol
+# Loading work.controlMUX
+# Loading work.programCounter
+# Loading work.alu
+# Loading work.bitAND
+# Loading work.bitOR
+# Loading work.bitXOR
+# Loading work.mult
+# Loading work.shifter
+# Loading work.arithmetic
+# Loading work.mux5to1
+# Loading work.zero
+# Loading work.instructmem
+# Loading work.regIdIf
+# Loading work.regfile
+# Loading work.decoder
+# Loading work.decoder2to4
+# Loading work.decoder3to8
+# Loading work.multiplex
+# Loading work.signExtend
+# Loading work.signExtend0
+# Loading work.regExId
+# Loading work.pipeFF
+# Loading work.forwardUnit
+# Loading work.dataMUX
+# Loading work.D_FF
+# Loading work.regExMem
+# Loading work.datamem
+# Loading work.regMemWb
+# Loading work.adder
+# Loading work.mux32to1
+# Loading work.mux4to1
+# Loading work.mux2to1other
+# Loading work.register
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# Running benchmark: benchmarks/test01_AddiB.arm
+# ** Error: Assertion error.
+#    Time: 25675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 25775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 25875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 25975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 26075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 26175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 26275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 26375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 26475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 26575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 26675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 26775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 26875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 26975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 27075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 27175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 27275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 27375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 27475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 27575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 27675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 27775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 27875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 27975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 28075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 28175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 28275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 28375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 28475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 28575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 28675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 28775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 28875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 28975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 29075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 29175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 29275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 29375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 29475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 29575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 29675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 29775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 29875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 29975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 30075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 30175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 30275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 30375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 30475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 30575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 30675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 30775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 30875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 30975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 31075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 31175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 31275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 31375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 31475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 31575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 31675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 31775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 31875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 31975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 32075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 32175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 32275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 32375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 32475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 32575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 32675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 32775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 32875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 32975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 33075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 33175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 33275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 33375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 33475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 33575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 33675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 33775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 33875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 33975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 34075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 34175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 34275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 34375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 34475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 34575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 34675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 34775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 34875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 34975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 35075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 35175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 35275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 35375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 35475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 35575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 35675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 35775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 35875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 35975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 36075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 36175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 36275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 36375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 36475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 36575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 36675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 36775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 36875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 36975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 37075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 37175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 37275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 37375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 37475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 37575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 37675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 37775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 37875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 37975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 38075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 38175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 38275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 38375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 38475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 38575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 38675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 38775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 38875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 38975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 39075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 39175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 39275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 39375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 39475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 39575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 39675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 39775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 39875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 39975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 40075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 40175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 40275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 40375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 40475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 40575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 40675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 40775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 40875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 40975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 41075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 41175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 41275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 41375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 41475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 41575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 41675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 41775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 41875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 41975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 42075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 42175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 42275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 42375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 42475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 42575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 42675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 42775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 42875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 42975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 43075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 43175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 43275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 43375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 43475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 43575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 43675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 43775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 43875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 43975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 44075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 44175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 44275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 44375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 44475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 44575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 44675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 44775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 44875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 44975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 45075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 45175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 45275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 45375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 45475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 45575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 45675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 45775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 45875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 45975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 46075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 46175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 46275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 46375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 46475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 46575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 46675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 46775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 46875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 46975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 47075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 47175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 47275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 47375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 47475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 47575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 47675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 47775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 47875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 47975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 48075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 48175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 48275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 48375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 48475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 48575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 48675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 48775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 48875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 48975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 49075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 49175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 49275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 49375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 49475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 49575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 49675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 49775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 49875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 49975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 50075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 50175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 50275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 50375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 50475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 50575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 50675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 50775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 50875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 50975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 51075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 51175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 51275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 51375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 51475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 51575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 51675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 51775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 51875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 51975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 52075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 52175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 52275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 52375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 52475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 52575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 52675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 52775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 52875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 52975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 53075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 53175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 53275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 53375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 53475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 53575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 53675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 53775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 53875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 53975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 54075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 54175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 54275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 54375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 54475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 54575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 54675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 54775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 54875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 54975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 55075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 55175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 55275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 55375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 55475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 55575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 55675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 55775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 55875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 55975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 56075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 56175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 56275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 56375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 56475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 56575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 56675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 56775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 56875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 56975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 57075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 57175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 57275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 57375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 57475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 57575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 57675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 57775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 57875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 57975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 58075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 58175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 58275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 58375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 58475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 58575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 58675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 58775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 58875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 58975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 59075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 59175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 59275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 59375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 59475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 59575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 59675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 59775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 59875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 59975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 60075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 60175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 60275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 60375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 60475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 60575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 60675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 60775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 60875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 60975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 61075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 61175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 61275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 61375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 61475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 61575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 61675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 61775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 61875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 61975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 62075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 62175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 62275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 62375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 62475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 62575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 62675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 62775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 62875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 62975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 63075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 63175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 63275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 63375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 63475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 63575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 63675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 63775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 63875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 63975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 64075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 64175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 64275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 64375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 64475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 64575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 64675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 64775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 64875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 64975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 65075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 65175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 65275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 65375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 65475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 65575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 65675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 65775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 65875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 65975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 66075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 66175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 66275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 66375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 66475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 66575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 66675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 66775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 66875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 66975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 67075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 67175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 67275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 67375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 67475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 67575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 67675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 67775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 67875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 67975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 68075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 68175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 68275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 68375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 68475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 68575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 68675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 68775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 68875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 68975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 69075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 69175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 69275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 69375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 69475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 69575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 69675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 69775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 69875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 69975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 70075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 70175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 70275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 70375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 70475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 70575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 70675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 70775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 70875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 70975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 71075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 71175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 71275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 71375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 71475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 71575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 71675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 71775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 71875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 71975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 72075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 72175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 72275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 72375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 72475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 72575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 72675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 72775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 72875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 72975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 73075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 73175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 73275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 73375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 73475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 73575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 73675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 73775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 73875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 73975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 74075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 74175 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 74275 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 74375 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 74475 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 74575 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 74675 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 74775 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 74875 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 74975 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# ** Error: Assertion error.
+#    Time: 75075 us  Scope: CPU_testbench.dut.instruc File: ./instructmem.sv Line: 37
+# Break in Module CPU_testbench at ./CPU.sv line 227
+# Simulation Breakpoint: Break in Module CPU_testbench at ./CPU.sv line 227
+# MACRO ./runlab.do PAUSED at line 48

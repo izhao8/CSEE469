@@ -132,7 +132,7 @@ module CPU (clk, reset);
 	
 	regExId IDnEX (WB0, M0, EX0, ReadData1, ReadData2, exto, Read2, A, Bother, 
 						Rd0, exto0, clk, instructOUT[9:5], instructOUT[20:16], Rn0, Rm0, WB1,
-						M1, aluop0, alusrc0, RegDst, instructOUT[31:21], OP0);
+						M1, RegDst, aluop0, alusrc0, instructOUT[31:21], OP0);
 	/* ID/EX register goes between here END */
 	
 	/* FORWARDING UNIT */
@@ -141,7 +141,7 @@ module CPU (clk, reset);
 	
 	forwardUnit forward (forA, forB, Rn0, Rm0, Rd1, Rd2, WB2, WB1);
 	dataMUX consider0 (WriteData, result0, A, F1, forA);
-	dataMUX consider1 (WriteData, result0, B, F2, forB);
+	dataMUX consider1 (WriteData, result0, Bother, F2, forB);
 	/* FORWARDING UNIT */
 	
 	//ALU input decider
@@ -184,7 +184,7 @@ module CPU (clk, reset);
 //	logic [63:0] result1, data0;
 //	logic RegWrite0, MemtoReg0;
 	
-	regMemWb MEMnWB (WB2, dataread, result0, Rd1, Rd2, RegWrite0, MemtoReg0, result1, data0);
+	regMemWb MEMnWB (WB2, dataread, result0, Rd1, Rd2, RegWrite0, MemtoReg0, result1, data0, clk);
 	
 	/* MEM/WB register goes between here END */
 	
@@ -206,7 +206,7 @@ module CPU_testbench();
 	
 	CPU dut (clk, reset);
 	
-	parameter clocks = 1500;
+	parameter clocks = 120;
 	parameter ClockDelay = 50000;
 	
 	initial $timeformat(-9, 2, " ns", 10);
