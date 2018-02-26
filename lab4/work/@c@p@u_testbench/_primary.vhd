@@ -2,7 +2,7 @@ library verilog;
 use verilog.vl_types.all;
 entity CPU_testbench is
     generic(
-        clocks          : integer := 1500;
+        clocks          : integer := 120;
         ClockDelay      : integer := 50000
     );
     attribute mti_svvh_generic_type : integer;

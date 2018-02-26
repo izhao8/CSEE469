@@ -41,7 +41,7 @@ module CPU (clk, reset);
 	logic RegWrite0, MemtoReg0;
 	
 	//Branch signals 
-	and #50 (B, zero, Branch); //B and CBZ
+	and #50 (B, zero, M1[0]); //B and CBZ
 	and #50 (Blt, Branch, negwire); //B.LT
 	mux2to1 sel2 (Blt, B, PCsr, Bout);
 	lsl shift (condB, PCaddr);
@@ -92,13 +92,13 @@ module CPU (clk, reset);
 	generate
 		genvar i;
 		for (i = 0; i < 5; i++) begin : RB
-			mux2to1 sel0 (instructOUT[i], instructOUT[i+16], Read2[i], Reg2Loc);
+			mux2to1 sel0 (instructOUT[i], instructOUT[i+16], Read2[i], EX0[0]);
 		end
 	endgenerate
 	
 	//Register module
 	regfile reading (instructOUT[9:5], Read2, WriteData, ReadData1, ReadData2,
-							instructOUT[4:0], RegWrite, clk);
+							instructOUT[4:0], RegWrite0, clk);
 	
 	//Sign Extending module for multiple instructions using parameters
 	signExtend #(.width(26)) extend (instructOUT[25:0], Extend); //Branching
@@ -160,7 +160,7 @@ module CPU (clk, reset);
 			alusrc <= F2;
 	end
 	
-	alu magic (F1, alusrc, control, result, negative, zero, overflow, carry_out, instruction[15:10]); 
+	alu magic (F1, alusrc, control, result, negative, zero, overflow, carry_out, instructOUT[15:10]); 
 	
 	//Stores negative flag for B.LT
 	mux2to1 choose ((negative & ~overflow), negwire, reggin, (control == 4'b011));
