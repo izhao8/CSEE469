@@ -2,11 +2,11 @@
 
 module controlMUX(sel, WB, M, EX, wb, m, ex);
 	output reg [1:0] wb;
-	output reg [2:0] m;
+	output reg [3:0] m;
 	output reg [5:0] ex;
 	
 	input [1:0] WB;
-	input [2:0] M;
+	input [3:0] M;
 	input [5:0] EX;
 	input sel;
 	

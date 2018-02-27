@@ -1,14 +1,15 @@
-Info (10281): Verilog HDL Declaration information at programCounter.v(9): object "PC4" differs only in case from object "pc4" in the same scope
-Info (10281): Verilog HDL Declaration information at alu.v(11): object "LSL" differs only in case from object "lsl" in the same scope
-Info (10281): Verilog HDL Declaration information at alu.v(11): object "LSR" differs only in case from object "lsr" in the same scope
-Info (10281): Verilog HDL Declaration information at CPU.sv(12): object "ALUSrc" differs only in case from object "alusrc" in the same scope
-Info (10281): Verilog HDL Declaration information at CPU.sv(8): object "UncondB" differs only in case from object "uncondB" in the same scope
-Info (10281): Verilog HDL Declaration information at CPU.sv(13): object "Extend" differs only in case from object "extend" in the same scope
-Info (10281): Verilog HDL Declaration information at CPU.sv(14): object "addi" differs only in case from object "addI" in the same scope
-Info (10281): Verilog HDL Declaration information at regForwarding.sv(5): object "pc" differs only in case from object "PC" in the same scope
-Info (10281): Verilog HDL Declaration information at regForwarding.sv(31): object "wb" differs only in case from object "WB" in the same scope
-Info (10281): Verilog HDL Declaration information at regForwarding.sv(32): object "m" differs only in case from object "M" in the same scope
-Info (10281): Verilog HDL Declaration information at regForwarding.sv(67): object "wb" differs only in case from object "WB" in the same scope
-Info (10281): Verilog HDL Declaration information at controlMUX.sv(4): object "wb" differs only in case from object "WB" in the same scope
-Info (10281): Verilog HDL Declaration information at controlMUX.sv(5): object "m" differs only in case from object "M" in the same scope
-Info (10281): Verilog HDL Declaration information at controlMUX.sv(6): object "ex" differs only in case from object "EX" in the same scope
+Info (10281): Verilog HDL Declaration information at programCounter.v(9): object "PC4" differs only in case from object "pc4" in the same scope File: C:/Users/qqzaho/Desktop/CSEE469/lab4/programCounter.v Line: 9
+Info (10281): Verilog HDL Declaration information at alu.v(11): object "LSL" differs only in case from object "lsl" in the same scope File: C:/Users/qqzaho/Desktop/CSEE469/lab4/alu.v Line: 11
+Info (10281): Verilog HDL Declaration information at alu.v(11): object "LSR" differs only in case from object "lsr" in the same scope File: C:/Users/qqzaho/Desktop/CSEE469/lab4/alu.v Line: 11
+Info (10281): Verilog HDL Declaration information at CPU.sv(12): object "ALUSrc" differs only in case from object "alusrc" in the same scope File: C:/Users/qqzaho/Desktop/CSEE469/lab4/CPU.sv Line: 12
+Info (10281): Verilog HDL Declaration information at CPU.sv(8): object "UncondB" differs only in case from object "uncondB" in the same scope File: C:/Users/qqzaho/Desktop/CSEE469/lab4/CPU.sv Line: 8
+Info (10281): Verilog HDL Declaration information at CPU.sv(13): object "Extend" differs only in case from object "extend" in the same scope File: C:/Users/qqzaho/Desktop/CSEE469/lab4/CPU.sv Line: 13
+Info (10281): Verilog HDL Declaration information at CPU.sv(14): object "addi" differs only in case from object "addI" in the same scope File: C:/Users/qqzaho/Desktop/CSEE469/lab4/CPU.sv Line: 14
+Info (10281): Verilog HDL Declaration information at regForwarding.sv(5): object "pc" differs only in case from object "PC" in the same scope File: C:/Users/qqzaho/Desktop/CSEE469/lab4/regForwarding.sv Line: 5
+Info (10281): Verilog HDL Declaration information at regForwarding.sv(32): object "wb" differs only in case from object "WB" in the same scope File: C:/Users/qqzaho/Desktop/CSEE469/lab4/regForwarding.sv Line: 32
+Info (10281): Verilog HDL Declaration information at regForwarding.sv(33): object "m" differs only in case from object "M" in the same scope File: C:/Users/qqzaho/Desktop/CSEE469/lab4/regForwarding.sv Line: 33
+Info (10281): Verilog HDL Declaration information at regForwarding.sv(69): object "wb" differs only in case from object "WB" in the same scope File: C:/Users/qqzaho/Desktop/CSEE469/lab4/regForwarding.sv Line: 69
+Info (10281): Verilog HDL Declaration information at regForwarding.sv(68): object "b" differs only in case from object "B" in the same scope File: C:/Users/qqzaho/Desktop/CSEE469/lab4/regForwarding.sv Line: 68
+Info (10281): Verilog HDL Declaration information at controlMUX.sv(4): object "wb" differs only in case from object "WB" in the same scope File: C:/Users/qqzaho/Desktop/CSEE469/lab4/controlMUX.sv Line: 4
+Info (10281): Verilog HDL Declaration information at controlMUX.sv(5): object "m" differs only in case from object "M" in the same scope File: C:/Users/qqzaho/Desktop/CSEE469/lab4/controlMUX.sv Line: 5
+Info (10281): Verilog HDL Declaration information at controlMUX.sv(6): object "ex" differs only in case from object "EX" in the same scope File: C:/Users/qqzaho/Desktop/CSEE469/lab4/controlMUX.sv Line: 6

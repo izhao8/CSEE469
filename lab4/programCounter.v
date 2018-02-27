@@ -20,8 +20,11 @@ module programCounter(in, PCsrc, out, clk, reset, temp, en);
 		else if (PCsrc && en) begin
 			out <= in;
 		end
-		else if(en) begin
+		else if (en) begin
 			out <= PC4;
+		end
+		else begin
+			out <= out;
 		end
 		temp <= out;
 	end

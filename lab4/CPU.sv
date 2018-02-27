@@ -15,7 +15,7 @@ module CPU (clk, reset);
 	logic [3:0] control;		
 	input logic clk, reset;
 	logic [1:0] WB0;
-	logic [2:0] M0;
+	logic [3:0] M0;
 	logic [5:0] EX0;
 	logic csel;
 	logic [31:0] instructOUT;
@@ -23,7 +23,7 @@ module CPU (clk, reset);
 	logic ifidwrite, flush;
 	logic [63:0] exto;
 	logic [1:0] WB1;
-	logic [2:0] M1;
+	logic [3:0] M1;
 	logic [63:0] exto0, A, Bother;
 	logic [10:0] OP0;
 	logic [4:0] Rd0, Rn0, Rm0;
@@ -38,17 +38,17 @@ module CPU (clk, reset);
 	logic zout, MemWrite0, MemRead0, branch0;
 	logic [4:0] Rd2;
 	logic [63:0] result1, data0;
-	logic RegWrite0, MemtoReg0;
+	logic RegWrite0, MemtoReg0, bout0, neg, of;
 	
 	//Branch signals 
-	and #50 (B, zero, M1[0]); //B and CBZ
-	and #50 (Blt, Branch, negwire); //B.LT
-	mux2to1 sel2 (Blt, B, PCsr, Bout);
-	lsl shift (condB, PCaddr);
+	and #50 (B, zout, branch0); //B and CBZ
+	and #50 (Blt, branch0, negwire); //B.LT
+	mux2to1 sel2 (Blt, B, PCsr, bout0);
+	lsl shift (exto0, PCaddr);
 	
 	/* HAZARD MODULE */
 	logic PCen;
-	hazard safe (PCen, ifidwrite, csel, instructOUT[9:5], instructOUT[20:16], Rn0, M0[1]);
+	//hazard safe (PCen, ifidwrite, csel, instructOUT[9:5], Read2, Rn0, M0[1]);
 	/* HAZARD MODULE */	
 	
 	//Main control and ALU control signal modules
@@ -59,22 +59,22 @@ module CPU (clk, reset);
 	
 	control signals (instructOUT[31:21], Reg2Loc, Branch, MemRead, 
 				MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite, UncondB, Bout);			
-	ALUcontrol signal (OP0, EX0[5:4], control); //change instruction input with ID/EX output
-	controlMUX stall0 (csel, {RegWrite, MemtoReg}, {MemWrite, MemRead, Branch}, 
+	ALUcontrol signal (OP0, aluop0, control); //change instruction input with ID/EX output
+	controlMUX stall0 (1'b1, {RegWrite, MemtoReg}, {MemWrite, MemRead, Branch, Bout}, //csel --> 1
 							{ALUOp, ALUSrc, Reg2Loc}, WB0, M0, EX0);
 	
 	//Unconditional Branching
-	generate
-		genvar l;
-		for (l = 0; l < 64; l++) begin : branc
-			mux2to1 Bcond (Extend[l], uncondB[l], condB[l], UncondB); //For Branching
-		end
-	endgenerate 
+//	generate
+//		genvar l;
+//		for (l = 0; l < 64; l++) begin : branc
+//			mux2to1 Bcond (Extend[l], uncondB[l], condB[l], UncondB); //For Branching
+//		end
+//	endgenerate 
 	
 	//Program counter and instruction modules
 	assign pc = PCaddr + instructPC0;
 	logic [63:0] t0; //temp in programCounter output
-	programCounter grabAddr (pc, PCsr, addr, clk, reset, t0, PCen);
+	programCounter grabAddr (pc, PCsr, addr, clk, reset, t0, 1'b1); //PCen --> 1
 	instructmem instruc (addr, instruction, clk);
 	
 	/* IF/ID register goes between here BEGIN */
@@ -83,7 +83,7 @@ module CPU (clk, reset);
 //	logic ifidwrite, flush;
 	
 	assign flush = (ReadData1 == ReadData2);
-	regIdIf IFnID (instruction, flush, ifidwrite, t0, instructOUT, instructPC0, clk);
+	regIdIf IFnID (instruction, flush, 1'b1, t0, instructOUT, instructPC0, clk); //ifidwrite -> 1
 	
 	/* IF/ID register goes between here END */
 	
@@ -98,7 +98,7 @@ module CPU (clk, reset);
 	
 	//Register module
 	regfile reading (instructOUT[9:5], Read2, WriteData, ReadData1, ReadData2,
-							instructOUT[4:0], RegWrite0, clk);
+							Rd2, RegWrite0, clk);
 	
 	//Sign Extending module for multiple instructions using parameters
 	signExtend #(.width(26)) extend (instructOUT[25:0], Extend); //Branching
@@ -108,12 +108,17 @@ module CPU (clk, reset);
 	
 //	logic [63:0] exto;
 	always_comb begin
-		if (instructOUT[31:21] >= 1160 && instructOUT[31:21] <= 1161) begin
+		if (instructOUT[31:21] >= 1160 && instructOUT[31:21] <= 1161) begin //ADDI
 			exto = addi;
 		end
-		else begin
-			exto = ldst;
+		else if (instructOUT[31:21] >= 672 && instructOUT[31:21] <= 679) begin //B.LT
+			exto = uncondB;
 		end
+		else if (instructOUT[31:21] >= 160 && instructOUT[31:21] <= 191) begin
+			exto = Extend;
+		end
+		else 
+			exto = ldst;
 	end
 	
 	/* ID/EX register goes between here BEGIN	*/
@@ -131,7 +136,7 @@ module CPU (clk, reset);
 					ALUOp, ALUSrc, OP, Opout) */
 	
 	regExId IDnEX (WB0, M0, EX0, ReadData1, ReadData2, exto, Read2, A, Bother, 
-						Rd0, exto0, clk, instructOUT[9:5], instructOUT[20:16], Rn0, Rm0, WB1,
+						Rd0, exto0, clk, instructOUT[9:5], Read2, Rn0, Rm0, WB1,
 						M1, RegDst, aluop0, alusrc0, instructOUT[31:21], OP0);
 	/* ID/EX register goes between here END */
 	
@@ -147,23 +152,23 @@ module CPU (clk, reset);
 	//ALU input decider
 	always_comb begin
 		if(reset)
-			alusrc <= 0;
+			alusrc = 0;
 		else if (alusrc0 == 3'b010)
-			alusrc <= exto;
+			alusrc = exto0;
 		else if (alusrc0 == 3'b001)
-			alusrc <= 64'b0;
+			alusrc = 64'b0;
 		else if (alusrc0 == 3'b011)
-			alusrc <= uncondB;
+			alusrc = exto0;
 		else if (alusrc0 == 3'b100)
-			alusrc <= exto;
+			alusrc = exto0;
 		else 
-			alusrc <= F2;
+			alusrc = F2;
 	end
 	
 	alu magic (F1, alusrc, control, result, negative, zero, overflow, carry_out, instructOUT[15:10]); 
 	
 	//Stores negative flag for B.LT
-	mux2to1 choose ((negative & ~overflow), negwire, reggin, (control == 4'b011));
+	mux2to1 choose ((neg & ~of), negwire, reggin, (control == 4'b011));
 	D_FF negFlag (negwire, reggin, 1'b0, clk);
 	
 	/* EX/MEM register goes between here BEGIN */
