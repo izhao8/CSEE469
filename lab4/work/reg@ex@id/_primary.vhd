@@ -3,7 +3,7 @@ use verilog.vl_types.all;
 entity regExId is
     port(
         \WB\            : in     vl_logic_vector(1 downto 0);
-        \M\             : in     vl_logic_vector(2 downto 0);
+        \M\             : in     vl_logic_vector(3 downto 0);
         EX              : in     vl_logic_vector(5 downto 0);
         A               : in     vl_logic_vector(63 downto 0);
         B               : in     vl_logic_vector(63 downto 0);
@@ -19,7 +19,7 @@ entity regExId is
         Rno             : out    vl_logic_vector(4 downto 0);
         Rmo             : out    vl_logic_vector(4 downto 0);
         wb              : out    vl_logic_vector(1 downto 0);
-        m               : out    vl_logic_vector(2 downto 0);
+        m               : out    vl_logic_vector(3 downto 0);
         Reg2Loc         : out    vl_logic;
         ALUOp           : out    vl_logic_vector(1 downto 0);
         ALUSrc          : out    vl_logic_vector(2 downto 0);

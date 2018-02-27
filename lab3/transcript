@@ -156,7 +156,7 @@ do runlab.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# Running benchmark: benchmarks/test12_Division.arm
+# Running benchmark: benchmarks/test02_AddsSubs.arm
 # Break in Module CPU_testbench at ./CPU.sv line 121
 # Simulation Breakpoint: Break in Module CPU_testbench at ./CPU.sv line 121
 # MACRO ./runlab.do PAUSED at line 43

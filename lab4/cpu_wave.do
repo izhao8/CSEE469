@@ -2,7 +2,9 @@ onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /CPU_testbench/dut/clk
 add wave -noupdate /CPU_testbench/dut/reset
-add wave -noupdate -radix unsigned /CPU_testbench/dut/addr
+add wave -noupdate -expand -group PC -radix decimal /CPU_testbench/dut/grabAddr/out
+add wave -noupdate -expand -group PC -radix decimal /CPU_testbench/dut/grabAddr/in
+add wave -noupdate -expand -group PC -radix decimal /CPU_testbench/dut/grabAddr/PC4
 add wave -noupdate -radix decimal /CPU_testbench/dut/PCaddr
 add wave -noupdate /CPU_testbench/dut/instruction
 add wave -noupdate -expand -group Control /CPU_testbench/dut/PCsr
@@ -41,7 +43,7 @@ add wave -noupdate /CPU_testbench/dut/Read2
 add wave -noupdate -radix decimal /CPU_testbench/dut/reading/ReadData1
 add wave -noupdate -radix decimal /CPU_testbench/dut/reading/ReadData2
 add wave -noupdate /CPU_testbench/dut/reading/RegWrite
-add wave -noupdate /CPU_testbench/dut/reading/WriteData
+add wave -noupdate -radix decimal /CPU_testbench/dut/reading/WriteData
 add wave -noupdate -radix unsigned /CPU_testbench/dut/reading/ReadRegister1
 add wave -noupdate -radix decimal /CPU_testbench/dut/reading/ReadRegister2
 add wave -noupdate -childformat {{{/CPU_testbench/dut/reading/outwr[31]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[30]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[29]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[28]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[27]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[26]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[25]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[24]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[23]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[22]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[21]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[20]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[19]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[18]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[17]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[16]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[15]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[14]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[13]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[12]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[11]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[10]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[9]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[8]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[7]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[6]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[5]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[4]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[3]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[2]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[1]} -radix decimal} {{/CPU_testbench/dut/reading/outwr[0]} -radix decimal}} -expand -subitemconfig {{/CPU_testbench/dut/reading/outwr[31]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[30]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[29]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[28]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[27]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[26]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[25]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[24]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[23]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[22]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[21]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[20]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[19]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[18]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[17]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[16]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[15]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[14]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[13]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[12]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[11]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[10]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[9]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[8]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[7]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[6]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[5]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[4]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[3]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[2]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[1]} {-height 15 -radix decimal} {/CPU_testbench/dut/reading/outwr[0]} {-height 15 -radix decimal}} /CPU_testbench/dut/reading/outwr
@@ -54,8 +56,6 @@ add wave -noupdate -expand -group ID/EX -radix decimal /CPU_testbench/dut/IDnEX/
 add wave -noupdate -expand -group ID/EX /CPU_testbench/dut/IDnEX/wb
 add wave -noupdate -expand -group ID/EX /CPU_testbench/dut/IDnEX/m
 add wave -noupdate -expand -group ID/EX -radix decimal /CPU_testbench/dut/IDnEX/ADDI
-add wave -noupdate -expand -group ID/EX -radix decimal /CPU_testbench/dut/IDnEX/addr
-add wave -noupdate -expand -group ID/EX -radix decimal /CPU_testbench/dut/IDnEX/addro
 add wave -noupdate -expand -group ID/EX /CPU_testbench/dut/IDnEX/ALUOp
 add wave -noupdate -expand -group ID/EX /CPU_testbench/dut/IDnEX/ALUSrc
 add wave -noupdate -expand -group ID/EX /CPU_testbench/dut/IDnEX/Opout
@@ -86,7 +86,7 @@ add wave -noupdate /CPU_testbench/dut/alusrc0
 add wave -noupdate -radix decimal /CPU_testbench/dut/alusrc
 add wave -noupdate -radix decimal /CPU_testbench/dut/magic/A
 add wave -noupdate -radix decimal /CPU_testbench/dut/magic/B
-add wave -noupdate -radix unsigned /CPU_testbench/dut/magic/result
+add wave -noupdate -radix decimal /CPU_testbench/dut/magic/result
 add wave -noupdate /CPU_testbench/dut/magic/cntrl
 add wave -noupdate /CPU_testbench/dut/magic/shift
 add wave -noupdate /CPU_testbench/dut/magic/negative
@@ -96,8 +96,6 @@ add wave -noupdate /CPU_testbench/dut/magic/carry_out
 add wave -noupdate -expand -group EX/MEM -radix decimal /CPU_testbench/dut/ExnMem/resultOut
 add wave -noupdate -expand -group EX/MEM -radix decimal /CPU_testbench/dut/ExnMem/Bo
 add wave -noupdate -expand -group EX/MEM -radix decimal /CPU_testbench/dut/ExnMem/Rdout
-add wave -noupdate -expand -group EX/MEM -radix decimal /CPU_testbench/dut/ExnMem/addr
-add wave -noupdate -expand -group EX/MEM -radix decimal /CPU_testbench/dut/ExnMem/addro
 add wave -noupdate -expand -group EX/MEM /CPU_testbench/dut/ExnMem/zout
 add wave -noupdate -expand -group EX/MEM /CPU_testbench/dut/ExnMem/MemWrite
 add wave -noupdate -expand -group EX/MEM /CPU_testbench/dut/ExnMem/MemRead
@@ -189,8 +187,9 @@ add wave -noupdate -expand -group MEM/WB -radix decimal /CPU_testbench/dut/MEMnW
 add wave -noupdate -expand -group MEM/WB -radix decimal /CPU_testbench/dut/MEMnWB/Rdout
 add wave -noupdate -expand -group MEM/WB /CPU_testbench/dut/MEMnWB/RegWrite
 add wave -noupdate -expand -group MEM/WB /CPU_testbench/dut/MEMnWB/MemtoReg
+add wave -noupdate -radix decimal /CPU_testbench/dut/WriteData
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {106509456 ps} 0}
+WaveRestoreCursors {{Cursor 1} {325100000 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 211

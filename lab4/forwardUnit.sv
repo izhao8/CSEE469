@@ -10,15 +10,15 @@ module forwardUnit(forA, forB, Rn, Rm, EXmemrd, MEMwbrd, memWB, exWB);
 	
 	assign en0 = exWB[1] & (EXmemrd != 31);
 	assign en1 = memWB[1] & (MEMwbrd != 31);
-	assign checkA = (EXmemrd != Rn) | (memWB[1] == 0);
-	assign checkB = (EXmemrd != Rm) | (memWB[1] == 0);
+	assign checkA = (EXmemrd != Rn) | ~exWB[1];
+	assign checkB = (EXmemrd != Rm) | ~exWB[1];
 	
 	always_comb begin
 		//control for data 1
 		if (en0 && (EXmemrd == Rn)) begin
 			forA = 2'b10;
 		end
-		else if (en1 && (MEMwbrd == Rn)) begin
+		else if (en1 && (MEMwbrd == Rn) && checkA) begin
 			forA = 2'b01;
 		end
 		else begin
@@ -29,7 +29,7 @@ module forwardUnit(forA, forB, Rn, Rm, EXmemrd, MEMwbrd, memWB, exWB);
 		if (en0 && (EXmemrd == Rm)) begin
 			forB = 2'b10;
 		end
-		else if (en1 && (MEMwbrd == Rm)) begin
+		else if (en1 && (MEMwbrd == Rm) && checkB) begin
 			forB = 2'b01;
 		end
 		else begin
