@@ -5,25 +5,7 @@ z0
 cModel Technology
 dC:\Users\ivanz\Documents\GitHub\CSEE469\lab4
 vadder
-<<<<<<< HEAD
-Z1 !s100 gFOjBV1<obR=g:Ez>oYGA3
-Z2 IFd]8Ri=_ZN7o:ZiWf2VMR0
-Z3 VbMgIlPJaE_nBONN:U9e0A2
-Z4 dC:\Users\ivanz\Documents\GitHub\CSEE469\lab4
-Z5 w1519253077
-Z6 8./arithmetic.v
-Z7 F./arithmetic.v
-L0 28
-Z8 OV;L;10.1e;51
-r1
-31
-Z9 !s108 1519803655.735000
-Z10 !s107 ./arithmetic.v|
-Z11 !s90 -reportprogress|300|./arithmetic.v|
-o-O0
-=======
 Z0 !s110 1519785015
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !i10b 1
 !s100 YzTU6V=C[<TcS1?YmfiB73
 IDWA>M@K3dchlM^k4RTQCK0
@@ -55,15 +37,6 @@ F./alu.v
 L0 3
 R7
 r1
-<<<<<<< HEAD
-31
-Z17 !s90 -reportprogress|300|./alu.v|
-o-O0
-Z18 !s108 1519803655.623000
-Z19 !s107 ./alu.v|
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R8
@@ -84,16 +57,6 @@ F./ALUcontrol.v
 L0 3
 R7
 r1
-<<<<<<< HEAD
-31
-Z26 !s90 -reportprogress|300|./ALUcontrol.v|
-o-O0
-Z27 n@a@l@ucontrol
-Z28 !s108 1519803657.378000
-Z29 !s107 ./ALUcontrol.v|
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 Z14 !s108 1519785017.000000
@@ -135,16 +98,6 @@ Z18 F./gatelogic.v
 R6
 R7
 r1
-<<<<<<< HEAD
-31
-Z38 !s108 1519803656.073000
-Z39 !s107 ./gatelogic.v|
-Z40 !s90 -reportprogress|300|./gatelogic.v|
-o-O0
-Z41 nbit@a@n@d
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 Z19 !s108 1519785016.000000
@@ -208,15 +161,6 @@ F./control.v
 L0 2
 R7
 r1
-<<<<<<< HEAD
-31
-Z56 !s90 -reportprogress|300|./control.v|
-o-O0
-Z57 !s108 1519803657.286000
-Z58 !s107 ./control.v|
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R14
@@ -241,11 +185,6 @@ L0 3
 R7
 r1
 !s85 0
-<<<<<<< HEAD
-Z69 !s108 1519803658.594000
-Z70 !s107 ./controlMUX.sv|
-!s101 -O0
-=======
 31
 Z24 !s108 1519785018.000000
 !s107 ./controlMUX.sv|
@@ -253,7 +192,6 @@ Z24 !s108 1519785018.000000
 !i113 1
 R11
 ncontrol@m@u@x
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 vCPU
 R22
 R12
@@ -270,16 +208,6 @@ Z28 F./CPU.sv
 L0 3
 R7
 r1
-<<<<<<< HEAD
-31
-Z78 !s108 1519803657.045000
-Z79 !s107 ./CPU.sv|
-Z80 !s90 -reportprogress|300|./CPU.sv|
-o-O0
-Z81 n@c@p@u
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R14
@@ -325,16 +253,6 @@ F./D_FF.v
 L0 1
 R7
 r1
-<<<<<<< HEAD
-31
-Z92 !s90 -reportprogress|300|./D_FF.v|
-o-O0
-Z93 n@d_@f@f
-Z94 !s108 1519803656.758000
-Z95 !s107 ./D_FF.v|
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R19
@@ -359,15 +277,6 @@ Z33 F./datamem.sv
 Z34 L0 12
 R7
 r1
-<<<<<<< HEAD
-31
-Z102 !s108 1519803657.607000
-Z103 !s107 ./datamem.sv|
-Z104 !s90 -reportprogress|300|./datamem.sv|
-o-O0
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R14
@@ -416,11 +325,7 @@ R7
 r1
 !s85 0
 31
-<<<<<<< HEAD
-!s108 1519803658.687000
-=======
 !s108 1519785019.000000
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s107 ./dataMUX.sv|
 !s90 -reportprogress|300|./dataMUX.sv|
 !i113 1
@@ -439,15 +344,6 @@ Z38 F./decoder.v
 L0 3
 R7
 r1
-<<<<<<< HEAD
-31
-Z122 !s108 1519803656.592000
-Z123 !s107 ./decoder.v|
-Z124 !s90 -reportprogress|300|./decoder.v|
-o-O0
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R19
@@ -496,18 +392,6 @@ R40
 !i113 1
 R11
 vforwardUnit
-<<<<<<< HEAD
-R59
-Z131 !s100 eWAVQe:`ALTUn=Mg<c>F81
-Z132 IZH<>RIJ4ED`_FAXaBfGfU1
-Z133 Vzfi?NPF`=FBUbESYJDYJl0
-Z134 !s105 forwardUnit_sv_unit
-S1
-R4
-Z135 w1519724903
-Z136 8./forwardUnit.sv
-Z137 F./forwardUnit.sv
-=======
 R22
 Z42 !s110 1519785018
 !i10b 1
@@ -520,20 +404,9 @@ R2
 w1519782344
 8./forwardUnit.sv
 F./forwardUnit.sv
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 L0 3
 R7
 r1
-<<<<<<< HEAD
-31
-Z138 !s90 -reportprogress|300|./forwardUnit.sv|
-o-O0
-Z139 nforward@unit
-Z140 !s108 1519803658.499000
-Z141 !s107 ./forwardUnit.sv|
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R24
@@ -558,15 +431,6 @@ F./hazard.sv
 L0 3
 R7
 r1
-<<<<<<< HEAD
-31
-Z149 !s90 -reportprogress|300|./hazard.sv|
-o-O0
-Z150 !s108 1519803658.168000
-Z151 !s107 ./hazard.sv|
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R24
@@ -575,17 +439,6 @@ R24
 !i113 1
 R11
 vinstructmem
-<<<<<<< HEAD
-R59
-Z152 IFR;z7a71`7hYhI<h1:WfP2
-Z153 V4X?P757>XGY3;C:BFbHzR3
-Z154 !s105 instructmem_sv_unit
-S1
-R4
-Z155 w1519803652
-Z156 8./instructmem.sv
-Z157 F./instructmem.sv
-=======
 R22
 R12
 !i10b 1
@@ -598,20 +451,9 @@ R2
 Z44 w1519784509
 Z45 8./instructmem.sv
 Z46 F./instructmem.sv
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 L0 21
 R7
 r1
-<<<<<<< HEAD
-31
-Z158 !s108 1519803657.467000
-Z159 !s107 ./instructmem.sv|
-Z160 !s90 -reportprogress|300|./instructmem.sv|
-o-O0
-Z161 !s100 75RJS0O:OV3Oh;ZP@14mJ2
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R14
@@ -620,18 +462,6 @@ Z48 !s90 -reportprogress|300|./instructmem.sv|
 !i113 1
 R11
 vinstructmem_testbench
-<<<<<<< HEAD
-R59
-Z162 !s100 Q[_ln6NN[1D`:L6Cn6m[33
-Z163 IDP_>Rj_QlWcmH0>c_oEo32
-Z164 VJ`000^3Hl=0hi_Ui@FX;P2
-R154
-S1
-R4
-R155
-R156
-R157
-=======
 R22
 R12
 !i10b 1
@@ -644,19 +474,9 @@ R2
 R44
 R45
 R46
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 L0 61
 R7
 r1
-<<<<<<< HEAD
-31
-R158
-R159
-R160
-o-O0
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R14
@@ -677,15 +497,6 @@ Z50 F./submodules.v
 R34
 R7
 r1
-<<<<<<< HEAD
-31
-Z170 !s108 1519803657.955000
-Z171 !s107 ./submodules.v|
-Z172 !s90 -reportprogress|300|./submodules.v|
-o-O0
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R24
@@ -709,15 +520,6 @@ Z55 F./math.sv
 L0 3
 R7
 r1
-<<<<<<< HEAD
-31
-Z179 !s108 1519803657.736000
-Z180 !s107 ./math.sv|
-Z181 !s90 -reportprogress|300|./math.sv|
-o-O0
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R24
@@ -764,15 +566,6 @@ Z60 F./multiplex.sv
 L0 2
 R7
 r1
-<<<<<<< HEAD
-31
-Z191 !s108 1519803656.845000
-Z192 !s107 ./multiplex.sv|
-Z193 !s90 -reportprogress|300|./multiplex.sv|
-o-O0
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R19
@@ -793,15 +586,6 @@ F./mux2to1.v
 L0 3
 R7
 r1
-<<<<<<< HEAD
-31
-Z199 !s90 -reportprogress|300|./mux2to1.v|
-o-O0
-Z200 !s108 1519803655.984000
-Z201 !s107 ./mux2to1.v|
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R8
@@ -891,15 +675,6 @@ F./mux5to1.v
 L0 3
 R7
 r1
-<<<<<<< HEAD
-31
-Z217 !s90 -reportprogress|300|./mux5to1.v|
-o-O0
-Z218 !s108 1519803655.874000
-Z219 !s107 ./mux5to1.v|
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R8
@@ -923,16 +698,6 @@ Z66 F./regForwarding.sv
 L0 151
 R7
 r1
-<<<<<<< HEAD
-31
-Z228 !s108 1519803658.270000
-Z229 !s107 ./regForwarding.sv|
-Z230 !s90 -reportprogress|300|./regForwarding.sv|
-o-O0
-Z231 npipe@f@f
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R24
@@ -954,16 +719,6 @@ F./programCounter.v
 L0 3
 R7
 r1
-<<<<<<< HEAD
-31
-Z238 !s90 -reportprogress|300|./programCounter.v|
-o-O0
-Z239 nprogram@counter
-Z240 !s108 1519803657.178000
-Z241 !s107 ./programCounter.v|
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R14
@@ -1036,15 +791,6 @@ F./regfile.sv
 L0 1
 R7
 r1
-<<<<<<< HEAD
-31
-Z256 !s90 -reportprogress|300|./regfile.sv|
-o-O0
-Z257 !s108 1519803656.495000
-Z258 !s107 ./regfile.sv|
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R19
@@ -1089,15 +835,6 @@ F./register.v
 L0 3
 R7
 r1
-<<<<<<< HEAD
-31
-Z268 !s90 -reportprogress|300|./register.v|
-o-O0
-Z269 !s108 1519803656.391000
-Z270 !s107 ./register.v|
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R19
@@ -1145,15 +882,6 @@ F./regstim.sv
 L0 4
 R7
 r1
-<<<<<<< HEAD
-31
-Z282 !s90 -reportprogress|300|./regstim.sv|
-o-O0
-Z283 !s108 1519803656.260000
-Z284 !s107 ./regstim.sv|
-!i10b 1
-=======
->>>>>>> 7bb56b6a3671d1fd8224341130878a12b21f1f2f
 !s85 0
 31
 R19
