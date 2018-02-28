@@ -42,7 +42,7 @@ endmodule
 
 module regExId (WB, M, EX, A, B, ADDI,  Rd, Ao, Bo, 
 					Rdout, addIO, clk, Rn, Rm, Rno, Rmo, wb, m, Reg2Loc,
-					ALUOp, ALUSrc, OP, Opout);
+					ALUOp, ALUSrc, OP, Opout, shift, shifto);
 	output [63:0] Ao, Bo, addIO; 
 	output [4:0] Rdout, Rno, Rmo;
 	output [1:0] wb;
@@ -51,13 +51,14 @@ module regExId (WB, M, EX, A, B, ADDI,  Rd, Ao, Bo,
 	output [2:0] ALUSrc;
 	output [10:0] Opout;
 	output Reg2Loc;
+	output [5:0] shifto;
 	
 	input [1:0] WB;
 	input [3:0] M; 
 	input [63:0] A, B, ADDI;
 	input [10:0] OP; //instruction[31:21] --> Opout
 	input [4:0] Rd, Rn, Rm; //instruction[4:0] --> Rdout
-	input [5:0] EX; //[5:4] is ALUOp, [3:1] is ALUSrc, 0 is Reg2Loc
+	input [5:0] EX, shift; //[5:4] is ALUOp, [3:1] is ALUSrc, 0 is Reg2Loc
 	input clk;
 	
 	// assign Rno = Rn;
@@ -85,6 +86,7 @@ module regExId (WB, M, EX, A, B, ADDI,  Rd, Ao, Bo,
 	pipeFF #(.length(1)) set10 (Reg2Loc, EX[0], clk, 1'b0);
 	pipeFF #(.length(4)) set11 (m, M, clk, 1'b0);
 	pipeFF #(.length(2)) set12 (wb, WB, clk, 1'b0);
+	pipeFF #(.length(6)) set13 (shifto, shift, clk, 1'b0);
 endmodule
 
 module regExMem (WB, M, zero, result, B, resultOut, Bo, 
@@ -118,7 +120,7 @@ module regExMem (WB, M, zero, result, B, resultOut, Bo,
 	pipeFF #(.length(2)) set5 (wb, WB, clk, 1'b0);
 	pipeFF #(.length(1)) set6 (MemWrite, M[3], clk, 1'b0);
 	pipeFF #(.length(1)) set7 (MemRead, M[2], clk, 1'b0);
-	pipeFF #(.length(1)) set8 (branch, M[0], clk, 1'b0);
+	pipeFF #(.length(1)) set8 (branch, M[1], clk, 1'b0);
 	pipeFF #(.length(1)) set9 (b, M[0], clk, 1'b0);
 	
 	

@@ -34,21 +34,23 @@ module CPU (clk, reset);
 	logic [63:0] F1, F2, t0;
 	logic [1:0] WB2;
 	logic [4:0] Rd1;
-	logic [63:0] result0, B0;
+	logic [63:0] result0, B0, F3, F4;
 	logic zout, MemWrite0, MemRead0, branch0;
 	logic [4:0] Rd2;
 	logic [63:0] result1, data0;
 	logic RegWrite0, MemtoReg0, bout0;
+	logic [5:0] shifting;
+	logic [63:0] exflush;
 	
 	//Branch signals 
-	and #50 (B, zero, Branch); //B and CBZ
-	and #50 (Blt, Branch, negwire); //B.LT
+	and #50 (B, flush, Branch); //B and CBZ
+	and #50 (Blt, Branch, exflush[63]); //B.LT
 	mux2to1 sel2 (Blt, B, PCsr, Bout);
 	lsl shift (condB, PCaddr);
 	
 	/* HAZARD MODULE */
 	logic PCen;
-	hazard safe (PCen, ifidwrite, csel, instructOUT[9:5], instructOUT[20:16], Rd0, M0[1]);
+	//hazard safe (PCen, ifidwrite, csel, exflush, instructOUT[9:5], Read2, Rn0, M1[2], clk);
 	/* HAZARD MODULE */	
 	
 	//Main control and ALU control signal modules
@@ -60,7 +62,7 @@ module CPU (clk, reset);
 	control signals (instructOUT[31:21], Reg2Loc, Branch, MemRead, 
 				MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite, UncondB, Bout);			
 	ALUcontrol signal (OP0, aluop0, control); //change instruction input with ID/EX output
-	controlMUX stall0 (csel, {RegWrite, MemtoReg}, {MemWrite, MemRead, Branch, Bout}, //csel --> 1
+	controlMUX stall0 (1'b1, {RegWrite, MemtoReg}, {MemWrite, MemRead, Branch, Bout}, //csel --> 1
 							{ALUOp, ALUSrc, Reg2Loc}, WB0, M0, EX0);
 	
 	//Unconditional Branching
@@ -74,7 +76,7 @@ module CPU (clk, reset);
 	//Program counter and instruction modules
 	assign pc = PCaddr + instructPC0;
 	// logic [63:0] t0; //temp in programCounter output
-	programCounter grabAddr (pc, PCsr, addr, clk, reset, t0, PCen); //PCen --> 1; PCsr --> Branch
+	programCounter grabAddr (pc, PCsr, addr, clk, reset, t0, 1'b1); //PCen --> 1; PCsr --> Branch
 	instructmem instruc (addr, instruction, clk);
 	
 	/* IF/ID register goes between here BEGIN */
@@ -82,8 +84,18 @@ module CPU (clk, reset);
 //	logic [63:0] instructPC0;
 //	logic ifidwrite, flush;
 	
-	assign flush = (ReadData1 == ReadData2);
-	regIdIf IFnID (instruction, flush, ifidwrite, t0, instructOUT, instructPC0, clk); //ifidwrite -> 1
+	//assign flush = (ReadData == 0);
+	always_comb begin
+		if (instructOUT[31:21] >= 160 && instructOUT[31:21] <= 191) flush = 1;
+		else flush = (ReadData2 == 0);
+	end
+	
+	always_comb begin
+		if (instructOUT[31:21] == 1880) exflush = ReadData1 - ReadData2;
+		else exflush = exflush;
+		
+	end
+	regIdIf IFnID (instruction, 1'b0, 1'b1, t0, instructOUT, instructPC0, clk); //ifidwrite -> 1
 	
 	/* IF/ID register goes between here END */
 	
@@ -111,14 +123,23 @@ module CPU (clk, reset);
 		if (instructOUT[31:21] >= 1160 && instructOUT[31:21] <= 1161) begin //ADDI
 			exto = addi;
 		end
-		// else if (instructOUT[31:21] >= 672 && instructOUT[31:21] <= 679) begin //B.LT
-		// 	exto = uncondB;
-		// end
-		// else if (instructOUT[31:21] >= 160 && instructOUT[31:21] <= 191) begin
-		// 	exto = Extend;
-		// end
 		else 
 			exto = ldst;
+	end
+	
+	always_comb begin
+		if (Rd2 == instructOUT[4:0] && RegWrite0) begin
+			F3 = WriteData;
+			F4 = ReadData2;
+		end 
+		else if (Rd2 == Read2 && RegWrite0) begin
+			F3 = ReadData1;
+			F4 = WriteData;
+		end
+		else begin
+			F3 = ReadData1;
+			F4 = ReadData2;
+		end
 	end
 	
 	/* ID/EX register goes between here BEGIN	*/
@@ -135,16 +156,17 @@ module CPU (clk, reset);
 					Rdout, addIO, clk, Rn, Rm, Rno, Rmo, wb, m, Reg2Loc,
 					ALUOp, ALUSrc, OP, Opout) */
 	
-	regExId IDnEX (WB0, M0, EX0, ReadData1, ReadData2, exto, instructOUT[4:0], A, Bother, 
+	regExId IDnEX (WB0, M0, EX0, F3, F4, exto, instructOUT[4:0], A, Bother, 
 						Rd0, exto0, clk, instructOUT[9:5], Read2, Rn0, Rm0, WB1,
-						M1, RegDst, aluop0, alusrc0, instructOUT[31:21], OP0);
+						M1, RegDst, aluop0, alusrc0, instructOUT[31:21], OP0, instructOUT[15:10], shifting);
 	/* ID/EX register goes between here END */
 	
+
 	/* FORWARDING UNIT */
 //	logic [1:0] forA, forB;
 //	logic [63:0] F1, F2;
 	
-	forwardUnit forward (forA, forB, Rn0, Rm0, Rd1, Rd2, WB2, WB1);
+	forwardUnit forward (forA, forB, Rn0, Rm0, Rd1, Rd2, {RegWrite0, MemtoReg0}, WB2);
 	dataMUX consider0 (WriteData, result0, A, F1, forA); //A
 	dataMUX consider1 (WriteData, result0, Bother, F2, forB); //Bother
 	/* FORWARDING UNIT */
@@ -165,11 +187,12 @@ module CPU (clk, reset);
 			alusrc = F2;
 	end
 	
-	alu magic (F1, alusrc, control, result, negative, zero, overflow, carry_out, instructOUT[15:10]); 
+	alu magic (F1, alusrc, control, result, negative, zero, overflow, carry_out, shifting); 
 	
 	//Stores negative flag for B.LT
-	mux2to1 choose ((neg & ~of), negwire, reggin, (control == 4'b011));
-	D_FF negFlag (negwire, reggin, 1'b0, clk);
+//	assign exflush = (ReadData1 - ReadData2) < 0;
+//	mux2to1 choose (exflush, negwire, reggin, (control == 4'b011));
+//	D_FF negFlag (negwire, reggin, 1'b0, clk);
 	
 	/* EX/MEM register goes between here BEGIN */
 //	logic [1:0] WB2;
