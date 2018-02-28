@@ -24,6 +24,8 @@ entity regExId is
         ALUOp           : out    vl_logic_vector(1 downto 0);
         ALUSrc          : out    vl_logic_vector(2 downto 0);
         OP              : in     vl_logic_vector(10 downto 0);
-        Opout           : out    vl_logic_vector(10 downto 0)
+        Opout           : out    vl_logic_vector(10 downto 0);
+        shift           : in     vl_logic_vector(5 downto 0);
+        shifto          : out    vl_logic_vector(5 downto 0)
     );
 end regExId;

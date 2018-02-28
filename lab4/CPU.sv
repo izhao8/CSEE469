@@ -40,7 +40,7 @@ module CPU (clk, reset);
 	logic [63:0] result1, data0;
 	logic RegWrite0, MemtoReg0, bout0;
 	logic [5:0] shifting;
-	logic [63:0] exflush;
+	logic [63:0] exflush, loop;
 	
 	//Branch signals 
 	and #50 (B, flush, Branch); //B and CBZ
@@ -87,11 +87,16 @@ module CPU (clk, reset);
 	//assign flush = (ReadData == 0);
 	always_comb begin
 		if (instructOUT[31:21] >= 160 && instructOUT[31:21] <= 191) flush = 1;
+		else if (Read2 == Rd0) flush = (result == 0);
 		else flush = (ReadData2 == 0);
 	end
 	
 	always_comb begin
-		if (instructOUT[31:21] == 1880) exflush = ReadData1 - ReadData2;
+		if (instructOUT[31:21] == 1880) begin
+			if ((Rd1 == instructOUT[9:5]) && WB2[1] && (Rd0 != 31)) exflush = result0 - ReadData2;
+			else if ((Rd1 == Read2) && WB2[1] && (Rd0 != 31)) exflush = result0 - WriteData;
+			else exflush = ReadData1 - ReadData2;
+		end
 		else exflush = exflush;
 		
 	end
@@ -128,11 +133,11 @@ module CPU (clk, reset);
 	end
 	
 	always_comb begin
-		if (Rd2 == instructOUT[4:0] && RegWrite0) begin
+		if (Rd2 == instructOUT[9:5] && RegWrite0 && Rd2 != 31) begin
 			F3 = WriteData;
 			F4 = ReadData2;
 		end 
-		else if (Rd2 == Read2 && RegWrite0) begin
+		else if (Rd2 == Read2 && RegWrite0 && Rd2 != 31) begin
 			F3 = ReadData1;
 			F4 = WriteData;
 		end
@@ -205,7 +210,12 @@ module CPU (clk, reset);
 	
 	/* EX/MEM register goes between here END */
 	
-	datamem data (result0, MemWrite0, MemRead0, B0, clk, 4'd8, dataread);
+	datamem data (result0, MemWrite0, MemRead0, loop, clk, 4'd8, dataread); //B0 --> loop
+
+	always_comb begin
+		if (Rd2 == Rd1) loop = WriteData;
+		else loop = B0;
+	end
 	
 	/* MEM/WB register goes between here BEGIN */
 //	logic [4:0] Rd2;
@@ -234,7 +244,7 @@ module CPU_testbench();
 	
 	CPU dut (clk, reset);
 	
-	parameter clocks = 120;
+	parameter clocks = 1200;
 	parameter ClockDelay = 50000;
 	
 	initial $timeformat(-9, 2, " ns", 10);

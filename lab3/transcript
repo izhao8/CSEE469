@@ -153,10 +153,21 @@ do runlab.do
 # Loading work.mux4to1
 # Loading work.mux2to1other
 # Loading work.register
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: ivanz  Hostname: DESKTOP-AIBR9J2  ProcessID: 13152
+# 
+#           Attempting to use alternate WLF file "./wlftkn6013".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftkn6013
+# 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# Running benchmark: benchmarks/test02_AddsSubs.arm
+# Running benchmark: benchmarks/test11_Sort.arm
 # Break in Module CPU_testbench at ./CPU.sv line 121
 # Simulation Breakpoint: Break in Module CPU_testbench at ./CPU.sv line 121
 # MACRO ./runlab.do PAUSED at line 43
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/ivanz/Documents/GitHub/CSEE469/lab3/cpu_wave.do
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/ivanz/Documents/GitHub/CSEE469/lab3/cpu_wave.do

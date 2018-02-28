@@ -48,7 +48,7 @@ module control (instruct, Reg2Loc, Branch, MemRead,
 		end
 		else if (instruct == 1984) begin //STUR
 			Reg2Loc = 1;
-			ALUSrc = 3'b100;
+			ALUSrc = 3'b100; // 100 --> 010
 			MemtoReg = 0;
 			RegWrite = 0;
 			MemRead = 0;
@@ -59,7 +59,7 @@ module control (instruct, Reg2Loc, Branch, MemRead,
 		end
 		else if (instruct == 1986) begin //LDUR
 			Reg2Loc = 1'b0;
-			ALUSrc = 3'b100;
+			ALUSrc = 3'b100; //100 --> 010
 			MemtoReg = 1;
 			RegWrite = 1;
 			MemRead = 1;
