@@ -12,6 +12,8 @@ add wave -noupdate -expand -group Control -radix unsigned /CPU_testbench/dut/sig
 add wave -noupdate -expand -group Control /CPU_testbench/dut/signals/RegWrite
 add wave -noupdate -expand -group Control /CPU_testbench/dut/signals/Reg2Loc
 add wave -noupdate -expand -group Control /CPU_testbench/dut/signals/Branch
+add wave -noupdate -expand -group Control /CPU_testbench/dut/Blt
+add wave -noupdate -expand -group Control /CPU_testbench/dut/exflush
 add wave -noupdate -expand -group Control /CPU_testbench/dut/signals/MemWrite
 add wave -noupdate -expand -group Control /CPU_testbench/dut/signals/MemtoReg
 add wave -noupdate -expand -group Control /CPU_testbench/dut/signals/MemRead
@@ -19,6 +21,10 @@ add wave -noupdate -expand -group Control /CPU_testbench/dut/signals/UncondB
 add wave -noupdate -expand -group Control /CPU_testbench/dut/signals/B
 add wave -noupdate -expand -group Control /CPU_testbench/dut/signals/ALUOp
 add wave -noupdate -expand -group Control /CPU_testbench/dut/signals/ALUSrc
+add wave -noupdate -expand -group controlMUX /CPU_testbench/dut/stall0/WB
+add wave -noupdate -expand -group controlMUX /CPU_testbench/dut/stall0/M
+add wave -noupdate -expand -group controlMUX /CPU_testbench/dut/stall0/EX
+add wave -noupdate -expand -group controlMUX /CPU_testbench/dut/stall0/sel
 add wave -noupdate -expand -group ALUcontrol -radix binary /CPU_testbench/dut/signal/out
 add wave -noupdate -expand -group ALUcontrol -radix unsigned /CPU_testbench/dut/signal/instruct
 add wave -noupdate -expand -group ALUcontrol /CPU_testbench/dut/signal/Op
@@ -26,14 +32,6 @@ add wave -noupdate /CPU_testbench/dut/negative
 add wave -noupdate /CPU_testbench/dut/zero
 add wave -noupdate /CPU_testbench/dut/overflow
 add wave -noupdate /CPU_testbench/dut/carry_out
-add wave -noupdate -expand -group hazard /CPU_testbench/dut/safe/IfIdwrite
-add wave -noupdate -expand -group hazard /CPU_testbench/dut/safe/PCwrite
-add wave -noupdate -expand -group hazard /CPU_testbench/dut/safe/csel
-add wave -noupdate -expand -group hazard -radix decimal /CPU_testbench/dut/safe/Rn
-add wave -noupdate -expand -group hazard -radix decimal /CPU_testbench/dut/safe/Rm
-add wave -noupdate -expand -group hazard -radix decimal /CPU_testbench/dut/safe/IdExRn
-add wave -noupdate -expand -group hazard /CPU_testbench/dut/safe/memRead
-add wave -noupdate -expand -group hazard /CPU_testbench/dut/safe/check
 add wave -noupdate -expand -group IF/ID /CPU_testbench/dut/IFnID/instruct
 add wave -noupdate -expand -group IF/ID -radix decimal /CPU_testbench/dut/IFnID/PC
 add wave -noupdate -expand -group IF/ID -radix decimal /CPU_testbench/dut/IFnID/pc
@@ -189,7 +187,7 @@ add wave -noupdate -expand -group MEM/WB /CPU_testbench/dut/MEMnWB/RegWrite
 add wave -noupdate -expand -group MEM/WB /CPU_testbench/dut/MEMnWB/MemtoReg
 add wave -noupdate -radix decimal /CPU_testbench/dut/WriteData
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {325100000 ps} 0}
+WaveRestoreCursors {{Cursor 1} {547358960 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 211
