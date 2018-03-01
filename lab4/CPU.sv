@@ -93,19 +93,14 @@ module CPU (clk, reset);
 	
 	always_comb begin
 		if (instructOUT[31:21] == 1880) begin
-			if ((Rd1 == instructOUT[9:5]) && WB2[1] && (Rd0 != 31)) exflush = result0 - ReadData2;
-			else if ((Rd1 == Read2) && WB2[1] && (Rd0 != 31)) exflush = ReadData1 - result0;
-			else if ((Rd2 == Read2) && RegWrite0 && (Rd1 != 31)) exflush = ReadData1 - WriteData;
-			else if ((Rd2 == instructOUT[9:5]) && RegWrite0 && (Rd1 != 31)) exflush = WriteData - ReadData2;
+			if ((Rd1 == instructOUT[9:5]) && WB2[1] && (Rd0 != 31) && (Rd1 != 31)) exflush = result0 - ReadData2;
+			else if ((Rd1 == Read2) && WB2[1] && (Rd0 != 31) && (Rd1 != 31)) exflush = ReadData1 - result0;
+			else if ((Rd2 == Read2) && RegWrite0 && (Rd1 != 31) && (Rd2 != 31)) exflush = ReadData1 - WriteData;
+			else if ((Rd2 == instructOUT[9:5]) && RegWrite0 && (Rd1 != 31) && (Rd2 != 31)) exflush = WriteData - ReadData2;
 			else exflush = ReadData1 - ReadData2;
 		end
 		else exflush = exflush;
-//		if (instructOUT[31:21] == 1880) exflush = w - z;
-//		else exflush = exflush;
 	end
-//	forwardUnit forward0 (fA, fB, instructOUT[9:5], Read2, Rd1, Rd2, {RegWrite0, MemtoReg0}, WB2);
-//	dataMUX blt0 (WriteData, result0, ReadData1, w, fA);
-//	dataMUX blt1 (WriteData, result0, ReadData2, z, fB);
 
 	regIdIf IFnID (instruction, 1'b0, 1'b1, t0, instructOUT, instructPC0, clk); //ifidwrite -> 1
 	

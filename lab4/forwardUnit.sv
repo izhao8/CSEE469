@@ -10,8 +10,6 @@ module forwardUnit(forA, forB, Rn, Rm, EXmemrd, MEMwbrd, memWB, exWB);
 	
 	assign en0 = exWB[1] & (EXmemrd != 31);
 	assign en1 = memWB[1] & (MEMwbrd != 31);
-	//assign checkA = (EXmemrd != Rn) | ~memWB[1];
-	//assign checkB = (EXmemrd != Rm) | ~memWB[1];
 	assign checkA = ~(exWB[1] && (EXmemrd != 31) && (MEMwbrd != Rn));
 	assign checkB = ~(exWB[1] && (EXmemrd != 31) && (MEMwbrd != Rm));
 	

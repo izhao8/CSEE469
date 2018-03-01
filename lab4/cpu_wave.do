@@ -93,7 +93,7 @@ add wave -noupdate /CPU_testbench/dut/magic/overflow
 add wave -noupdate /CPU_testbench/dut/magic/carry_out
 add wave -noupdate -expand -group EX/MEM -radix decimal /CPU_testbench/dut/ExnMem/resultOut
 add wave -noupdate -expand -group EX/MEM -radix decimal /CPU_testbench/dut/ExnMem/Bo
-add wave -noupdate -expand -group EX/MEM -radix decimal /CPU_testbench/dut/ExnMem/Rdout
+add wave -noupdate -expand -group EX/MEM -radix unsigned /CPU_testbench/dut/ExnMem/Rdout
 add wave -noupdate -expand -group EX/MEM /CPU_testbench/dut/ExnMem/zout
 add wave -noupdate -expand -group EX/MEM /CPU_testbench/dut/ExnMem/MemWrite
 add wave -noupdate -expand -group EX/MEM /CPU_testbench/dut/ExnMem/MemRead
@@ -112,12 +112,12 @@ add wave -noupdate -expand -group Memory -radix decimal {/CPU_testbench/dut/data
 add wave -noupdate -expand -group Memory -radix decimal {/CPU_testbench/dut/data/mem[0]}
 add wave -noupdate -expand -group MEM/WB -radix decimal /CPU_testbench/dut/MEMnWB/dataO
 add wave -noupdate -expand -group MEM/WB -radix decimal /CPU_testbench/dut/MEMnWB/addrO
-add wave -noupdate -expand -group MEM/WB -radix decimal /CPU_testbench/dut/MEMnWB/Rdout
+add wave -noupdate -expand -group MEM/WB -radix unsigned /CPU_testbench/dut/MEMnWB/Rdout
 add wave -noupdate -expand -group MEM/WB /CPU_testbench/dut/MEMnWB/RegWrite
 add wave -noupdate -expand -group MEM/WB /CPU_testbench/dut/MEMnWB/MemtoReg
 add wave -noupdate -radix decimal /CPU_testbench/dut/WriteData
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {6996649841 ps} 0}
+WaveRestoreCursors {{Cursor 1} {49956751097 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 116
 configure wave -valuecolwidth 52
@@ -133,4 +133,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {6266502508 ps} {7931306033 ps}
+WaveRestoreZoom {48493436652 ps} {50158240177 ps}
