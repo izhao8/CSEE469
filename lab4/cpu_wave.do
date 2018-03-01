@@ -117,7 +117,7 @@ add wave -noupdate -expand -group MEM/WB /CPU_testbench/dut/MEMnWB/RegWrite
 add wave -noupdate -expand -group MEM/WB /CPU_testbench/dut/MEMnWB/MemtoReg
 add wave -noupdate -radix decimal /CPU_testbench/dut/WriteData
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {49956751097 ps} 0}
+WaveRestoreCursors {{Cursor 1} {25206779901 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 116
 configure wave -valuecolwidth 52
@@ -133,4 +133,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {48493436652 ps} {50158240177 ps}
+WaveRestoreZoom {23989237024 ps} {27026882262 ps}
