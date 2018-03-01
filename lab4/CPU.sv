@@ -94,7 +94,7 @@ module CPU (clk, reset);
 	always_comb begin
 		if (instructOUT[31:21] == 1880) begin
 			if ((Rd1 == instructOUT[9:5]) && WB2[1] && (Rd0 != 31)) exflush = result0 - ReadData2;
-			else if ((Rd1 == Read2) && WB2[1] && (Rd0 != 31)) exflush = result0 - WriteData;
+			else if ((Rd1 == Read2) && WB2[1] && (Rd0 != 31)) exflush = ReadData1 - result0;
 			else exflush = ReadData1 - ReadData2;
 		end
 		else exflush = exflush;
