@@ -30,11 +30,11 @@ module CPU (clk, reset);
 	logic [1:0] aluop0; 
 	logic [2:0] alusrc0;
 	logic RegDst;
-	logic [1:0] forA, forB;
+	logic [1:0] forA, forB, fA, fB;
 	logic [63:0] F1, F2, t0;
 	logic [1:0] WB2;
 	logic [4:0] Rd1;
-	logic [63:0] result0, B0, F3, F4;
+	logic [63:0] result0, B0, F3, F4, w, z;
 	logic zout, MemWrite0, MemRead0, branch0;
 	logic [4:0] Rd2;
 	logic [63:0] result1, data0;
@@ -95,11 +95,18 @@ module CPU (clk, reset);
 		if (instructOUT[31:21] == 1880) begin
 			if ((Rd1 == instructOUT[9:5]) && WB2[1] && (Rd0 != 31)) exflush = result0 - ReadData2;
 			else if ((Rd1 == Read2) && WB2[1] && (Rd0 != 31)) exflush = ReadData1 - result0;
+			else if ((Rd2 == Read2) && RegWrite0 && (Rd1 != 31)) exflush = ReadData1 - WriteData;
+			else if ((Rd2 == instructOUT[9:5]) && RegWrite0 && (Rd1 != 31)) exflush = WriteData - ReadData2;
 			else exflush = ReadData1 - ReadData2;
 		end
 		else exflush = exflush;
-		
+//		if (instructOUT[31:21] == 1880) exflush = w - z;
+//		else exflush = exflush;
 	end
+//	forwardUnit forward0 (fA, fB, instructOUT[9:5], Read2, Rd1, Rd2, {RegWrite0, MemtoReg0}, WB2);
+//	dataMUX blt0 (WriteData, result0, ReadData1, w, fA);
+//	dataMUX blt1 (WriteData, result0, ReadData2, z, fB);
+
 	regIdIf IFnID (instruction, 1'b0, 1'b1, t0, instructOUT, instructPC0, clk); //ifidwrite -> 1
 	
 	/* IF/ID register goes between here END */
@@ -244,7 +251,7 @@ module CPU_testbench();
 	
 	CPU dut (clk, reset);
 	
-	parameter clocks = 1200;
+	parameter clocks = 1000;
 	parameter ClockDelay = 50000;
 	
 	initial $timeformat(-9, 2, " ns", 10);
