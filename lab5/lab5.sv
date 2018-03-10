@@ -53,7 +53,7 @@ endmodule
 // Test the data memory, and figure out the settings.
 
 module lab5_testbench ();
-	localparam USERID = 1336091;  // Set to your student ID #
+	localparam USERID = 1534691;  // Set to your student ID #
 	localparam ADDRESS_WIDTH = 20;
 	localparam DATA_WIDTH = 8;
 	localparam NUM_OF_READS = 50;
@@ -261,66 +261,102 @@ module lab5_testbench ();
 	
 
 	initial begin
-		dummy_data <= '0;
-		resetMem();				// Initialize the memory.
-		
-		// Set up output file to write in append mode
-		wFile = $fopen("written_data.txt" , "a");
-		if (!wFile) begin
-			$error("File could not be opened: ");
-		end
-		$fwrite(wFile, "Student number is: %d \n", USERID);
-		
-		// Do 50 random reads.
-		for (i = 0; i < NUM_OF_READS; i++) begin
-			addr = $random()*8; // *8 to doubleword-align the access.
+
+		//	L1 block size & hit time
+		for (i = 0; i < 16; i++) begin
+			addr = i * 16;
 			readMem(addr, dummy_data, delay);
 		end
+		
+		for (i = 0; i < 16; i++) begin
+			addr = i * 16;
+			readMem(addr, dummy_data, delay);
+		end 
+
+		// Ivan L1 Associativity
+		// readMem(0, dummy_data, delay);
+		// $display("%t Read took %d cycles", $time, delay);
+		// readMem(0, dummy_data, delay);
+		// $display("%t Read took %d cycles", $time, delay);
+		// readMem(16*8, dummy_data, delay);
+		// $display("%t Read took %d cycles", $time, delay);
+		// readMem(16*8*2, dummy_data, delay);
+		// $display("%t Read took %d cycles", $time, delay);
+		// readMem(16*8*3, dummy_data, delay);
+		// $display("%t Read took %d cycles", $time, delay);
+		// readMem(0, dummy_data, delay);
+		// $display("%t Read took %d cycles", $time, delay); 
+		
+		// readMem(0, dummy_data, delay);
+		// $display("%t Read took %d cycles", $time, delay);
+		// readMem(16*8, dummy_data, delay);
+		// $display("%t Read took %d cycles", $time, delay);
+		// readMem(16*8*2, dummy_data, delay);
+		// $display("%t Read took %d cycles", $time, delay);
+		// readMem(16*8*3, dummy_data, delay);
+		// $display("%t Read took %d cycles", $time, delay);
+
+
+		// dummy_data <= '0;
+		// resetMem();				// Initialize the memory.
+		
+		// // Set up output file to write in append mode
+		// wFile = $fopen("written_data.txt" , "a");
+		// if (!wFile) begin
+		// 	$error("File could not be opened: ");
+		// end
+		// $fwrite(wFile, "Student number is: %d \n", USERID);
+		
+		// // Do 50 random reads.
+		// for (i = 0; i < NUM_OF_READS; i++) begin
+		// 	addr = $random()*8; // *8 to doubleword-align the access.
+		// 	readMem(addr, dummy_data, delay);
+		// end
 			
-		// Do 20 random double-word writes of random data.
-		for (i = 0; i < NUM_OF_WRITES; i++) begin
-			addr = $random()*8; // *8 to doubleword-align the access.
-			for (j = 0; j < NUM_OF_WRITES; j++) begin
-				if(addr == addressArray[j]) begin
-					addr = $random()*8;
-					j = -1;
-				end
-			end
-			addressArray[i] = addr; 
-			dummy_data = (addr << i) + i;
+		// // Do 20 random double-word writes of random data.
+		// for (i = 0; i < NUM_OF_WRITES; i++) begin
+		// 	addr = $random()*8; // *8 to doubleword-align the access.
+		// 	for (j = 0; j < NUM_OF_WRITES; j++) begin
+		// 		if(addr == addressArray[j]) begin
+		// 			addr = $random()*8;
+		// 			j = -1;
+		// 		end
+		// 	end
+		// 	addressArray[i] = addr; 
+		// 	dummy_data = (addr << i) + i;
 			
-			writeMem(addr, dummy_data, 8'hFF, delay);	
-		end
+		// 	writeMem(addr, dummy_data, 8'hFF, delay);	
+		// end
 			
 		
-		// Read back the 20 writes from above
-		for (i = (NUM_OF_WRITES - 1); i > -1; i--) begin
-			addr = addressArray[i]; // *8 to doubleword-align the access.
-			readMem(addr, dummy_data, delay);
-			expected_data = (addr << i) + i;
+		// // Read back the 20 writes from above
+		// for (i = (NUM_OF_WRITES - 1); i > -1; i--) begin
+		// 	addr = addressArray[i]; // *8 to doubleword-align the access.
+		// 	readMem(addr, dummy_data, delay);
+		// 	expected_data = (addr << i) + i;
 			
-			if(expected_data !== dummy_data) begin
-				$fwrite(wFile, "ERROR: Reading %d, expected: %d from addx %h\n", dummy_data, expected_data, addr);
-			end/*  else begin
-				$fwrite(wFile, "SUCCESS: Reading %d from addx %h \n", dummy_data, addr);
-			end
-			*/
+		// 	if(expected_data !== dummy_data) begin
+		// 		$fwrite(wFile, "ERROR: Reading %d, expected: %d from addx %h\n", dummy_data, expected_data, addr);
+		// 	end/*  else begin
+		// 		$fwrite(wFile, "SUCCESS: Reading %d from addx %h \n", dummy_data, addr);
+		// 	end
+		// 	*/
 	
 			
-			//$fwrite(wFile, "Read %d from addx %h \n", dummy_data, addr);
-			//$display("%t Write took %d cycles", $time, delay);
-		end
+		// 	//$fwrite(wFile, "Read %d from addx %h \n", dummy_data, addr);
+		// 	//$display("%t Write took %d cycles", $time, delay);
+		// end
 		
-		// Reset the memory.
-		resetMem();
+		// // Reset the memory.
+		// resetMem();
 		
 		
-		// Read all of the first KB
-		//	readStride(0, 8, 1024/8, minval, maxval);
-		//	$display("%t Reading the first KB took between %d and %d cycles each", $time, minval, maxval);
-		$fclose(wFile);
-		//$finish();
-		$stop();
+		// // Read all of the first KB
+		// //	readStride(0, 8, 1024/8, minval, maxval);
+		// //	$display("%t Reading the first KB took between %d and %d cycles each", $time, minval, maxval);
+		// $fclose(wFile);
+		// //$finish();
+		// $stop();
 	end
 	
 endmodule
